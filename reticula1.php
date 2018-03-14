@@ -15,7 +15,7 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body >
         <!--Import jQuery before materialize.js-->
@@ -59,7 +59,7 @@
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
-                <a href="#" class="brand-logo center">Metal Mecánica</a>
+                <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
             </div>
         </nav>
         <nav class="hide-on-med-and-down">
@@ -864,7 +864,7 @@
                 </ul>
               </div>
               <div class="col l4 s12">
-                <h5 class="white-text">Contactanos</h5>
+                <h5 class="white-text">Contáctanos</h5>
                 <ul>
                     Teléfonos: 4433121570 Ext.248<br />
                     Email: metal_Mecánica@itmorelia.edu.mx<br />

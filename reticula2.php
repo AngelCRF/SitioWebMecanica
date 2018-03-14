@@ -15,7 +15,7 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body >
         <!--Import jQuery before materialize.js-->
@@ -25,6 +25,7 @@
                 $(".dropdown-button").dropdown();
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
+                $('.parallax').parallax();
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -59,7 +60,7 @@
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
-                <a href="#" class="brand-logo center">Metal Mecánica</a>
+                <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
             </div>
         </nav>
         <nav class="hide-on-med-and-down">
@@ -90,7 +91,9 @@
         <div>
             <h5 class="center-align">Retícula para la carrera de Ingeniería Mecatrónica</h5>
         </div>
-        <img class="responsive-img materialboxed col s10 m10 l10 offset-l1 offset-m1 offset-s1" src="Imagenes/ReticulaMecánica-1.jpg">
+        <div class="image-container">
+            <img class="responsive-img materialboxed" src="Imagenes/ReticulaMecánica-1.jpg">
+        </div>
         <br />
         <div class="divider"></div>
         <br />
@@ -864,7 +867,7 @@
                 </ul>
               </div>
               <div class="col l4 s12">
-                <h5 class="white-text">Contactanos</h5>
+                <h5 class="white-text">Contáctanos</h5>
                 <ul>
                     Teléfonos: 4433121570 Ext.248<br />
                     Email: metal_Mecánica@itmorelia.edu.mx<br />
