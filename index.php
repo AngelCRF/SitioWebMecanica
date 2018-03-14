@@ -10,11 +10,31 @@
         
         <meta name="author" content="Neri Gonzalez Lopez"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
+
+        <!-- Materialized libraries -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+           <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+
       
+      
+
+        <script>
+          $(document).ready(function(){
+            $(".dropdown-button").dropdown(); 
+            $(".button-collapse").sideNav();
+          });
+        </script>
+
          <link rel="stylesheet" type="text/css" href="index.css" />
         <style type="text/css">
         body{
-          background: #000000;
+          background: #dddddd;
           background-repeat: no-repeat;
           background-position: center center;
           background-attachment: fixed;
@@ -24,61 +44,33 @@
 
 
 <body >
-   
-<div>   
-    <div id="header" style = "display: table; width: 500px;">
-    <div style = "float: left; width: 104px;">
-        <div style = "float: left; height: 100px; width: 100px;">
-        <ul class="nav">
-            <li><img src="Imagenes/logoch.png"></li>
-        </ul>
-        </div>
+
+
+<!-- Dropdown Structure -->
+<ul id="dropdownRet" class="dropdown-content">
+  <li><a href="#!">Especialidad 1</a></li>
+  <li><a href="#!">Especialidad 2</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Especialidad 3</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper container blue-grey" >
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a class="brand-logo site-logo"><img src="imagenes/log_meca.jpg" alt="Logo mecanica" height="50%" width="50%"></a>
+    <ul class="left hide-on-med-and-down" id="nav-mobile">
+    <li><a href=""></a></li>
+      <li><a href="sass.html">Inicio</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-button" data-activates="dropdownRet"s>Reticula
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
         
-    </div>
-    
-    <div  style = "float: left; height: 100px; width: 100px;">
-    	
-    	
-    	<ul class="titulo_carrera">
-			<li>Ingenieria en GestiÃ³n Empresarial</li>    	
-    	</ul>
-    	    	
-    </div>
-    
-    <div style = "height: 50px; width: 1350px;">
-    
-    <br><br>
-    	<ul class="nav">            
-            <li><a href="index.php"><font color="white">INICIO</font></a></li>
-            <li><a href="index.php#"><font color="white">RETICULA</font></a>
-            	<ul>
-                    <li><a href="reticula1.php"><font color="white">Especialidad Calidad</font></a></li>
-                    <li><a href="reticula2.php"><font color="white">Especialidad Finanzas</font></a></li>
-                </ul>
-            </li>    
-            <li><a href="index.php#"><font color="white">PERFILES</font></a>
-                <ul>
-                    <li><a href="aspirante.php"><font color="white">Perfil de Aspirante</font></a></li>
-                    <li><a href="egresado.php"><font color="white">Perfil de Egresado</font></a></li>
-                </ul>
-            </li>
-            <li><a href="mision.php"><font color="white">QUIENES SOMOS</font></a></li>
-            <li><a href="orga.php"><font color="white">ORGANIGRAMA</font></a></li>
-            <li><a href="material_apoyo.php"><font color="white">MATERIAL DE APOYO</font></a></li>
-          <li><a href="index.php#"><font color="white">INDICE DE REPROBACIÃ“N</font></a>
-                <ul>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2015.pdf" target="blank"><font color="white">ENE-JUN 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2015.pdf" target="blank"><font color="white">AGO-DIC 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2016.pdf" target="blank"><font color="white">ENE-JUN 2016</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2016.pdf" target="blank"><font color="white">AGO-DIC 2016</font></a></li>
-              </ul>       
-                    </li>
-                
-        </ul>
-    
-    </div>
-    
-</div>
+        
 <br><br><br>
 <br><br><br>
 
@@ -127,14 +119,14 @@
 <tr>
 
 <td style="width: 500px"><a href="Pagina/pdf/Diagnostico_ITMorelia.pdf" target="_blank"><img src="Pagina/images/Imagen_Diagnostico.png"></a></td>
-<td><a title="Medio informativo especializado sobre los últimos desarrollos tecnológicos e innovadores de nuestro país." href="http://www.conacytprensa.mx/" target="_blank"><img src="Pagina/images/logoAICgris.png"></a></td>
+<td><a title="Medio informativo especializado sobre los ï¿½ltimos desarrollos tecnolï¿½gicos e innovadores de nuestro paï¿½s." href="http://www.conacytprensa.mx/" target="_blank"><img src="Pagina/images/logoAICgris.png"></a></td>
 <td><a href="http://cacei.org.mx/index.php" target="_blank"><img src="Pagina/images/cacei.png"></a></td>
 </tr>
 </table>
 <table>
 <tr>
 <td style="width: 100px"></td>
-<td><a title="Súbete a un autobus, concibe, construye e inicia una Startup" href="https://northamerica.startupbus.com/buses/mex.html" target="_blank"><img src="Imagenes/startupbusMexico.png"></a></td>
+<td><a title="Sï¿½bete a un autobus, concibe, construye e inicia una Startup" href="https://northamerica.startupbus.com/buses/mex.html" target="_blank"><img src="Imagenes/startupbusMexico.png"></a></td>
 <td style="width: 300px"></td>
 <td><a href="https://www.entrepreneur.com/es" target="_blank"><img src="Imagenes/entrepreneur-logo.png"></td>
 <td style="width: 100px"></td>
@@ -179,17 +171,5 @@ Avenida TecnolÃ³gico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Mor
 Derechos Reservados. Â© 2017 Instituto TecnolÃ³gico de Morelia.
 </div>
 
-          
- 
-
-
-
     </body>
     </html>
-
-
-
-
-
-    <!--
--->
