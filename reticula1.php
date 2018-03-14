@@ -58,6 +58,7 @@
         </ul>
         <nav>
             <div class="nav-wrapper grey darken-1">
+                <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
                 <a href="#" class="brand-logo center">Metal Mecánica</a>
             </div>
         </nav>
@@ -83,7 +84,6 @@
             <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
             <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
         <div>
             <h5 class="center-align">Plan de Estudios</h5>
         </div>
