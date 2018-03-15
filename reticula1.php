@@ -93,7 +93,12 @@
         <div>
             <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
         </div>
-        <img class="responsive-img materialboxed col s10 m10 l10 offset-l1 offset-m1 offset-s1" src="Imagenes/ReticulaMecánica-1.jpg">
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <a href="Imagenes/ReticulaMecánica-1.jpg"><img class="activator" src="Imagenes/ReticulaMecánica-1.jpg"></a>
+            </div>
+        </div>
         <br />
         <div class="divider"></div>
         <br />

@@ -25,10 +25,10 @@
                 $(".dropdown-button").dropdown();
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
-                $('.parallax').parallax();
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!--contenedores para menus desplegables-->
         <ul id="reticulas" class="dropdown-content">
             <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
             <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
@@ -57,6 +57,16 @@
             <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
             <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
         </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="index.php"><i class="material-icons">home</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="mision.php">QUIENES SOMOS</a></li>
+            <li><a href="orga.php">ORGANIGRAMA</a></li>
+            <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+        </ul>
+        <!--encabezado y menus-->
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
@@ -76,27 +86,23 @@
                 </ul>
             </div>
         </nav>
-        <ul id="slide-out" class="side-nav">
-            <li><a href="index.php"><i class="material-icons">home</i></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="mision.php">QUIENES SOMOS</a></li>
-            <li><a href="orga.php">ORGANIGRAMA</a></li>
-            <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
-        </ul>
+        <!--Cuerpo de la pagina, reticula y materias-->
         <div>
             <h5 class="center-align">Plan de Estudios</h5>
         </div>
         <div>
             <h5 class="center-align">Retícula para la carrera de Ingeniería Mecatrónica</h5>
         </div>
-        <div class="image-container">
-            <img class="responsive-img materialboxed" src="Imagenes/ReticulaMecánica-1.jpg">
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <a href="Imagenes/ReticulaMecánica-1.jpg"><img class="activator" src="Imagenes/ReticulaMecánica-1.jpg"></a>
+            </div>
         </div>
         <br />
         <div class="divider"></div>
         <br />
+        <!--Apartado de menu de materias para escritorio-->
         <nav class="nav-extended grey darken-1 hide-on-med-and-down">
             <div class="nav-wrapper center-align">
                 <a href="#" class="brand-logo center-align">Materias</a>
@@ -115,6 +121,7 @@
                 </ul>
             </div>
         </nav>
+        <!--Menu para materias por semestre, para tableta y celular-->
         <nav class="nav-extended grey darken-1 hide-on-large-only">
             <div class="nav-wrapper center-align">
                 <a href="#" class="brand-logo center-align">Materias</a>
@@ -133,6 +140,7 @@
                 </ul>
             </div>
         </nav>
+        <!--Contenedores para tarjetas de materias, por semestre-->
         <div id="primero" class="col s12">
             <div class="row col s10 offset-s1">
                 <div>
@@ -844,6 +852,7 @@
                 </div>
             </div>
         </div>
+        <!--Pie de pagina, datos de contato-->
         <footer class="page-footer grey darken-1">
           <div class="container">
             <div class="row">
