@@ -15,7 +15,7 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body >
         <!--Import jQuery before materialize.js-->
@@ -28,6 +28,7 @@
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!--contenedores para menus desplegables-->
         <ul id="reticulas" class="dropdown-content">
             <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
             <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
@@ -56,9 +57,20 @@
             <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
             <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
         </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="index.php"><i class="material-icons">home</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="mision.php">QUIENES SOMOS</a></li>
+            <li><a href="orga.php">ORGANIGRAMA</a></li>
+            <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+        </ul>
+        <!--encabezado y menus-->
         <nav>
             <div class="nav-wrapper grey darken-1">
-                <a href="#" class="brand-logo center">Metal Mecánica</a>
+                <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
+                <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
             </div>
         </nav>
         <nav class="hide-on-med-and-down">
@@ -74,26 +86,22 @@
                 </ul>
             </div>
         </nav>
-        <ul id="slide-out" class="side-nav">
-            <li><a href="index.php"><i class="material-icons">home</i></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="mision.php">QUIENES SOMOS</a></li>
-            <li><a href="orga.php">ORGANIGRAMA</a></li>
-            <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
+        <!--Cuerpo de la pagina, reticula y materias-->
         <div>
             <h5 class="center-align">Plan de Estudios</h5>
         </div>
         <div>
             <h5 class="center-align">Retícula para la carrera de Ingeniería Mecatrónica</h5>
         </div>
-        <img class="responsive-img materialboxed col s10 m10 l10 offset-l1 offset-m1 offset-s1" src="Imagenes/ReticulaMecánica-1.jpg">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <a href="Imagenes/ReticulaMecatrónica-1.jpg"><img class="activator" src="Imagenes/ReticulaMecatrónica-1.jpg"></a>
+            </div>
+        </div>
         <br />
         <div class="divider"></div>
         <br />
+        <!--Apartado de menu de materias para escritorio-->
         <nav class="nav-extended grey darken-1 hide-on-med-and-down">
             <div class="nav-wrapper center-align">
                 <a href="#" class="brand-logo center-align">Materias</a>
@@ -112,6 +120,7 @@
                 </ul>
             </div>
         </nav>
+        <!--Menu para materias por semestre, para tableta y celular-->
         <nav class="nav-extended grey darken-1 hide-on-large-only">
             <div class="nav-wrapper center-align">
                 <a href="#" class="brand-logo center-align">Materias</a>
@@ -130,6 +139,7 @@
                 </ul>
             </div>
         </nav>
+        <!--Contenedores para tarjetas de materias, por semestre-->
         <div id="primero" class="col s12">
             <div class="row col s10 offset-s1">
                 <div>
@@ -841,6 +851,7 @@
                 </div>
             </div>
         </div>
+        <!--Pie de pagina, datos de contato-->
         <footer class="page-footer grey darken-1">
           <div class="container">
             <div class="row">
@@ -864,7 +875,7 @@
                 </ul>
               </div>
               <div class="col l4 s12">
-                <h5 class="white-text">Contactanos</h5>
+                <h5 class="white-text">Contáctanos</h5>
                 <ul>
                     Teléfonos: 4433121570 Ext.248<br />
                     Email: metal_Mecánica@itmorelia.edu.mx<br />
