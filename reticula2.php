@@ -9,7 +9,7 @@
         <meta name="author" content="Jorge Cervantes Ramirez"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
         
-        <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C9F4FA71-999E-B34A-9850-0A3168C7DFC4/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/3594C5CB-F1F1-7E45-8406-4626D7A232DC/abn/main.css"/>
+        <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/3594C5CB-F1F1-7E45-8406-4626D7A232DC/abn/main.css"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
