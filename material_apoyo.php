@@ -8,7 +8,6 @@
         <meta name="keywords" content="pagina de Metal-Mecánica"/>
         <meta name="author" content="Jorge Cervantes Ramirez"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-        <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/3594C5CB-F1F1-7E45-8406-4626D7A232DC/abn/main.css"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
