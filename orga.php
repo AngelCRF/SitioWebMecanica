@@ -107,67 +107,65 @@
         <div class="Cprincipal_index card-panel grey lighten-4">
             <div class="cajaS"><img src="Imagenes/logoSEP.png"></div>
             <div class="cajaT"><img src="Imagenes/logoTEC.png"></div>
+            <br>
+            <br>
             <div id="wrapper">
-    <div id="container">
-        <ol class="organizational-chart">
-            <li>
-                <div>
-                    <h3>Jefe de Departamento</h3>
-                </div>
-                <ol>
+            <div >
+                <ol class="organizational-chart">
                     <li>
                         <div>
-                            <h4>Presidente de Academia</h4>
+                            <h3>Jefe de Departamento</h3>
                         </div>
                         <ol>
                             <li>
                                 <div>
-                                    <h5>Secretario de Academia</h5>
+                                    <h4>Presidente de Academia</h4>
                                 </div>
+                                <ol>
+                                    <li>
+                                        <div>
+                                            <h5>Secretario de Academia</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h5>Jefe de Docencia</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h5>Jefe de Vinculación</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h5>Jefe de Investigación</h5>
+                                        </div>
+                                    </li>
+                                </ol>
                             </li>
                             <li>
                                 <div>
-                                    <h5>Jefe de Docencia</h5>
+                                    <h4>Profesores</h4>
                                 </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h5>Jefe de Vinculación</h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h5>Jefe de Investigación</h5>
-                                </div>
-                            </li>
-                        </ol>
-                    </li>
-                    <li>
-                        <div>
-                            <h4>Profesores</h4>
-                        </div>
-                        <ol>
-                            <li>
-                                <div>
-                                    <h5>Profesor 1</h5>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <h5>Profesor 2</h5>
-                                </div>
+                                <ol>
+                                    <li>
+                                        <div>
+                                            <h5>Profesor 1</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h5>Profesor 2</h5>
+                                         </div>
+                                    </li>
+                                </ol>
                             </li>
                         </ol>
                     </li>
                 </ol>
-            </li>
-        </ol>
-
-    </div>
-</div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br
-            ><br><br><br>
+            </div>
+        </div>
         </div>
         <footer class="page-footer grey darken-1">
             <div class="container">
