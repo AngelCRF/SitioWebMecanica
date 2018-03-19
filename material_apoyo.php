@@ -15,7 +15,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body >
+    <body>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
@@ -85,6 +85,7 @@
                 </ul>
             </div>
         </nav>
+        <br />
         <!--Cuerpo de la pagina-->
         <div class="row">
           <div class="col s10 m5 l5 offset-s1 offset-m1 offset-l1">
@@ -100,7 +101,7 @@
                 <div class="row">
                   <div class="input-field col s12">
                     <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                      <option value="PDF/Recursos/Docentes/Reporte_Avance_2016.doc">Reporte Avance</option>
+                      <option value="PDF/Recursos/Docentes/Reporte_Avance_2016.docx">Reporte Avance</option>
                       <option value="PDF/Recursos/Docentes/Investigaciones.pdf">Investigaciones</option>
                     </select>
                     <label>Documentos</label>
