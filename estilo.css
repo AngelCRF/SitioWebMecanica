@@ -1,0 +1,22 @@
+.Cprincipal_index{
+    width:90%;
+    height:100%;
+    margin-top: 5%;
+    margin-left: 5%;  
+    border-bottom: solid iem*
+ }
+ .cajaS{
+    width: 345px;
+    height: 100px;
+    margin-left: 3%;	
+    margin-top: 2%;
+    float: left;
+
+}
+.cajaT{
+    width: 400px;
+    height: 100px;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    float: right;
+}

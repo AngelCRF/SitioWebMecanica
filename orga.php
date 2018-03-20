@@ -3,7 +3,7 @@
 
 <html lang="es">
     <head>
-        <title>ITM | Departamento Mecánica</title>
+        <title>ITMORELIA| Dept. Metal-Mecánica</title>
         <meta charset="utf-8"/>
         <meta name="keywords" content="pagina de IGE"/>
         <meta name="author" content="Kevin Erick Angel Medrano"/>

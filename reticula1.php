@@ -11,10 +11,19 @@
         
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style type="text/css">
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+        </style>
     </head>
     <body >
         <!--Import jQuery before materialize.js-->
@@ -98,758 +107,758 @@
             </div>
         </div>
         <br />
-        <div class="divider"></div>
-        <br />
-        <!--Apartado de menu de materias para escritorio-->
-        <nav class="nav-extended grey darken-1 hide-on-med-and-down">
-            <div class="nav-wrapper center-align">
-                <a href="#" class="brand-logo center-align">Materias</a>
-            </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a class="active" href="#primero">1er Semestre</a></li>
-                    <li class="tab"><a href="#segundo">2do Semestre</a></li>
-                    <li class="tab"><a href="#tercero">3er Semestre</a></li>
-                    <li class="tab"><a href="#cuarto">4to Semestre</a></li>
-                    <li class="tab"><a href="#quinto">5to Semestre</a></li>
-                    <li class="tab"><a href="#sexto">6to Semestre</a></li>
-                    <li class="tab"><a href="#septimo">7mo Semestre</a></li>
-                    <li class="tab"><a href="#octavo">8vo Semestre</a></li>
-                    <li class="tab"><a href="#noveno">9no Semestre</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--Menu para materias por semestre, para tableta y celular-->
-        <nav class="nav-extended grey darken-1 hide-on-large-only">
-            <div class="nav-wrapper center-align">
-                <a href="#" class="brand-logo center-align">Materias</a>
-            </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a class="active" href="#primero">1ero</a></li>
-                    <li class="tab"><a href="#segundo">2do</a></li>
-                    <li class="tab"><a href="#tercero">3er</a></li>
-                    <li class="tab"><a href="#cuarto">4to</a></li>
-                    <li class="tab"><a href="#quinto">5to</a></li>
-                    <li class="tab"><a href="#sexto">6to</a></li>
-                    <li class="tab"><a href="#septimo">7mo</a></li>
-                    <li class="tab"><a href="#octavo">8vo</a></li>
-                    <li class="tab"><a href="#noveno">9no</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--Contenedores para tarjetas de materias, por semestre-->
-        <div id="primero" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Primer Semestre</h5>
+            <div class="divider"></div>
+            <br />
+            <!--Apartado de menu de materias para escritorio-->
+            <nav class="nav-extended grey darken-1 hide-on-med-and-down">
+                <div class="nav-wrapper center-align">
+                    <a href="#" class="brand-logo center-align">Materias</a>
                 </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="active" href="#primero">1er Semestre</a></li>
+                        <li class="tab"><a href="#segundo">2do Semestre</a></li>
+                        <li class="tab"><a href="#tercero">3er Semestre</a></li>
+                        <li class="tab"><a href="#cuarto">4to Semestre</a></li>
+                        <li class="tab"><a href="#quinto">5to Semestre</a></li>
+                        <li class="tab"><a href="#sexto">6to Semestre</a></li>
+                        <li class="tab"><a href="#septimo">7mo Semestre</a></li>
+                        <li class="tab"><a href="#octavo">8vo Semestre</a></li>
+                        <li class="tab"><a href="#noveno">9no Semestre</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Menu para materias por semestre, para tableta y celular-->
+            <nav class="nav-extended grey darken-1 hide-on-large-only">
+                <div class="nav-wrapper center-align">
+                    <a href="#" class="brand-logo center-align">Materias</a>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="active" href="#primero">1ero</a></li>
+                        <li class="tab"><a href="#segundo">2do</a></li>
+                        <li class="tab"><a href="#tercero">3er</a></li>
+                        <li class="tab"><a href="#cuarto">4to</a></li>
+                        <li class="tab"><a href="#quinto">5to</a></li>
+                        <li class="tab"><a href="#sexto">6to</a></li>
+                        <li class="tab"><a href="#septimo">7mo</a></li>
+                        <li class="tab"><a href="#octavo">8vo</a></li>
+                        <li class="tab"><a href="#noveno">9no</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Contenedores para tarjetas de materias, por semestre-->
+            <div id="primero" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Primer Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="segundo" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Segundo Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="tercero" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Tercero Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+            <div id="segundo" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Segundo Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="cuarto" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Cuarto Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="quinto" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Quinto Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+            <div id="tercero" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Tercero Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="sexto" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Sexto Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="septimo" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Septimo Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+            <div id="cuarto" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Cuarto Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="octavo" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Octavo Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="noveno" class="col s12">
-            <div class="row col s10 offset-s1">
-                <div>
-                    <h5 class="center-align">Noveno Semestre</h5>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 1</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+            <div id="quinto" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Quinto Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 2</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 3</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 4</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 5</h5>
-                            </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col s8 offset-s2">
-                    <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                        <div class="card-stacked">
-                            <div class="card-content center-align">
-                                <h5>Materia 6</h5>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
-                            <div class="card-action center-align">
-                                <a href="#">Ver Materia</a>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="sexto" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Sexto Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="septimo" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Septimo Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="octavo" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Octavo Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="noveno" class="col s12">
+                <div class="row col s10 offset-s1">
+                    <div>
+                        <h5 class="center-align">Noveno Semestre</h5>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 1</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 2</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 3</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 4</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 5</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8 offset-s2">
+                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
+                            <div class="card-stacked">
+                                <div class="card-content center-align">
+                                    <h5>Materia 6</h5>
+                                </div>
+                                <div class="card-action center-align">
+                                    <a href="#">Ver Materia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!--Pie de pagina, datos de contato-->
         <footer class="page-footer grey darken-1">
           <div class="container">

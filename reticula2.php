@@ -15,6 +15,14 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style type="text/css">
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+        </style>
     </head>
     <body >
         <!--Import jQuery before materialize.js-->
