@@ -96,7 +96,7 @@
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
-                <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
+                <a href="#" class="brand-logo center"><h5>Departamento Metal Mecánica</h5></a>
             </div>
         </nav>
         <nav class="hide-on-med-and-down">
@@ -124,7 +124,7 @@
                     <li>
                         <div>
                             <h3>Jefe de Departamento</h3>
-                            <h4>M.C. José Nicolás Ponciano Guzmán</h4>
+                            <h4>M.C. José Nicolas Ponciano Guzmán</h4>
                         </div>
                         <ol>
                             <li>
@@ -148,25 +148,25 @@
                                     <li>
                                         <div>
                                             <h5>Coordinador de Programa de Tutorias</h5>
-                                            <h6>M.I. Gilberto Daniel Conejo Magaña</h6>
+                                            <h6>Acéfalo</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h5>Jefe de Proyecto de Docencia</h5>
-                                            <h6>M.C. Moisés García Monroy</h6>
+                                            <h6>Acéfalo</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h5>Jefe de Proyecto de Vinculación</h5>
-                                            <h6>Ing. Felipe de Jesús Tena Martínez</h6>
+                                            <h6>Acéfalo</h6>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <h5>Jefe de Proyecto de Investigación</h5>
-                                            <h6>Dr. Juan Crstóbal Camacho Arriaga</h6>
+                                            <h6>Acéfalo</h6>
                                         </div>
                                     </li>
                                 </ol>
