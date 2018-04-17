@@ -3,7 +3,7 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Dept. Metal-Mecánica</title>
+        <title>ITMORELIA| Dept. Metal-Mecï¿½nica</title>
         <meta charset="utf-8"/>
        
         <meta name="keywords" content="pagina de IGE"/>

@@ -101,7 +101,7 @@
             <br>
             <br>
             <div id="wrapper">
-            <div >
+            <div>
               <div class="row">
                 <div class="col s10 m5 l5 offset-s1 offset-m1 offset-l1">
                   <div class="divider"></div>
