@@ -8,14 +8,13 @@
         <meta name="keywords" content="pagina de Metal-Mecánica"/>
         <meta name="author" content="Jorge Cervantes Ramirez"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-        
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
             body{
                 background: #dddddd;
@@ -25,7 +24,7 @@
             }
         </style>
     </head>
-    <body >
+    <body>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
@@ -33,6 +32,7 @@
                 $(".dropdown-button").dropdown();
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
+                $('select').material_select();
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -94,809 +94,346 @@
                 </ul>
             </div>
         </nav>
-        <!--Cuerpo de la pagina, reticula y materias-->
-        <div>
-            <h5 class="center-align">Plan de Estudios</h5>
-        </div>
-        <div>
-            <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
-        </div>
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                <a href="Imagenes/ReticulaMecánica-1.jpg"><img class="activator" src="Imagenes/ReticulaMecánica-1.jpg"></a>
-            </div>
-        </div>
-        <br />
-            <div class="divider"></div>
-            <br />
-            <!--Apartado de menu de materias para escritorio-->
-            <nav class="nav-extended grey darken-1 hide-on-med-and-down">
-                <div class="nav-wrapper center-align">
-                    <a href="#" class="brand-logo center-align">Materias</a>
-                </div>
-                <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a class="active" href="#primero">1er Semestre</a></li>
-                        <li class="tab"><a href="#segundo">2do Semestre</a></li>
-                        <li class="tab"><a href="#tercero">3er Semestre</a></li>
-                        <li class="tab"><a href="#cuarto">4to Semestre</a></li>
-                        <li class="tab"><a href="#quinto">5to Semestre</a></li>
-                        <li class="tab"><a href="#sexto">6to Semestre</a></li>
-                        <li class="tab"><a href="#septimo">7mo Semestre</a></li>
-                        <li class="tab"><a href="#octavo">8vo Semestre</a></li>
-                        <li class="tab"><a href="#noveno">9no Semestre</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!--Menu para materias por semestre, para tableta y celular-->
-            <nav class="nav-extended grey darken-1 hide-on-large-only">
-                <div class="nav-wrapper center-align">
-                    <a href="#" class="brand-logo center-align">Materias</a>
-                </div>
-                <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a class="active" href="#primero">1ero</a></li>
-                        <li class="tab"><a href="#segundo">2do</a></li>
-                        <li class="tab"><a href="#tercero">3er</a></li>
-                        <li class="tab"><a href="#cuarto">4to</a></li>
-                        <li class="tab"><a href="#quinto">5to</a></li>
-                        <li class="tab"><a href="#sexto">6to</a></li>
-                        <li class="tab"><a href="#septimo">7mo</a></li>
-                        <li class="tab"><a href="#octavo">8vo</a></li>
-                        <li class="tab"><a href="#noveno">9no</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!--Contenedores para tarjetas de materias, por semestre-->
-            <div id="primero" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Primer Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="segundo" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Segundo Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="tercero" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Tercero Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="cuarto" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Cuarto Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="quinto" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Quinto Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sexto" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Sexto Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="septimo" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Septimo Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="octavo" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Octavo Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="noveno" class="col s12">
-                <div class="row col s10 offset-s1">
-                    <div>
-                        <h5 class="center-align">Noveno Semestre</h5>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 1</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 2</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 3</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 4</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 5</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s8 offset-s2">
-                        <div class="card horizontal blue lighten-5 waves-effect waves-light">
-                            <div class="card-stacked">
-                                <div class="card-content center-align">
-                                    <h5>Materia 6</h5>
-                                </div>
-                                <div class="card-action center-align">
-                                    <a href="#">Ver Materia</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <!--Pie de pagina, datos de contato-->
-        <footer class="page-footer grey darken-1">
-          <div class="container">
+        <!--Cuerpo de la pagina-->
+        <div class="card-panel grey lighten-4">
             <div class="row">
-              <div class="col l4 s12">
-                <h5 class="white-text">Redes Sociales</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"><img src="Imagenes/face.jpg">Facebook</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/tiwter.jpg">Twitter</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin</a></li>
-                </ul>
-              </div>
-              <div class="col l4 s12">
-                <h5 class="white-text">Vínculos Académicos</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://www.ets.org/es/toefl"  target="_blank">Toefl</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://www.anfei.mx/" target="_blank">Anfei</a></li>
-                  <li><a class="grey-text text-lighten-3" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología</a></li>
-                </ul>
-              </div>
-              <div class="col l4 s12">
-                <h5 class="white-text">Contáctanos</h5>
-                <ul>
-                    Teléfonos: 4433121570 Ext.248<br />
-                    Email: metal_Mecánica@itmorelia.edu.mx<br />
-                    Dirección: Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia, Michoacán, México.<br />
-                </ul>
-              </div>
+                <div class="cajaS col s12 m6 l3"><img class="responsive-img" src="Imagenes/logoSEP.png"></div>
+                <div class="col s12 m12 l6 hide-on-med-and-down">
+                    <div>
+                        <h5 class="center-align">Plan de Estudios</h5>
+                    </div>
+                    <div>
+                        <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
+                    </div>
+                </div>
+                <div class="cajaT col s12 m6 l3"><img class="responsive-img right" src="Imagenes/logoTEC.png"></div>
+                <div class="col s12 m12 hide-on-large-only">
+                    <div>
+                        <h5 class="center-align">Plan de Estudios</h5>
+                    </div>
+                    <div>
+                        <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright">
+            <div id="wrapper">
+                <div >
+                    <div class="row">
+                        <table class="centered hide-on-med-and-down">
+                            <thead>
+                                <tr>
+                                    <th>Semestre 1</th>
+                                    <th>Semestre 2</th>
+                                    <th>Semestre 3</th>
+                                    <th>Semestre 4</th>                                    
+                                    <th>Semestre 5</th>
+                                    <th>Semestre 6</th>                                    
+                                    <th>Semestre 7</th>
+                                    <th>Semestre 8</th>                                    
+                                    <th>Semestre 9</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 2</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 4</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 1</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 3</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 5</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row hide-on-large-only">
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 1</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 2</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 3</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 4</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 5</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 6</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 7</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 1</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 8</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 2</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 3</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 9</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 4</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 5</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer grey darken-1">
             <div class="container">
-                Derechos Reservados. © 2018 Instituto Tecnológico de Morelia.
+                <div class="row">
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Redes Sociales</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"><img src="Imagenes/face.jpg">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/twitter.jpg">Twitter</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Vínculos Académicos</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.ets.org/es/toefl"  target="_blank">Toefl</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.anfei.mx/" target="_blank">Anfei</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Contáctanos</h5>
+                        <ul>
+                            Teléfonos: 4433121570 Ext.248<br />
+                            Email: metal_Mecánica@itmorelia.edu.mx<br />
+                            Dirección: Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia,     Michoacán, México.<br />
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Derechos Reservados. © 2018 Instituto Tecnológico de Morelia.
+                </div>
+            </div>
         </footer>
     </body>
 </html> 
