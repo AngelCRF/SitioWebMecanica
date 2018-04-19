@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>¿Quíenes Somos?</title>
+        <title>¿Quiénes Somos?</title>
         <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="keywords" content="Quienes, Somos, Mecanica, ITM"/>
         <meta name="author" content="Luis Eduardo Loaiza Diosdasdo"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
@@ -54,12 +55,12 @@
         </ul>
         <ul id="slide-out" class="side-nav">
             <li><a href="index.php"><i class="material-icons">home</i></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETÍCULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
             <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="mision.php">QUIENES SOMOS</a></li>
+            <li><a href="mision.php">¿QUIÉNES SOMOS?</a></li>
             <li><a href="orga.php">ORGANIGRAMA</a></li>
             <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">ÍNDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
         </ul>
         <!--encabezado y menus-->
         <nav>
@@ -72,12 +73,12 @@
             <div class="nav-wrapper grey darken-1 center-align">
                 <ul class="center hide-on-med-and-down">
                     <li><a href="index.php"><i class="material-icons">home</i></a></li>
-                    <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETÍCULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
                     <li><a href="#" class="dropdown-button" data-activates="perfiles">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-                    <li><a href="mision.php">QUIENES SOMOS</a></li>
+                    <li><a href="mision.php">¿QUIÉNES SOMOS?</a></li>
                     <li><a href="orga.php">ORGANIGRAMA</a></li>
                     <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-                    <li><a href="#" class="dropdown-button" data-activates="reprobacion">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a href="#" class="dropdown-button" data-activates="reprobacion">ÍNDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
