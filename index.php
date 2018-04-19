@@ -3,7 +3,7 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Ing. en Gestión Empresarial</title>
+        <title>ITMORELIA| Dept. Metal-Mec�nica</title>
         <meta charset="utf-8"/>
        
         <meta name="keywords" content="pagina de IGE"/>
@@ -22,11 +22,11 @@
 
          <link rel="stylesheet" type="text/css" href="index.css" />
         <style type="text/css">
-        body{
-          background: #dddddd;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-attachment: fixed;
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
            }
         </style>
        </head>

@@ -3,202 +3,437 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Ing. en Gestión Empresarial</title>
+        <title>ITMORELIA| Dept. Metal-Mecánica</title>
         <meta charset="utf-8"/>
-       
-        <meta name="keywords" content="pagina de IGE"/>
-        
-        <meta name="author" content="Neri Gonzalez Lopez"/>
+        <meta name="keywords" content="pagina de Metal-Mecánica"/>
+        <meta name="author" content="Jorge Cervantes Ramirez"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-      	<link href="Pagina/styles/custom.css" rel="stylesheet" type="text/css" />
-         <link rel="stylesheet" type="text/css" href="index.css" />
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
-        body{
-          background: #000000;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-attachment: fixed;
-           }
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
         </style>
-       </head>
-    <body >
-    <div id="header" style = "display: table; width: 500px;">
-    <div style = "float: left; width: 104px;">
-        <div style = "float: left; height: 100px; width: 100px;">
-        <ul class="nav">
-            <li><img src="Imagenes/logoch.png"></li>
+    </head>
+    <body>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".dropdown-button").dropdown();
+                $('.materialboxed').materialbox();
+                $(".button-collapse").sideNav();
+                $('select').material_select();
+            });            
+        </script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!--contenedores para menus desplegables-->
+        <ul id="reticulas" class="dropdown-content">
+            <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
+            <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
         </ul>
+        <ul id="perfiles" class="dropdown-content">
+            <li><a href="aspirante.php">Perfil de Aspirante</a></li>
+            <li><a href="egresado.php">Perfil de Egresado</a></li>
+        </ul>
+        <ul id="reprobacion" class="dropdown-content">
+            <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
+            <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
+            <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
+            <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
+        </ul>
+        <ul id="reticulas-movil" class="dropdown-content">
+            <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
+            <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
+        </ul>
+        <ul id="perfiles-movil" class="dropdown-content">
+            <li><a href="aspirante.php">Perfil de Aspirante</a></li>
+            <li><a href="egresado.php">Perfil de Egresado</a></li>
+        </ul>
+        <ul id="reprobacion-movil" class="dropdown-content">
+            <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
+            <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
+            <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
+            <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="index.php"><i class="material-icons">home</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="mision.php">QUIENES SOMOS</a></li>
+            <li><a href="orga.php">ORGANIGRAMA</a></li>
+            <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+        </ul>
+        <!--encabezado y menus-->
+        <nav>
+            <div class="nav-wrapper grey darken-1">
+                <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
+                <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
+            </div>
+        </nav>
+        <nav class="hide-on-med-and-down">
+            <div class="nav-wrapper grey darken-1 center-align">
+                <ul class="center hide-on-med-and-down">
+                    <li><a href="index.php"><i class="material-icons">home</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a href="#" class="dropdown-button" data-activates="perfiles">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a href="mision.php">QUIENES SOMOS</a></li>
+                    <li><a href="orga.php">ORGANIGRAMA</a></li>
+                    <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+                    <li><a href="#" class="dropdown-button" data-activates="reprobacion">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--Cuerpo de la pagina-->
+        <div class="card-panel grey lighten-4">
+            <div class="row">
+                <div class="cajaS col s12 m6 l3"><img class="responsive-img" src="Imagenes/logoSEP.png"></div>
+                <div class="col s12 m12 l6 hide-on-med-and-down">
+                    <div>
+                        <h5 class="center-align">Plan de Estudios</h5>
+                    </div>
+                    <div>
+                        <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
+                    </div>
+                </div>
+                <div class="cajaT col s12 m6 l3"><img class="responsive-img right" src="Imagenes/logoTEC.png"></div>
+                <div class="col s12 m12 hide-on-large-only">
+                    <div>
+                        <h5 class="center-align">Plan de Estudios</h5>
+                    </div>
+                    <div>
+                        <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
+                    </div>
+                </div>
+            </div>
+            <div id="wrapper">
+                <div >
+                    <div class="row">
+                        <table class="centered hide-on-med-and-down">
+                            <thead>
+                                <tr>
+                                    <th>Semestre 1</th>
+                                    <th>Semestre 2</th>
+                                    <th>Semestre 3</th>
+                                    <th>Semestre 4</th>                                    
+                                    <th>Semestre 5</th>
+                                    <th>Semestre 6</th>                                    
+                                    <th>Semestre 7</th>
+                                    <th>Semestre 8</th>                                    
+                                    <th>Semestre 9</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 2</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 4</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 1</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 3</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text" href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 5</h6></a></div><br />Creditos:<br />Tipo: Especialidad</div><br /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row hide-on-large-only">
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 1</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 2</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 3</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 4</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 5</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 6</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 6</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 7</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 5</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 1</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 8</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 2</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 3</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="centered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Semestre 9</th>
+                                    <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 1</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 2</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 3</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Materia 4</h6></a></div><br />Creditos:<br />Tipo: Tronco Comun<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 4</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                    <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6>Espec... 5</h6></a></div><br />Creditos:<br />Tipo: Especialidad<br /></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-    </div>
-    
-    <div  style = "float: left; height: 100px; width: 100px;">
-    	
-    	
-    	<ul class="titulo_carrera">
-			<li>Ingenieria en Gestión Empresarial</li>    	
-    	</ul>
-    	    	
-    </div>
-    
-    <div style = "height: 50px; width: 1350px;">
-    
-    <br><br>
-    	<ul class="nav">            
-            <li><a href="index.php"><font color="white">INICIO</font></a></li>
-            <li><a href="reticula1.php#"><font color="white">RETICULA</font></a>
-            	<ul>
-                    <li><a href="reticula1.php"><font color="white">Especialidad Calidad</font></a></li>
-                    <li><a href="reticula2.php"><font color="white">Especialidad Finanzas</font></a></li>
-                </ul>
-            </li>    
-            <li><a href="reticula1.php#"><font color="white">PERFILES</font></a>
-                <ul>
-                    <li><a href="aspirante.php"><font color="white">Perfil de Aspirante</font></a></li>
-                    <li><a href="egresado.php"><font color="white">Perfil de Egresado</font></a></li>
-                </ul>
-            </li>
-            <li><a href="mision.php"><font color="white">QUIENES SOMOS</font></a></li>
-            <li><a href="orga.php"><font color="white">ORGANIGRAMA</font></a></li>
-            <li><a href="material_apoyo.php"><font color="white">MATERIAL DE APOYO</font></a></li>
-          <li><a href="reticula1.php#"><font color="white">INDICE DE REPROBACIÓN</font></a>
-                <ul>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2015.pdf" target="blank"><font color="white">ENE-JUN 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2015.pdf" target="blank"><font color="white">AGO-DIC 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2016.pdf" target="blank"><font color="white">ENE-JUN 2016</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2016.pdf" target="blank"><font color="white">AGO-DIC 2016</font></a></li>
-              </ul>       
-                    </li>
-                
-        </ul>
-    
-    </div>
-    
-</div>
-<br><br><br>
-
-
-
-<div class="Creticula">
-  <div class="cajaS"><img src="Imagenes/logoSEP.png"></div>
-     <div class="cajaT"><img src="Imagenes/logoTEC.png"><br></div>
-     <br><br><br><br><br>
-	 <br><br><br><br>
-	 
-     <div class="Ctextoa">
-		<div class="letrata"><center>Plan de Estudios</center><br></div>
-		<div class="letram" align="justify">
-
-
-				   <!-- <div class="conten-tabla">
-          <div class="conten-fila"> -->
-        
-          <h3><center>Retícula para la especialidad en Calidad y Logística Empresarial</center></h3>
-        
-          <div id="aplicacionesI">
-            <img src="Imagenes/reticula.jpg">
-            <a id="CalcDif" target="_blank" href="PDF/Reticula/Fundamentos&#32;de&#32;Investigacion.pdf"></a>
-            <a id="Quim" target="_blank" href="PDF/Reticula/AC001&#32;Calculo&#32;Diferencial.pdf"></a>
-            <a id="ProEst" target="_blank" href="PDF/Reticula/Desarrollo&#32;Humano.pdf"></a>
-            <a id="DesHumInt" target="_blank" href="PDF/Reticula/PROGRAMA&#32;FUNDAMENTOS&#32;DE&#32;GESTION&#32;EMPRESARIAL.pdf"></a>
-            <a id="FundInv" target="_blank" href="PDF/Reticula/Fundamentos&#32;de&#32;Fisica.pdf"></a>
-            <a id="TEtica" target="_blank" href="PDF/Reticula/Fundamentos&#32;de&#32;Quimica.pdf"></a>
-            <a id="CalInt" target="_blank" href="PDF/Reticula/softwaredeaplicacionejecutivo.pdf"></a>
-            <a id="MecClas" target="_blank" href="PDF/Reticula/AC002&#32;Calculo&#32;Integral.pdf"></a>
-            <a id="Electro" target="_blank" href="PDF/Reticula/Contabilidad&#32;orientada&#32;a&#32;los&#32;Negocios.pdf"></a>
-            <a id="MedElec" target="_blank" href="PDF/Reticula/Habilidades&#32;Directivas&#32;I.pdf"></a>
-            <a id="DibAsisComp" target="_blank" href="PDF/Reticula/Taller&#32;de&#32;Etica.pdf"></a>
-            <a id="TecnoMat" target="_blank" href="PDF/Reticula/dinamicasocial.pdf"></a>
-            <a id="CalcVec" target="_blank" href="PDF/Reticula/marcolegaldelasorganizaciones.pdf"></a>
-            <a id="AlgLin" target="_blank" href="PDF/Reticula/Probabilidad&#32;y&#32;Estadistica&#32;Descriptiva.pdf"></a>
-            <a id="CircElecI" target="_blank" href="PDF/Reticula/Costos&#32;Empresariales.pdf"></a>
-            <a id="Progra" target="_blank" href="PDF/Reticula/AC003&#32;Algebra&#32;Lineal.pdf"></a>
-            <a id="MecFluidTermo" target="_blank" href="PDF/Reticula/AE071&#32;Economia&#32;Empresarial.pdf"></a>
-            <a id="ComHuman" target="_blank" href="PDF/Reticula/Legislacion&#32;Laboral.pdf"></a>
-            <a id="EcuaDif" target="_blank" href="PDF/Reticula/Ingenieria&#32;Economica.pdf"></a>
-            <a id="FisicaMod" target="_blank" href="PDF/Reticula/Estadistica&#32;Inferencial&#32;I.pdf"></a>
-            <a id="CircElecII" target="_blank" href="PDF/Reticula/Instrumentos&#32;de&#32;Presupuestacion&#32;Empresarial.pdf"></a>
-            <a id="ElectroAnaloga" target="_blank" href="PDF/Reticula/Habilidades&#32;Directivas&#32;II.pdf"></a>
-            <a id="TeoElectro" target="_blank" href="PDF/Reticula/Entorno&#32;Macroeconomico.pdf"></a>
-            <a id="MetNum" target="_blank" href="PDF/Reticula/Investigacion&#32;de&#32;Operaciones.pdf"></a>
-            <a id="ControlI" target="_blank" href="PDF/Reticula/finanzaseenlasorganizaciones.pdf"></a>
-            <a id="EquiposMec" target="_blank" href="PDF/Reticula/Estadistica&#32;Inferencial&#32;II.pdf"></a>
-            <a id="Transform" target="_blank" href="PDF/Reticula/Ingenieria&#32;de&#32;Procesos.pdf"></a>
-            <a id="ElectroDigit" target="_blank" href="PDF/Reticula/AE072&#32;El&#32;emprendedor&#32;y&#32;la&#32;Innovacion.pdf"></a>
-            <a id="InstalElec" target="_blank" href="PDF/Reticula/Taller&#32;de&#32;Investigacion&#32;I.pdf"></a>
-            <a id="DesSusten" target="_blank" href="PDF/Reticula/Mercadotecnia.pdf"></a>
-            <a id="ControlII" target="_blank" href="PDF/Reticula/Administracion&#32;de&#32;la&#32;Salud&#32;y&#32;Seguridad&#32;Ocupacional.pdf"></a>
-            <a id="LegisMatElec" target="_blank" href="PDF/Reticula/Gestion&#32;del&#32;Capital&#32;Humano.pdf"></a>
-            <a id="MacSincCD" target="_blank" href="PDF/Reticula/Gestion&#32;de&#32;la&#32;Produccion&#32;I.pdf"></a>
-            <a id="MotInducEsp" target="_blank" href="PDF/Reticula/disenoorganizacional.pdf"></a>
-            <a id="InstalElecInd" target="_blank" href="PDF/Reticula/Taller&#32;de&#32;Investigacion&#32;II.pdf"></a>
-            <a id="TInvestI" target="_blank" href="PDF/Reticula/Sistemas&#32;de&#32;Informacion&#32;de&#32;Mercadotecnia.pdf"></a>
-            <a id="PrograAplic" target="_blank" href="PDF/Reticula/03&#32;SISTEMAS&#32;DE&#32;GESTION&#32;DE&#32;CALIDAD.pdf"></a>
-            <a id="ControlMacElec" target="_blank" href="PDF/Reticula/Cadena&#32;de&#32;Sumunistros.pdf"></a>
-            <a id="ModelSistElecPot" target="_blank" href="PDF/Reticula/Plan&#32;de&#32;Negocios.pdf"></a>
-            <a id="CentralElec" target="_blank" href="PDF/Reticula/Calidad&#32;Aplicada&#32;a&#32;la&#32;Gestion&#32;Empresarial.pdf"></a>
-            <a id="EletroInd" target="_blank" href="PDF/Reticula/gestiondeestrategia.pdf"></a>
-            <a id="Instrum" target="_blank" href="PDF/Reticula/02&#32;TRAFICO&#32;Y&#32;TRANSPORTE.pdf"></a>
-            <a id="TInvestII" target="_blank" href="PDF/Reticula/AE045&#32;Mercadotecnia&#32;Electronica.pdf"></a>            
-            <a id="RedesComInd" target="_blank" href="PDF/Reticula/05&#32;LOGISTICA&#32;INTERNACIONAL.pdf"></a>
-            
-            <a id="CostPresProyElec" target="_blank" href="PDF/Reticula/04&#32;PROCESOS&#32;DE&#32;MEJORA&#32;CONTINUA.pdf"></a>
-            <a id="GestEmpreLider" target="_blank" href="PDF/Reticula/06&#32;ADQUISICIONES&#32;Y&#32;ALMACENES.pdf"></a>
-            <a id="ControlLogicProgra" target="_blank" href="PDF/Reticula/Gestion&#32;de&#32;la&#32;Produccion&#32;II.pdf"></a>
-            <a id="PruebMantElec" target="_blank" href="http://sagitario.itmorelia.edu.mx/ige/PDF/Reticula/Pruebas_y_Mantenimiento_electrico.pdf"></a>
-            <a id="SistemIlum" target="_blank" href="PDF/Reticula/Desarrollo&#32;Sustentable.pdf"></a>
-            <a id="ModFin" target="_blank" href="PDF/Reticula/01&#32;TOPICOS&#32;DE&#32;CALIDAD.pdf"></a>
-            <a id="FinanzasInter" target="_blank" href="PDF/Reticula/03&#32;SISTEMAS&#32;DE&#32;GESTION&#32;DE&#32;CALIDAD.pdf"></a>
-          </div>
-          	
-
-		</div>
-
-	</div>
-
-
-
-
-
-
-
-</div>
-
-<div  class="letra_pie">
-<div class="Cpie_index">
-<div class="CSocial">
-<div class="titulos_pie"><center>Redes Sociales</center><br></div>
-<div class="CSocial2">
-<a id="link" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"> <img src="Imagenes/face.jpg">Facebook<br></a>
-<a  id="link" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/tiwter.jpg">Twitter<br></a>
-<a  id="link" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube<br> </a>
-<a  id="link" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin<br></a>
-</div>
-</div>
-<div class="CVinculo">
-<div class="titulos_pie">Vínculos Académicos</center><br><br></div>
-<a  id="link" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México<br><br></a>
-<a   id="link" href="http://www.ets.org/es/toefl"  target="_blank">Toefl<br><br></a>
-<a   id="link" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval<BR><br></a>
-<a    id="link" href="http://www.anfei.mx/" target="_blank">Anfei<BR><br></a>
-<a     id="link" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología<br><br></a>
-</div>
-<div class="CContactar">
-<div class="titulos_pie">Contactanos</div><br><br>
-<a id="link2">Teléfonos:</a><br>
-4433121570 Ext.248<br><br>
-<a id="link2">Email:</a><br><a id="link" >ige@itmorelia.edu.mx</a><br><br>
-<a id="link2">Dirección:</a><br>
-Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia, Michoacán, México.<br>
-</div> 
-
-</div>
-Derechos Reservados. © 2017 Instituto Tecnológico de Morelia.
-</div>
-
-          
-
-
+        <footer class="page-footer grey darken-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Redes Sociales</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"><img src="Imagenes/face.jpg">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/twitter.jpg">Twitter</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Vínculos Académicos</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.ets.org/es/toefl"  target="_blank">Toefl</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.anfei.mx/" target="_blank">Anfei</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5 class="white-text">Contáctanos</h5>
+                        <ul>
+                            Teléfonos: 4433121570 Ext.248<br />
+                            Email: metal_Mecánica@itmorelia.edu.mx<br />
+                            Dirección: Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia,     Michoacán, México.<br />
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Derechos Reservados. © 2018 Instituto Tecnológico de Morelia.
+                </div>
+            </div>
+        </footer>
     </body>
-    </html>                            
-                                 
+</html> 

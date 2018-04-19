@@ -146,9 +146,14 @@ tama�o conforme al menu- absolute */
     width:90%;
     height:100%;
     margin-top: 5%;
-
-    margin-left: 5%;
-   
+    margin-left: 5%;  
+    border-bottom: solid iem*
+ }
+ .panelcentral{
+    width:90%;
+    height:100%;
+    margin-top: 5%;
+    margin-left: 5%;  
     border-bottom: solid iem*
  }
 /*FIN DE INDEX*/
