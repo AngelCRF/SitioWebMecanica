@@ -15,4 +15,3 @@ function agregarpersonal(){
     xhr.send();
     $('select').material_select();
 }
-

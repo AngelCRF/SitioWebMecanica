@@ -1,6 +1,22 @@
+<?php 
+    session_start();
+    if($_SESSION['result'] == 'guardado'){
+        echo "<h2 style=\"background-color: green;\">Guardado exitosamente<h2>";
+    }
+    if($_SESSION['result'] == 'editado'){
+        echo "<h2 style=\"background-color: green;\">Editado exitosamente<h2>";
+    }
+    if($_SESSION['result'] == 'eliminado'){
+        echo "<h2 style=\"background-color: green;\">Eliminado exitosamente<h2>";
+    }
+    if($_SESSION['result'] == 'error'){
+        echo "<h2 style=\"background-color: red;\">Error, vuelva a intentarlo<h2>";
+    }
+    $_SESSION['result']= "";
+
+?>
 <!DOCTYPE html>
 <!-- Artesania y loza Mexicana -->
-
 <html lang="es">
     <head>
         <title>ITMORELIA| Dept. Metal-Mec�nica</title>
@@ -42,62 +58,131 @@
   </nav>
 
   <nav class="hide-on-med-and-down">
-    <div class="nav-wrapper grey darken-1 center-align">
-        <ul class="center hide-on-med-and-down">
-            <li><a href="index.php"><i class="material-icons">Personal</i></a></li>
-            <li><a href="index.php"><i class="material-icons">Reticula</i></a></li>
-        </ul>
+        <div class="nav-wrapper grey darken-1 center-align">
+            <ul class="center hide-on-med-and-down">
+                <li><a href="index.php"><i class="material-icons">Personal</i></a></li>
+                <li><a href="index.php"><i class="material-icons">Reticula</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECCION PARA AGREGAR A LOS PROFESORES -->
+    <div class="Cprincipal_index card-panel grey lighten-4">
+        <h1>Agregar Personal</h1>
+        <form action="subirPersonal.php" method="post" enctype="multipart/form-data">
+            <input type="text" name= "nombreprofesor" id="nombreprofesor" placeholder="Nombre del profesor">
+            <div class="input-field col s12">
+            <select id="puesto" name="puesto">
+                <option value="Profesor">Profesor</option>
+                <option value="Jefe_de_departamento">Jefe de departamento</option>
+                <option value="presidente_de_academia">Presidente de academia</option>
+                <option value="secretario_de_academia">Secretario de academia</option>
+                <option value="coordinador_de_carrera">coordinador de carrera</option>
+                <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
+                <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
+                <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
+                <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
+            </select>
+            <label>Puesto</label>
+            </div>
+
+            <div class="input-field col s12">
+            <select id="carrera" name="carrera">
+                <option value="mecanica">Mec&aacutencia</option>
+                <option value="mecatronica">Mecatr&oacutenica</option>
+            </select>
+            <label>Carrera</label>
+            </div>
+            <label for="archivo">Seleccione un archivo para subir</label>  
+            <br>
+            <input type="file"  accept="application/pdf" name="archivo" id="archivo">
+            <input type="submit" value="Guardar">
+        </form>
     </div>
-</nav>
+
+    <!-- SECCION PARA EDITAR A LOS PROFESORES -->
+    <div class="Cprincipal_index card-panel grey lighten-4">
+        <h1>Editar Personal</h1>
+        <form action="editarPersonal.php" method="post" enctype="multipart/form-data">
+            <div class="input-field col s12">
+                <select id="nombreprofesorEditar" class="nombreprofesorEditar" name="nombreprofesorEditar">
+                    <option value="" disabled selected>Elija un profesor</option>
+                    <?php
+                    //Conexion a la base de datos
+                    require_once("DB.php");
+                    $db = new DB();
+                    $SQL = "SELECT nombre FROM profesor";
+                    $resultado = $db->ejecutar($SQL);
+                    foreach($resultado as $fila){
+                        $json= json_decode($fila[0]);
+                    ?>
+                    <option value="<?=$fila[0]?>">
+                    <?=$fila[0]?>
+                    </option>  
+                    <?php
+                    }
+                    ?>
+                </select>
+                <label>Profesor</label>
+            </div>
+            <div class="input-field col s12">
+            <select id="puestoeditar" name="puestoeditar">
+                <option value="Profesor">Profesor</option>
+                <option value="Jefe_de_departamento">Jefe de departamento</option>
+                <option value="presidente_de_academia">Presidente de academia</option>
+                <option value="secretario_de_academia">Secretario de academia</option>
+                <option value="coordinador_de_carrera">coordinador de carrera</option>
+                <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
+                <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
+                <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
+                <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
+            </select>
+            <label>Puesto</label>
+            </div>
+
+            <div class="input-field col s12">
+            <select id="carreraeditar" name="carreraeditar">
+                <option value="mecanica">Mec&aacutencia</option>
+                <option value="mecatronica">Mecatr&oacutenica</option>
+            </select>
+            <label>Carrera</label>
+            </div>
+            <label for="archivo">Seleccione un archivo para subir</label>  
+            <br>
+            <input type="file"  accept="application/pdf" name="archivo" id="archivo">
+            <input type="submit" value="Guardar">
+        </form>
+    </div>
+
+    <!-- SECCION PARA ELIMINAR A LOS PROFESORES -->
+    <div class="Cprincipal_index card-panel grey lighten-4">
+        <h1>Eliminar Personal</h1>
+        <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data">
+            <div class="input-field col s12">
+                <select id="eliminarp" name="eliminarp">
+                    <option value="" disabled selected>Elija un profesor</option>
+                    <?php
+                    //Conexion a la base de datos
+                    require_once("DB.php");
+                    $db = new DB();
+                    $SQL = "SELECT nombre FROM profesor";
+                    $resultado = $db->ejecutar($SQL);
+                    foreach($resultado as $fila){
+                        $json= json_decode($fila[0]);
+                    ?>
+                    <option value="<?=$fila[0]?>">
+                    <?=$fila[0]?>
+                    </option>  
+                    <?php
+                    }
+                    ?>
+                </select>
+                <label>Eliminar</label>
+            </div>
+            <input type="submit" name="submit" value="Eliminar">
+            </form>
         
-  <div class="Cprincipal_index card-panel grey lighten-4">
-    <h1>Personal</h1>
-    <div class="sitios_interes2 container">
-      <center class="flow-text grey-text ">Agregar curriculum de profesor</center><br>
-    </div>
-
-    <form action="subirPersonal.php" method="post" enctype="multipart/form-data">
-        <input type="text" name= "nombreprofesor" id="nombreprofesor" placeholder="Nombre del profesor">
-        <div class="input-field col s12">
-          <select id="puesto">
-            <option value="Profesor">Profesor</option>
-            <option value="Jefe de departamento">Jefe de departamento</option>
-            <option value="presidente de academia">Presidente de academia</option>
-            <option value="secretario de academia">Secretario de academia</option>
-            <option value="coordinador de carrera">coordinador de carrera</option>
-            <option value="coordinador de programa de tutorias">coordinador de programa de tutorias</option>
-            <option value="Jefe de proyecto de docencia">Jefe de proyecto de docencia</option>
-            <option value="Jefe de proyecto de vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
-            <option value="Jefe de proyecto de investigacion">Jefe de proyecto de investigaci&oacuten</option>
-          </select>
-          <label>Puesto</label>
-        </div>
-
-        <div class="input-field col s12">
-          <select id="carrera">
-            <option value="mecanica">Mec&aacutencia</option>
-            <option value="mecatronica">Mecatr&oacutenica</option>
-          </select>
-          <label>Carrera</label>
-        </div>
-        <label for="archivo">Seleccione un archivo para subir</label>  
-        <br>
-        <input type="file" name="archivo" id="archivo">
-    </form>
-
-
-  </div>
-
-    <div class="Cprincipal_index card-panel grey lighten-4">
-        <div class="sitios_interes2 container">
-        <center class="flow-text grey-text ">Editar </center><br>
-        </div>
-    </div>
-
-    <div class="Cprincipal_index card-panel grey lighten-4">
-        <div class="sitios_interes2 container">
-        <center class="flow-text grey-text ">Edición de Tercer sitio</center><br>
-        </div>
+       
     </div>
 
  <!--Pie de pagina, datos de contato-->
