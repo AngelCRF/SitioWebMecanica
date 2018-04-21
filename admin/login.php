@@ -3,40 +3,32 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Dept. Metal-Mec�nica</title>
-        <meta charset="utf-8"/>
-       
-        <meta name="keywords" content="pagina de IGE"/>
-        
-        <meta name="author" content="Neri Gonzalez Lopez"/>
-        <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-
-        <!-- Materialized libraries -->
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-           <!--Import jQuery before materialize.js-->
+      <title>ITMORELIA| Dept. Metal-Mec�nica</title>
+      <meta charset="utf-8"/>
+      <meta name="keywords" content="pagina de IGE"/>
+      <meta name="author" content="Neri Gonzalez Lopez"/>
+      <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
+      <!-- Materialized libraries -->
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-         <link rel="stylesheet" type="text/css" href="index.css" />
-        <style type="text/css">
-            body{
-                background: #dddddd;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-attachment: fixed;
-           }
-        </style>
-       </head>
-
-
-<body >
-
-
- <!--Pie de pagina, datos de contato-->
- <footer class="page-footer grey darken-1">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="index.css" />
+      <style type="text/css">
+        body{
+          background: #dddddd;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-attachment: fixed;
+        }
+      </style>
+      </head>
+<body>
+<!--Pie de pagina, datos de contato-->
+<footer class="page-footer grey darken-1">
           <div class="container">
             <div class="row">
               <div class="col l4 s12">
