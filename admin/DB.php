@@ -20,30 +20,10 @@ class DB{
     
     public function ejecutar($sql){
         if($this->conexion){
-            
             return $this->conexion->query($sql)->fetchAll();
-            
-        
         }else{
             return null;
         }
-    }
-    
-    //Este deberia estar en el modelo...
-    public function consultaPreparada($name, $pass){
-        
-        $sql = "SELECT * FROM usuarios WHERE nombre=:name and password=:pass";
-        $sentencia = $this->conexion->prepare($sql);
-        
-        $sentencia->bindParam(":pass", $pass);
-        $sentencia->bindParam(":name", $name);
-        $sentencia->execute();
-        
-        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
-        
-        $resultado = $sentencia->fetchAll();
-        
-        return $resultado;
     }
 
     //función para insertar un profesor en la base de datos

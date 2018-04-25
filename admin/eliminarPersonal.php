@@ -7,16 +7,18 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
     }
 
     extract($_POST);
+    //falta eliminar el archivo
                 if($eliminarp!=""){
                     $conexion = new DB();
                     $resultado = $conexion->eliminarProfesor($eliminarp);
+                    session_start();
                     if($resultado>0){
-                        session_start();
                         $_SESSION['result'] = 'eliminado';
                         header('Location: prueba_admin.php');
                         
                     }
                     else{
+                        $_SESSION['result'] = 'error';
                         echo "Error de consulta";
                     }
             }   

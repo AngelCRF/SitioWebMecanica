@@ -1,19 +1,6 @@
 <?php 
+#inicio de sesión para variables de verificación 
     session_start();
-    if($_SESSION['result'] == 'guardado'){
-        echo "<h2 style=\"background-color: green;\">Guardado exitosamente<h2>";
-    }
-    if($_SESSION['result'] == 'editado'){
-        echo "<h2 style=\"background-color: green;\">Editado exitosamente<h2>";
-    }
-    if($_SESSION['result'] == 'eliminado'){
-        echo "<h2 style=\"background-color: green;\">Eliminado exitosamente<h2>";
-    }
-    if($_SESSION['result'] == 'error'){
-        echo "<h2 style=\"background-color: red;\">Error, vuelva a intentarlo<h2>";
-    }
-    $_SESSION['result']= "";
-
 ?>
 <!DOCTYPE html>
 <!-- Artesania y loza Mexicana -->
@@ -42,6 +29,7 @@
                 background-attachment: fixed;
            }
         </style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        </head>
 
 
@@ -60,53 +48,96 @@
   <nav class="hide-on-med-and-down">
         <div class="nav-wrapper grey darken-1 center-align">
             <ul class="center hide-on-med-and-down">
-                <li><a href="index.php"><i class="material-icons">Personal</i></a></li>
-                <li><a href="index.php"><i class="material-icons">Reticula</i></a></li>
+                <li><a href=""><i class="material-icons">Personal</i></a></li>
+                <li><a href=""><i class="material-icons">Reticula</i></a></li>
             </ul>
         </div>
     </nav>
 
+    <?php 
+    #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
+    if($_SESSION['result'] == 'guardado'){
+        echo '<script>';
+        echo 'alert("Profesor guardado exitosamente!");';
+        echo '</script>';
+        //echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Guardado exitosamente</H2></div></nav>";
+    }
+    if($_SESSION['result'] == 'editado'){
+        echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Editado exitosamente</H2></div></nav>";
+    }
+    if($_SESSION['result'] == 'eliminado'){
+        echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Eliminado exitosamente</H2></div></nav>";
+    }
+    if($_SESSION['result'] == 'error'){
+        echo "<nav><div class=\"nav-wrapper red accent-3\"><H2>Error, vuelva a intentarlo</H2></div></nav>";
+    }
+    $_SESSION['result']= "";
+    ?>
+
     <!-- SECCION PARA AGREGAR A LOS PROFESORES -->
     <div class="Cprincipal_index card-panel grey lighten-4">
         <h1>Agregar Personal</h1>
-        <form action="subirPersonal.php" method="post" enctype="multipart/form-data">
+        <form action="subirPersonal.php" method="post" enctype="multipart/form-data" id="agregarPersonalForm">
             <input type="text" name= "nombreprofesor" id="nombreprofesor" placeholder="Nombre del profesor">
             <div class="input-field col s12">
-            <select id="puesto" name="puesto">
-                <option value="Profesor">Profesor</option>
-                <option value="Jefe_de_departamento">Jefe de departamento</option>
-                <option value="presidente_de_academia">Presidente de academia</option>
-                <option value="secretario_de_academia">Secretario de academia</option>
-                <option value="coordinador_de_carrera">coordinador de carrera</option>
-                <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
-                <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
-                <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
-                <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
-            </select>
-            <label>Puesto</label>
+                <select id="puesto" name="puesto">
+                    <option value="Profesor">Profesor</option>
+                    <option value="Jefe_de_departamento">Jefe de departamento</option>
+                    <option value="presidente_de_academia">Presidente de academia</option>
+                    <option value="secretario_de_academia">Secretario de academia</option>
+                    <option value="coordinador_de_carrera">coordinador de carrera</option>
+                    <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
+                    <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
+                    <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
+                    <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
+                </select>
+                <label>Puesto</label>
             </div>
 
             <div class="input-field col s12">
-            <select id="carrera" name="carrera">
-                <option value="mecanica">Mec&aacutencia</option>
-                <option value="mecatronica">Mecatr&oacutenica</option>
-            </select>
-            <label>Carrera</label>
+                <select id="carrera" name="carrera">
+                    <option value="mecanica">Mec&aacutencia</option>
+                    <option value="mecatronica">Mecatr&oacutenica</option>
+                </select>
+                <label>Carrera</label>
+            </div>
+            <br>
+
+            <label for="archivo">Seleccione una foto para subir</label>  
+            <br>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Foto</span>
+                    <input type="file" accept="image/*" name="archivoFoto" id="archivoFoto">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
             </div>
             <label for="archivo">Seleccione un archivo para subir</label>  
             <br>
-            <input type="file"  accept="application/pdf" name="archivo" id="archivo">
-            <input type="submit" value="Guardar">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Curriculum</span>
+                    <input type="file" accept="application/pdf" name="archivo" id="archivo">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+                <i class="material-icons right">save</i>
+            </button>
         </form>
     </div>
 
     <!-- SECCION PARA EDITAR A LOS PROFESORES -->
     <div class="Cprincipal_index card-panel grey lighten-4">
         <h1>Editar Personal</h1>
-        <form action="editarPersonal.php" method="post" enctype="multipart/form-data">
+        <form action="editarPersonal.php" method="post" enctype="multipart/form-data" id="editarPersonalForm">
             <div class="input-field col s12">
                 <select id="nombreprofesorEditar" class="nombreprofesorEditar" name="nombreprofesorEditar">
-                    <option value="" disabled selected>Elija un profesor</option>
+                    <!-- <option value="disable" disabled selected>Elija un profesor</option> -->
                     <?php
                     //Conexion a la base de datos
                     require_once("DB.php");
@@ -126,41 +157,61 @@
                 <label>Profesor</label>
             </div>
             <div class="input-field col s12">
-            <select id="puestoeditar" name="puestoeditar">
-                <option value="Profesor">Profesor</option>
-                <option value="Jefe_de_departamento">Jefe de departamento</option>
-                <option value="presidente_de_academia">Presidente de academia</option>
-                <option value="secretario_de_academia">Secretario de academia</option>
-                <option value="coordinador_de_carrera">coordinador de carrera</option>
-                <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
-                <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
-                <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
-                <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
-            </select>
-            <label>Puesto</label>
+                <select id="puestoeditar" name="puestoeditar">
+                    <option value="Profesor">Profesor</option>
+                    <option value="Jefe_de_departamento">Jefe de departamento</option>
+                    <option value="presidente_de_academia">Presidente de academia</option>
+                    <option value="secretario_de_academia">Secretario de academia</option>
+                    <option value="coordinador_de_carrera">coordinador de carrera</option>
+                    <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
+                    <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
+                    <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
+                    <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
+                </select>
+                <label>Puesto</label>
             </div>
-
             <div class="input-field col s12">
-            <select id="carreraeditar" name="carreraeditar">
-                <option value="mecanica">Mec&aacutencia</option>
-                <option value="mecatronica">Mecatr&oacutenica</option>
-            </select>
-            <label>Carrera</label>
+                <select id="carreraeditar" name="carreraeditar">
+                    <option value="mecanica">Mec&aacutencia</option>
+                    <option value="mecatronica">Mecatr&oacutenica</option>
+                </select>
+                <label>Carrera</label>
+            </div>
+            <label for="archivo">Seleccione una foto para subir</label>  
+            <br>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Foto</span>
+                    <input type="file" accept="image/*" name="archivoFotoe" id="archivoFotoe">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
             </div>
             <label for="archivo">Seleccione un archivo para subir</label>  
             <br>
-            <input type="file"  accept="application/pdf" name="archivo" id="archivo">
-            <input type="submit" value="Guardar">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" accept="application/pdf" name="archivoe" id="archivoe">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Editar
+                <i class="material-icons right">system_update_alt</i>
+            </button>
         </form>
     </div>
 
     <!-- SECCION PARA ELIMINAR A LOS PROFESORES -->
     <div class="Cprincipal_index card-panel grey lighten-4">
         <h1>Eliminar Personal</h1>
-        <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data">
+        <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data" id="eliminarPersonalForm">
             <div class="input-field col s12">
                 <select id="eliminarp" name="eliminarp">
-                    <option value="" disabled selected>Elija un profesor</option>
+                    <option value="x" disabled selected>Elija un profesor</option>
                     <?php
                     //Conexion a la base de datos
                     require_once("DB.php");
@@ -179,17 +230,12 @@
                 </select>
                 <label>Eliminar</label>
             </div>
-            <input type="submit" name="submit" value="Eliminar">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Eliminar
+                <i class="material-icons right">delete_forever</i>
+            </button>
             </form>
         
        
     </div>
-
- <!--Pie de pagina, datos de contato-->
- <div id="feet" class="feet">
-            <script type="text/javascript">
-                    $("#feet").load("footer.html");
-            </script> 
-        </div>
     </body>
 </html> 
