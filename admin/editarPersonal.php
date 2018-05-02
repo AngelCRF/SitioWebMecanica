@@ -2,6 +2,7 @@
 session_start();
 require_once("DB.php");
 if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
+    
     foreach($_POST as $indice => $valor){
         $_POST[$indice] = htmlspecialchars($valor);
     }
