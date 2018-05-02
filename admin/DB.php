@@ -101,4 +101,83 @@ class DB{
         $resultado = $sentencia->fetchAll();
         return $resultado;
     }
+
+    //Funciones para administrar materias
+    public function insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria){
+        $sql = "INSERT INTO materias VALUES(null, :materia, :creditos, :tipo, :semestre, :urlarchivo, :carrera, :abreviacion)";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":materia", $nombremateria);
+        $sentencia->bindParam(":creditos", $creditosmateria);
+        $sentencia->bindParam(":tipo", $tipomateria);
+        $sentencia->bindParam(":semestre", $semestremateria);
+        $sentencia->bindParam(":urlarchivo", $archivo);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":abreviacion", $abreviacionmateria);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function editarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria){
+        $sql = "UPDATE materias SET VALUES creditos=:creditos, tipo=:tipo, semestre=:semestre, url=:urlarchivo,  carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":materia", $nombremateria);
+        $sentencia->bindParam(":creditos", $creditosmateria);
+        $sentencia->bindParam(":tipo", $tipomateria);
+        $sentencia->bindParam(":semestre", $semestremateria);
+        $sentencia->bindParam(":urlarchivo", $archivo);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":abreviacion", $abreviacionmateria);
+        $sentencia->execute(); 
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function eliminarMateria($nombremateria){
+        $sql = "DELETE FROM materias WHERE materia=:nombremateria";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nombremateria", $nombremateria);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function obtenerDatosMateria($nombremateria){
+        $sql = "SELECT materia,creditos,tipo,semestre,carrera,abreviacion FROM materias WHERE materia=:nombremateria";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nombremateria", $nombremateria);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function obtenerArchivoMaterias($nombremateria){
+        $sql = "SELECT url FROM materias WHERE materia=:nombremateria";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nombremateria", $nombremateria);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+    
+    public function editarMateriaElse($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria){
+        $sql = "UPDATE materias SET VALUES creditos=:creditos, tipo=:tipo, semestre=:semestre, carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":materia", $nombremateria);
+        $sentencia->bindParam(":creditos", $creditosmateria);
+        $sentencia->bindParam(":tipo", $tipomateria);
+        $sentencia->bindParam(":semestre", $semestremateria);
+        $sentencia->bindParam(":urlarchivo", $archivo);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":abreviacion", $abreviacionmateria);
+        $sentencia->execute(); 
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
 }

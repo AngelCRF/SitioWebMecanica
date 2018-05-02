@@ -45,10 +45,7 @@
        </head>
 
 
-<body >
-      
-      
-    
+<body>
   <!--encabezado y menus-->
   <nav>
     <div class="nav-wrapper grey darken-1">
@@ -80,6 +77,7 @@
                     </select>
                     <label>Carrera</label>
                 </div>
+                <input type="text" name= "abreviacionmateria" id="abreviacionmateria" placeholder="Abreviación de la materia">
                 <label for="archivo">Seleccione un archivo para subir</label>  
                 <br>
                 <div class="file-field input-field">
@@ -97,92 +95,69 @@
             </form>
         </div>
 
-    <!-- SECCION PARA EDITAR A LOS PROFESORES -->
+    <!-- SECCION PARA EDITAR A LAS MATERIAS -->
     <div class="Cprincipal_index card-panel grey lighten-4">
-        <h1>Editar Personal</h1>
-        <form action="editarPersonal.php" method="post" enctype="multipart/form-data" id="editarPersonalForm">
+        <h1>Editar Materias</h1>
+        <form action="editarMateria.php" method="post" enctype="multipart/form-data" id="editarMateriaForm">
             <div class="input-field col s12">
-                <select id="nombreprofesorEditar" class="nombreprofesorEditar" name="nombreprofesorEditar">
-                    <!-- <option value="disable" disabled selected>Elija un profesor</option> -->
+                <select id="nombremateriaEditar" class="nombremateriaEditar" name="nombremateriaEditar">
                     <?php
-                    //Conexion a la base de datos
-                    require_once("DB.php");
-                    $db = new DB();
-                    $SQL = "SELECT nombre FROM profesor";
-                    $resultado = $db->ejecutar($SQL);
-                    foreach($resultado as $fila){
-                        $json= json_decode($fila[0]);
+                        require_once("DB.php");
+                        $db = new DB();
+                        $SQL = "SELECT materia FROM materias";
+                        $resultado = $db->ejecutar($SQL);
+                        foreach($resultado as $fila){
+                            $json= json_decode($fila[0]);
                     ?>
                     <option value="<?=$fila[0]?>">
-                    <?=$fila[0]?>
+                        <?=$fila[0]?>
                     </option>  
                     <?php
-                    }
+                        }
                     ?>
                 </select>
-                <label>Profesor</label>
+                <label>Materias</label>
             </div>
-            <div class="input-field col s12">
-                <select id="puestoeditar" name="puestoeditar">
-                    <option value="Profesor">Profesor</option>
-                    <option value="Jefe_de_departamento">Jefe de departamento</option>
-                    <option value="presidente_de_academia">Presidente de academia</option>
-                    <option value="secretario_de_academia">Secretario de academia</option>
-                    <option value="coordinador_de_carrera">coordinador de carrera</option>
-                    <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
-                    <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
-                    <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
-                    <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>
-                </select>
-                <label>Puesto</label>
-            </div>
-            <div class="input-field col s12">
-                <select id="carreraeditar" name="carreraeditar">
-                    <option value="mecanica">Mec&aacutencia</option>
-                    <option value="mecatronica">Mecatr&oacutenica</option>
-                </select>
-                <label>Carrera</label>
-            </div>
-            <label for="archivo">Seleccione una foto para subir</label>  
-            <br>
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Foto</span>
-                    <input type="file" accept="image/*" name="archivoFotoe" id="archivoFotoe">
+                <input type="number"  min="0" max="11" name= "creditosmateria" id="creditosmateria" placeholder="Creditos de la materia">
+                <input type="text" name= "tiposmateria" id="tipomateria" placeholder="Tipo de la materia">
+                <input type="number"  min="1" max="12" name= "semestremateria" id="semestremateria" placeholder="Semestre de la materia">
+                <div class="input-field col s12">
+                    <select id="carrera" name="carrera">
+                        <option value="mecanica">Mec&aacutencia</option>
+                        <option value="mecatronica">Mecatr&oacutenica</option>
+                    </select>
+                    <label>Carrera</label>
                 </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
+                <input type="text" name= "abreviacionmateria" id="abreviacionmateria" placeholder="Abreviación de la materia">
+                <label for="archivo">Seleccione un archivo para subir</label>  
+                <br>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Programa</span>
+                        <input type="file"  accept="application/pdf" name="archivo" id="archivo">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
                 </div>
-            </div>
-            <label for="archivo">Seleccione un archivo para subir</label>  
-            <br>
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>File</span>
-                    <input type="file" accept="application/pdf" name="archivoe" id="archivoe">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                <i class="material-icons right">system_update_alt</i>
-            </button>
-        </form>
-    </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Editar
+                    <i class="material-icons right">system_update_alt</i>
+                </button>
+            </form>
+        </div>
 
-    <!-- SECCION PARA ELIMINAR A LOS PROFESORES -->
+    <!-- SECCION PARA ELIMINAR LAS MATERIAS -->
     <div class="Cprincipal_index card-panel grey lighten-4">
-        <h1>Eliminar Personal</h1>
-        <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data" id="eliminarPersonalForm">
+        <h1>Eliminar Materias</h1>
+        <form action="eliminarMateria.php" method="post" enctype="multipart/form-data" id="eliminarMateriaForm">
             <div class="input-field col s12">
-                <select id="eliminarp" name="eliminarp">
-                    <option value="x" disabled selected>Elija un profesor</option>
+                <select id="eliminarmateria" name="eliminarmateria">
+                    <option value="x" disabled selected>Elija una materia</option>
                     <?php
                     //Conexion a la base de datos
                     require_once("DB.php");
                     $db = new DB();
-                    $SQL = "SELECT nombre FROM profesor";
+                    $SQL = "SELECT materia FROM materias";
                     $resultado = $db->ejecutar($SQL);
                     foreach($resultado as $fila){
                         $json= json_decode($fila[0]);
@@ -200,8 +175,6 @@
                 <i class="material-icons right">delete_forever</i>
             </button>
             </form>
-        
-       
     </div>
     </body>
 </html> 
