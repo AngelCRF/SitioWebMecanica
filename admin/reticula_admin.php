@@ -118,6 +118,8 @@
                 </select>
                 <label>Materias</label>
             </div>
+            <br>
+            <br>
                 <input type="number"  min="0" max="11" name= "creditosmateria" id="creditosmateria" placeholder="Creditos de la materia">
                 <input type="text" name= "tiposmateria" id="tipomateria" placeholder="Tipo de la materia">
                 <input type="number"  min="1" max="12" name= "semestremateria" id="semestremateria" placeholder="Semestre de la materia">
@@ -128,6 +130,8 @@
                     </select>
                     <label>Carrera</label>
                 </div>
+                <br>
+                <br>
                 <input type="text" name= "abreviacionmateria" id="abreviacionmateria" placeholder="Abreviación de la materia">
                 <label for="archivo">Seleccione un archivo para subir</label>  
                 <br>
@@ -171,6 +175,9 @@
                 </select>
                 <label>Eliminar</label>
             </div>
+            <br>
+            <br>
+            <br>
             <button class="btn waves-effect waves-light" type="submit" name="action">Eliminar
                 <i class="material-icons right">delete_forever</i>
             </button>
