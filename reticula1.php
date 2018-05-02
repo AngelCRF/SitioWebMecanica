@@ -38,11 +38,11 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <div id="navbar" class="navbar">
             <script type="text/javascript">
-                    $("#navbar").load("navbar.html");
+                $("#navbar").load("navbar.html");
             </script> 
         </div>
         <!--Cuerpo de la pagina-->
-        <div class="card-panel grey lighten-4">
+        <div class=" Cprincipal_index card-panel grey lighten-4">
             <div class="row">
                 <div class="cajaS col s12 m6 l3"><img class="responsive-img" src="Imagenes/logoSEP.png"></div>
                 <div class="col s12 m12 l6 hide-on-med-and-down">
@@ -88,7 +88,7 @@
         </div>
         <div id="feet" class="feet">
             <script type="text/javascript">
-                    $("#feet").load("footer.html");
+                $("#feet").load("footer.html");
             </script> 
         </div>
     </body>

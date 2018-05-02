@@ -30,7 +30,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -50,7 +50,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -70,7 +70,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -90,7 +90,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -110,7 +110,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -130,7 +130,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -150,7 +150,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -170,7 +170,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -190,7 +190,7 @@
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -224,7 +224,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -252,7 +252,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -280,7 +280,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -308,7 +308,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -336,7 +336,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -364,7 +364,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -392,7 +392,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -420,7 +420,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -448,7 +448,7 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
                         }
