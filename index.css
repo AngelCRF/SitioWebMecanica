@@ -43,13 +43,13 @@
 
 }
 
-/*Sitios de interés*/
+/*Sitios de interï¿½s*/
 .sitios_interes2{
 
 
-
-    font-family: sans-serif;
-    font-size: 40px;
+    margin-top: 5%;
+    
+    font-size: 60px;
     color:#6c132b;
     font-weight: bold;
   
@@ -113,7 +113,7 @@ quita subrayado  textdecoration*/
 
 /*desaparece submenus
 
-tamaño conforme al menu- absolute */
+tamaï¿½o conforme al menu- absolute */
 
 .nav li ul{
     display: none;
@@ -143,25 +143,20 @@ tamaño conforme al menu- absolute */
 /*INDEX*/
 
 .Cprincipal_index{
-    
     width:90%;
-    height:1500px;
-    background-image: url(Imagenes/fondo1.png);
-    margin-left: 5%;
-   border: solid 0.1em black;
+    height:100%;
+    margin-top: 5%;
+    margin-left: 5%;  
     border-bottom: solid iem*
-
-   
-   
+ }
+ .panelcentral{
+    width:90%;
+    height:100%;
+    margin-top: 5%;
+    margin-left: 5%;  
+    border-bottom: solid iem*
  }
 /*FIN DE INDEX*/
-
-
-
-
-
-
-
 
 /* ASPIRANTE EGRESADO y Organigrama*/
  .Cprincipal_aspirante{
@@ -316,7 +311,7 @@ font-family: sans-serif;
    
    margin-left: 4%;
     border: solid 0.1em black;
-    border-bottom: solid iem*;
+    border-bottom: solid iem*
     
     
  }
@@ -1133,7 +1128,7 @@ Organigrama2{
 
 
 
-/* ubicación de una materia de la retícula */
+/* ubicaciï¿½n de una materia de la retï¿½cula */
 #ModFin{
     right: 360px;
     top: 580px;
