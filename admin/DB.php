@@ -27,14 +27,15 @@ class DB{
     }
 
     //función para insertar un profesor en la base de datos
-    public function insertarProfesor($nombreprofesor, $puesto, $carrera, $archivo){
+    public function insertarProfesor($nombreprofesor, $puesto, $carrera, $archivo, $foto){
 
-        $sql = "INSERT INTO profesor VALUES(null, :nombre, :tipo, :carrera, :archivo)";
+        $sql = "INSERT INTO profesor VALUES(null, :nombre, :tipo, :carrera, :archivo, :foto)";
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->bindParam(":nombre", $nombreprofesor);
         $sentencia->bindParam(":tipo", $puesto);
         $sentencia->bindParam(":carrera", $carrera);
         $sentencia->bindParam(":archivo", $archivo);
+        $sentencia->bindParam(":foto", $foto);
         $sentencia->execute();
         
         $sentencia->setFetchMode(PDO::FETCH_ASSOC);
@@ -43,12 +44,26 @@ class DB{
         return $resultado;
     }
 
-    public function editarProfesor($nombreprofesor, $puesto, $carrera, $archivo){
+    public function editarProfesorFoto($nombreprofesor, $puesto, $carrera, $foto){
 
-        $sql = "UPDATE profesor SET VALUES tipo=:puesto, carrera=:carrera, CV=:archivo WHERE nombre=:nombreprofesor";
+        $sql = "UPDATE profesor SET Tipo=:puesto, Carrera=:carrera, foto=:foto WHERE nombre=:nombreprofesor";
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->bindParam(":nombreprofesor", $nombreprofesor);
-        $sentencia->bindParam(":tipo", $puesto);
+        $sentencia->bindParam(":puesto", $puesto);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":foto", $foto);
+        $sentencia->execute(); 
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function editarProfesorCV($nombreprofesor, $puesto, $carrera, $archivo){
+
+        $sql = "UPDATE profesor SET Tipo=:puesto, Carrera=:carrera, CV=:archivo WHERE Nombre=:nombreprofesor";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nombreprofesor", $nombreprofesor);
+        $sentencia->bindParam(":puesto", $puesto);
         $sentencia->bindParam(":carrera", $carrera);
         $sentencia->bindParam(":archivo", $archivo);
         $sentencia->execute(); 
@@ -56,6 +71,22 @@ class DB{
         $resultado = $sentencia->fetchAll();
         return $resultado;
     }
+
+    public function editarProfesor($nombreprofesor, $puesto, $carrera, $archivo, $foto){
+
+        $sql = "UPDATE profesor SET Tipo=:puesto, Carrera=:carrera, CV=:archivo, foto=:foto WHERE Nombre=:nombreprofesor";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nombreprofesor", $nombreprofesor);
+        $sentencia->bindParam(":puesto", $puesto);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":archivo", $archivo);
+        $sentencia->bindParam(":foto", $foto);
+        $sentencia->execute(); 
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
     //función para eliminar un profesor en la base de datos
     public function eliminarProfesor($nombreprofesor){
 
@@ -80,7 +111,6 @@ class DB{
     }
 
     public function obtenerArchivo($nombreprofesor){
-
         $sql = "SELECT CV FROM profesor WHERE nombre=:nombreprofesor";
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->bindParam(":nombreprofesor", $nombreprofesor);

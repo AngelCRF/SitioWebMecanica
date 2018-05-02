@@ -73,7 +73,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
     <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data" class="datos_usuarios" id="logInForm">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Placeholder" id="usuarioLogIn" type="text" class="validate">
+        <input id="usuarioLogIn" type="text" class="validate">
         <label for="e">Usuario</label>
       </div> 
       <div class="row">
