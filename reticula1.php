@@ -27,6 +27,7 @@
     <body>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>    
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".dropdown-button").dropdown();
@@ -36,6 +37,7 @@
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+<<<<<<< HEAD
         <!--contenedores para menus desplegables-->
         <ul id="reticulas" class="dropdown-content">
             <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
@@ -94,6 +96,13 @@
                 </ul>
             </div>
         </nav>
+=======
+        <div id="navbar" class="navbar">
+            <script type="text/javascript">
+                    $("#navbar").load("navbar.html");
+            </script> 
+        </div>
+>>>>>>> 3918d997bfcb588c137564e0bb851c3c42a8f19c
         <!--Cuerpo de la pagina-->
         <div class="card-panel grey lighten-4">
             <div class="row">
@@ -113,6 +122,7 @@
                     </div>
                     <div>
                         <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
+<<<<<<< HEAD
                     </div>
                 </div>
             </div>
@@ -435,5 +445,38 @@
                 </div>
             </div>
         </footer>
+=======
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#especialidad1" class="active">Especialidad 1</a></li>
+                        <li class="tab col s3"><a href="#especialidad2">Especialidad 2</a></li>
+                    </ul>
+                </div>
+                <div id="especialidad1" class="col s12">
+                    <div id="espec1">
+                        <script type="text/javascript">
+                            $("#espec1").load("retEspec1Mecanica.php");
+                        </script> 
+                    </div>
+                </div>
+                <div id="especialidad2" class="col s12">
+                    <div id="espec2">
+                        <script type="text/javascript">
+                            $("#espec2").load("retEspec2Mecanica.php");
+                        </script> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="feet" class="feet">
+            <script type="text/javascript">
+                    $("#feet").load("footer.html");
+            </script> 
+        </div>
+>>>>>>> 3918d997bfcb588c137564e0bb851c3c42a8f19c
     </body>
 </html> 

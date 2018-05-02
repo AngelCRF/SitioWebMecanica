@@ -466,6 +466,7 @@
           </div>
         </footer>
     </body>
+<<<<<<< HEAD
 =======
 <!DOCTYPE html>
 <!-- Artesania y loza Mexicana -->
@@ -681,4 +682,6 @@
         </footer>
     </body>
 >>>>>>> 4c56ed2de0e75b7d03db81b327a03c633609bd9b
+=======
+>>>>>>> 3918d997bfcb588c137564e0bb851c3c42a8f19c
 </html> 
