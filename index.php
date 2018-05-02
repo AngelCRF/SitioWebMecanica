@@ -58,36 +58,30 @@
     <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
     <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
   </ul>
-
   <ul id="perfiles" class="dropdown-content">
     <li><a href="aspirante.php">Perfil de Aspirante</a></li>
     <li><a href="egresado.php">Perfil de Egresado</a></li>
   </ul>
-
   <ul id="reprobacion" class="dropdown-content">
     <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
     <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
     <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
     <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
   </ul>
-
   <ul id="reticulas-movil" class="dropdown-content">
     <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
     <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
   </ul>
-
   <ul id="perfiles-movil" class="dropdown-content">
     <li><a href="aspirante.php">Perfil de Aspirante</a></li>
     <li><a href="egresado.php">Perfil de Egresado</a></li>
   </ul>
-
   <ul id="reprobacion-movil" class="dropdown-content">
     <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
     <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
     <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
     <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
   </ul>
-
   <ul id="slide-out" class="side-nav">
     <li><a href="index.php"><i class="material-icons">home</i></a></li>
     <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>

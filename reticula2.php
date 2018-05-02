@@ -27,6 +27,7 @@
     <body >
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".dropdown-button").dropdown();
@@ -37,7 +38,6 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <!--contenedores para menus desplegables-->
         <div id="navbar" class="navbar">
-            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <script type="text/javascript">
                     $("#navbar").load("navbar.html");
             </script> 
@@ -73,7 +73,6 @@
                 </div>
                 <div id="especialidad1" class="col s12">
                     <div id="espec1">
-                        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                         <script type="text/javascript">
                             $("#espec1").load("retEspec1Mecatronica.php");
                         </script> 
@@ -81,7 +80,6 @@
                 </div>
                 <div id="especialidad2" class="col s12">
                     <div id="espec2">
-                        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                         <script type="text/javascript">
                             $("#espec2").load("retEspec2Mecatronica.php");
                         </script> 
@@ -91,7 +89,6 @@
         </div>
         <!--Pie de pagina, datos de contato-->
         <div id="feet" class="feet">
-            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <script type="text/javascript">
                     $("#feet").load("footer.html");
             </script> 
