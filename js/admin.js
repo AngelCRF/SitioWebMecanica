@@ -50,6 +50,7 @@ $(function(){
         }
     });
 
+    /*
     $('#editarPersonalForm').submit(function() {
         var validated =0;
         if($('#nombreprofesorEditar').val() == "disable" ){
@@ -82,7 +83,7 @@ $(function(){
             return true;
         }
     });
-
+    */
     $('#eliminarPersonalForm').submit(function() {
         if(jQuery('#eliminarp').val() == "x" ){
             alert("Favor de elegir un profesor para eliminar");

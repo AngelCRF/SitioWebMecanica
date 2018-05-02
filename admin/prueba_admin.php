@@ -57,19 +57,17 @@
     <?php 
     #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
     if($_SESSION['result'] == 'guardado'){
-        echo '<script>';
-        echo 'alert("Profesor guardado exitosamente!");';
-        echo '</script>';
+        echo '<script>alert("Profesor guardado exitosamente!");</script>';
         //echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Guardado exitosamente</H2></div></nav>";
     }
     if($_SESSION['result'] == 'editado'){
-        echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Editado exitosamente</H2></div></nav>";
+        echo '<script>alert("Profesor editado exitosamente!");</script>';
     }
     if($_SESSION['result'] == 'eliminado'){
-        echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Eliminado exitosamente</H2></div></nav>";
+        echo '<script>alert("Profesor eliminado exitosamente!");</script>';
     }
     if($_SESSION['result'] == 'error'){
-        echo "<nav><div class=\"nav-wrapper red accent-3\"><H2>Error, vuelva a intentarlo</H2></div></nav>";
+        echo '<script>alert("Error, vuelva a intentarlo más tarde!");</script>';
     }
     $_SESSION['result']= "";
     ?>
@@ -234,8 +232,6 @@
                 <i class="material-icons right">delete_forever</i>
             </button>
             </form>
-        
-       
     </div>
     </body>
 </html> 
