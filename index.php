@@ -3,7 +3,7 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Ing. en Gestión Empresarial</title>
+        <title>ITMORELIA| Dept. Metal-Mec�nica</title>
         <meta charset="utf-8"/>
        
         <meta name="keywords" content="pagina de IGE"/>
@@ -19,157 +19,215 @@
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
-
-      
-      
-
-        <script>
-          $(document).ready(function(){
-            $(".dropdown-button").dropdown(); 
-            $(".button-collapse").sideNav();
-          });
-        </script>
 
          <link rel="stylesheet" type="text/css" href="index.css" />
         <style type="text/css">
-        body{
-          background: #dddddd;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-attachment: fixed;
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
            }
         </style>
        </head>
 
 
 <body >
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".dropdown-button").dropdown();
+                $('.materialboxed').materialbox();
+                $(".button-collapse").sideNav();
+                $('.carousel.carousel-slider').carousel({fullWidth: true});     
+                function autoplay() {
+                    $('.carousel').carousel('next');
+                    setTimeout(autoplay, 4500);
+                }
+
+                jQuery(document).ready(function() {
+                    setTimeout(function() {
+                      autoplay()
+                    }, 4500);
+                });
+                
+            });            
+        </script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+<!--contenedores para menus desplegables-->
+  <ul id="reticulas" class="dropdown-content">
+    <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
+    <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
+  </ul>
+
+  <ul id="perfiles" class="dropdown-content">
+    <li><a href="aspirante.php">Perfil de Aspirante</a></li>
+    <li><a href="egresado.php">Perfil de Egresado</a></li>
+  </ul>
+
+  <ul id="reprobacion" class="dropdown-content">
+    <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
+    <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
+    <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
+    <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
+  </ul>
+
+  <ul id="reticulas-movil" class="dropdown-content">
+    <li><a href="reticula1.php">Ingeniería Mecánica</a></li>
+    <li><a href="reticula2.php">Ingeniería Mecatrónica</a></li>
+  </ul>
+
+  <ul id="perfiles-movil" class="dropdown-content">
+    <li><a href="aspirante.php">Perfil de Aspirante</a></li>
+    <li><a href="egresado.php">Perfil de Egresado</a></li>
+  </ul>
+
+  <ul id="reprobacion-movil" class="dropdown-content">
+    <li><a href="PDF/Indice_Rep/ENE-JUN 2015.pdf" target="blank">ENE-JUN 2015</a></li>
+    <li><a href="PDF/Indice_Rep/AGO-DIC 2015.pdf" target="blank">AGO-DIC 2015</a></li>
+    <li><a href="PDF/Indice_Rep/ENE-JUN 2016.pdf" target="blank">ENE-JUN 2016</a></li>
+    <li><a href="PDF/Indice_Rep/AGO-DIC 2016.pdf" target="blank">AGO-DIC 2016</a></li>
+  </ul>
+
+  <ul id="slide-out" class="side-nav">
+    <li><a href="index.php"><i class="material-icons">home</i></a></li>
+    <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+    <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+    <li><a href="mision.php">QUIENES SOMOS</a></li>
+    <li><a href="orga.php">ORGANIGRAMA</a></li>
+    <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+    <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+  </ul>
+        
+  <!--encabezado y menus-->
+  <nav>
+    <div class="nav-wrapper grey darken-1">
+      <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
+      <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
+    </div>
+  </nav>
+        
+  <nav class="hide-on-med-and-down">
+    <div class="nav-wrapper grey darken-1 center-align">
+      <ul class="center hide-on-med-and-down">
+        <li><a href="index.php"><i class="material-icons">home</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+        <li><a href="#" class="dropdown-button" data-activates="perfiles">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
+        <li><a href="mision.php">QUIENES SOMOS</a></li>
+        <li><a href="orga.php">ORGANIGRAMA</a></li>
+        <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
+        <li><a href="#" class="dropdown-button" data-activates="reprobacion">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+      
+  <div class="Cprincipal_index card-panel grey lighten-4">
+      <div class="cajaS"><img src="Imagenes/logoSEP.png"></div>
+      <div class="cajaT"><img src="Imagenes/logoTEC.png"></div>
+   
+    <br>
+    <br>
+
+    <!--Carusel de imagenes -->
+    <div class="carousel carousel-slider center z-depth-5" data-indicators="true">
+
+      <div class="carousel-item grey white-text">
+        <div class="carousel-fixed-item"><img src="Imagenes/1.png"></div>
+        <h2>Mecanica imagen 1</h2>
+        <p class="white-text">This is your first panel</p>
+      </div>
+
+      <div class="carousel-item grey darken-1 white-text" href="#two!">
+        <div class="carousel-fixed-item"><img src="Imagenes/5.png"></div>
+        <h2>Second Panel</h2>
+        <p class="white-text">This is your second panel</p>
+      </div>
+
+      <div class="carousel-item grey darken-2 white-text" href="#three!">
+        <div class="carousel-fixed-item"><img src="Imagenes/3.png"></div>
+        <h2>Third Panel</h2>
+        <p class="white-text">This is your third panel</p>
+      </div>
+
+      <div class="carousel-item grey darken-3 white-text" href="#four!">
+        <div class="carousel-fixed-item"><img src="Imagenes/4.png"></div>
+        <h2>Fourth Panel</h2>
+        <p class="white-text">This is your fourth panel</p>
+      </div>
+
+    </div>
 
 
-<!-- Dropdown Structure -->
-<ul id="dropdownRet" class="dropdown-content">
-  <li><a href="#!">Especialidad 1</a></li>
-  <li><a href="#!">Especialidad 2</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">Especialidad 3</a></li>
-</ul>
-<nav>
-  <div class="nav-wrapper container blue-grey" >
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    <a class="brand-logo site-logo"><img src="imagenes/log_meca.jpg" alt="Logo mecanica" height="50%" width="50%"></a>
-    <ul class="left hide-on-med-and-down" id="nav-mobile">
-    <li><a href=""></a></li>
-      <li><a href="sass.html">Inicio</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <!-- Dropdown Trigger -->
-      <li>
-        <a class="dropdown-button" data-activates="dropdownRet"s>Reticula
-        </a>
-      </li>
-    </ul>
+    <div class="sitios_interes2 container">
+      <center class="flow-text grey-text ">Sitios de Interés</center><br>
+    </div>
+
+    <div class="row">
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+            <a href="http://www.conacytprensa.mx/"><img src="Pagina/images/logoAICgris.png"></a>
+            <span class="card-title">Card Title</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+            <a href="http://cacei.org.mx/index.php"><img src="Pagina/images/cacei.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+          <a href="https://www.entrepreneur.com/es"><img src="Imagenes/entrepreneur-logo.png"></a>
+            <span class="card-title">Card Title</span>
+          </div>
+        </div>
+      </div>
+    </div>
+            
+
   </div>
-</nav>
-        
-        
-<br><br><br>
-<br><br><br>
 
-</div>
-
-<div class="Cprincipal_index">
-    <div class="cajaS"><img src="Imagenes/logoSEP.png"></div>
-     <div class="cajaT"><img src="Imagenes/logoTEC.png"><br></div>
-     
-     
-<br>
-<br>
-
-
- <div class="slider">
-	
-	<ul>
-		<li><img src="Imagenes/1.png" alt=""></li>
-		<li><img src="Imagenes/3.png" alt=""></li>
-		<li><img src="Imagenes/5.png" alt=""></li>
-		<li><img src="Imagenes/4.png" alt=""></li>
-		<li><img src="Imagenes/5.png" alt=""></li>
-	</ul>
-
-
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<div class="sitios_interes2"><center>Sitios de Interés</center><br></div>
-
-
-<div>
-<table>	
-<tr>
-
-<td style="width: 500px"><a href="Pagina/pdf/Diagnostico_ITMorelia.pdf" target="_blank"><img src="Pagina/images/Imagen_Diagnostico.png"></a></td>
-<td><a title="Medio informativo especializado sobre los �ltimos desarrollos tecnol�gicos e innovadores de nuestro pa�s." href="http://www.conacytprensa.mx/" target="_blank"><img src="Pagina/images/logoAICgris.png"></a></td>
-<td><a href="http://cacei.org.mx/index.php" target="_blank"><img src="Pagina/images/cacei.png"></a></td>
-</tr>
-</table>
-<table>
-<tr>
-<td style="width: 100px"></td>
-<td><a title="S�bete a un autobus, concibe, construye e inicia una Startup" href="https://northamerica.startupbus.com/buses/mex.html" target="_blank"><img src="Imagenes/startupbusMexico.png"></a></td>
-<td style="width: 300px"></td>
-<td><a href="https://www.entrepreneur.com/es" target="_blank"><img src="Imagenes/entrepreneur-logo.png"></td>
-<td style="width: 100px"></td>
-</tr>
-
-
-</table>
-
-</div>    
-
-</div>
-
-<div  class="letra_pie">
-<div class="Cpie_index">
-<div class="CSocial">
-<div class="titulos_pie"><center>Redes Sociales</center><br></div>
-<div class="CSocial2">
-<a id="link" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"> <img src="Imagenes/face.jpg">Facebook<br></a>
-<a  id="link" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/tiwter.jpg">Twitter<br></a>
-<a  id="link" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube<br> </a>
-<a  id="link" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin<br></a>
-</div>
-</div>
-<div class="CVinculo">
-<div class="titulos_pie">Vínculos Académicos</center><br><br></div>
-<a  id="link" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México<br><br></a>
-<a   id="link" href="http://www.ets.org/es/toefl"  target="_blank">Toefl<br><br></a>
-<a   id="link" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval<BR><br></a>
-<a    id="link" href="http://www.anfei.mx/" target="_blank">Anfei<BR><br></a>
-<a     id="link" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología<br><br></a>
-</div>
-<div class="CContactar">
-<div class="titulos_pie">Contactanos</div><br><br>
-<a id="link2">Teléfonos:</a><br>
-4433121570 Ext.248<br><br>
-<a id="link2">Email:</a><br><a id="link" >ige@itmorelia.edu.mx</a><br><br>
-<a id="link2">Dirección:</a><br>
-Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia, Michoacán, México.<br>
-</div> 
-
-</div>
-Derechos Reservados. © 2017 Instituto Tecnológico de Morelia.
-</div>
-
+ <!--Pie de pagina, datos de contato-->
+ <footer class="page-footer grey darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l4 s12">
+                <h5 class="white-text">Redes Sociales</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"><img src="Imagenes/face.jpg">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/tiwter.jpg">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin</a></li>
+                </ul>
+              </div>
+              <div class="col l4 s12">
+                <h5 class="white-text">Vínculos Académicos</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.ets.org/es/toefl"  target="_blank">Toefl</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.anfei.mx/" target="_blank">Anfei</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología</a></li>
+                </ul>
+              </div>
+              <div class="col l4 s12">
+                <h5 class="white-text">Contáctanos</h5>
+                <ul>
+                    Teléfonos: 4433121570 Ext.248<br />
+                    Email: metal_Mecánica@itmorelia.edu.mx<br />
+                    Dirección: Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia, Michoacán, México.<br />
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+                Derechos Reservados. © 2018 Instituto Tecnológico de Morelia.
+            </div>
+          </div>
+        </footer>
     </body>
-    </html>
+</html> 
