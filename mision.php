@@ -12,6 +12,14 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style type="text/css">
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+           }
+        </style>
     </head>
     <body>
 
@@ -63,6 +71,7 @@
             <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">ÍNDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
         </ul>
         <!--encabezado y menus-->
+        
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
@@ -82,9 +91,13 @@
                 </ul>
             </div>
         </nav>
+
+
         <header>
-      		<img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">      	
+      		      	
         </header><br><br><br><div class="container">
+              <div class="Cprincipal_index card-panel grey lighten-4">
+                <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">
 		<p><h2>Misión</h2></p>
         	<p><h5>Formar profesionistas que contribuyan al desarrollo científico, tecnológico, social y sustentable a nivel nacional e internacional, vinculados con la implantación de actividades innovadoras y de gestión estratégica.</h5></p>
         	<br><br><br>
@@ -93,7 +106,7 @@
         	<br><br><br>
         	<p><h2>Objetivo</h2></p>
         	<p><h5>Formar profesionistas que contribuyan a la adecuada gestión de empresas e innovación de procesos, así como al desarrollo, implementación y evaluación de sistemas estratégicos de negocios, elevando la eficacia productiva en un entorno global, con ética y responsabilidad social.</h5></p>	
-        	<br><br><br><br></div>
+        	<br><br><br><br></div></div>
          <footer class="page-footer grey darken-1">
           <div class="container">
             <div class="row">
