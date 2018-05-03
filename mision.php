@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>¿Quíenes Somos?</title>
+        <title>¿Quiénes Somos?</title>
         <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="keywords" content="Quienes, Somos, Mecanica, ITM"/>
         <meta name="author" content="Luis Eduardo Loaiza Diosdasdo"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
@@ -11,6 +12,14 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style type="text/css">
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+           }
+        </style>
     </head>
     <body>
 
@@ -54,14 +63,15 @@
         </ul>
         <ul id="slide-out" class="side-nav">
             <li><a href="index.php"><i class="material-icons">home</i></a></li>
-            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="reticulas-movil">RETÍCULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
             <li><a href="#" class="dropdown-button" data-activates="perfiles-movil">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-            <li><a href="mision.php">QUIENES SOMOS</a></li>
+            <li><a href="mision.php">¿QUIÉNES SOMOS?</a></li>
             <li><a href="orga.php">ORGANIGRAMA</a></li>
             <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+            <li><a href="#" class="dropdown-button" data-activates="reprobacion-movil">ÍNDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
         </ul>
         <!--encabezado y menus-->
+        
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only left"><i class="material-icons">menu</i></a>
@@ -72,18 +82,22 @@
             <div class="nav-wrapper grey darken-1 center-align">
                 <ul class="center hide-on-med-and-down">
                     <li><a href="index.php"><i class="material-icons">home</i></a></li>
-                    <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETICULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="reticulas">RETÍCULAS<i class="material-icons right" >arrow_drop_down</i></a></li>
                     <li><a href="#" class="dropdown-button" data-activates="perfiles">PERFILES<i class="material-icons right" >arrow_drop_down</i></a></li>
-                    <li><a href="mision.php">QUIENES SOMOS</a></li>
+                    <li><a href="mision.php">¿QUIÉNES SOMOS?</a></li>
                     <li><a href="orga.php">ORGANIGRAMA</a></li>
                     <li><a href="material_apoyo.php">MATERIAL DE APOYO</a></li>
-                    <li><a href="#" class="dropdown-button" data-activates="reprobacion">INDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
+                    <li><a href="#" class="dropdown-button" data-activates="reprobacion">ÍNDICE DE REPROBACIÓN<i class="material-icons right" >arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
+
+
         <header>
-      		<img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">      	
+      		      	
         </header><br><br><br><div class="container">
+              <div class="Cprincipal_index card-panel grey lighten-4">
+                <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">
 		<p><h2>Misión</h2></p>
         	<p><h5>Formar profesionistas que contribuyan al desarrollo científico, tecnológico, social y sustentable a nivel nacional e internacional, vinculados con la implantación de actividades innovadoras y de gestión estratégica.</h5></p>
         	<br><br><br>
@@ -92,7 +106,7 @@
         	<br><br><br>
         	<p><h2>Objetivo</h2></p>
         	<p><h5>Formar profesionistas que contribuyan a la adecuada gestión de empresas e innovación de procesos, así como al desarrollo, implementación y evaluación de sistemas estratégicos de negocios, elevando la eficacia productiva en un entorno global, con ética y responsabilidad social.</h5></p>	
-        	<br><br><br><br></div>
+        	<br><br><br><br></div></div>
          <footer class="page-footer grey darken-1">
           <div class="container">
             <div class="row">
@@ -133,3 +147,4 @@
         </footer>    
     </body>
 </html> 
+
