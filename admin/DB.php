@@ -133,14 +133,14 @@ class DB{
     }
 
     //Funciones para administrar materias
-    public function insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria){
-        $sql = "INSERT INTO materias VALUES(null, :materia, :creditos, :tipo, :semestre, :urlarchivo, :carrera, :abreviacion)";
+    public function insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria, $archivo){
+        $sql = "INSERT INTO materias VALUES(null, :materia, :creditos, :tipo, :semestre, :programa, :carrera, :abreviacion)";
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->bindParam(":materia", $nombremateria);
         $sentencia->bindParam(":creditos", $creditosmateria);
         $sentencia->bindParam(":tipo", $tipomateria);
         $sentencia->bindParam(":semestre", $semestremateria);
-        $sentencia->bindParam(":urlarchivo", $archivo);
+        $sentencia->bindParam(":programa", $archivo);
         $sentencia->bindParam(":carrera", $carrera);
         $sentencia->bindParam(":abreviacion", $abreviacionmateria);
         $sentencia->execute();
@@ -149,16 +149,16 @@ class DB{
         return $resultado;
     }
 
-    public function editarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria){
-        $sql = "UPDATE materias SET VALUES creditos=:creditos, tipo=:tipo, semestre=:semestre, url=:urlarchivo,  carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
+    public function editarMateria($nombremateriaeditar, $creditosmateriaeditar, $tipomateriaeditar, $semestremateriaeditar, $carreraeditar, $abreviacionmateriaeditar, $archivoeditar){
+        $sql = "UPDATE materias SET creditos=:creditos, tipo=:tipo, semestre=:semestre, programa=:programa,  carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
         $sentencia = $this->conexion->prepare($sql);
-        $sentencia->bindParam(":materia", $nombremateria);
-        $sentencia->bindParam(":creditos", $creditosmateria);
-        $sentencia->bindParam(":tipo", $tipomateria);
-        $sentencia->bindParam(":semestre", $semestremateria);
-        $sentencia->bindParam(":urlarchivo", $archivo);
-        $sentencia->bindParam(":carrera", $carrera);
-        $sentencia->bindParam(":abreviacion", $abreviacionmateria);
+        $sentencia->bindParam(":materia", $nombremateriaeditar);
+        $sentencia->bindParam(":creditos", $creditosmateriaeditar);
+        $sentencia->bindParam(":tipo", $tipomateriaeditar);
+        $sentencia->bindParam(":semestre", $semestremateriaeditar);
+        $sentencia->bindParam(":programa", $archivoeditar);
+        $sentencia->bindParam(":carrera", $carreraeditar);
+        $sentencia->bindParam(":abreviacion", $abreviacionmateriaeditar);
         $sentencia->execute(); 
         $sentencia->setFetchMode(PDO::FETCH_ASSOC);
         $resultado = $sentencia->fetchAll();
@@ -196,13 +196,12 @@ class DB{
     }
     
     public function editarMateriaElse($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria){
-        $sql = "UPDATE materias SET VALUES creditos=:creditos, tipo=:tipo, semestre=:semestre, carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
+        $sql = "UPDATE materias SET creditos=:creditos, tipo=:tipo, semestre=:semestre, carrera=:carrera, abreviacion=:abreviacion WHERE materia=:materia";
         $sentencia = $this->conexion->prepare($sql);
         $sentencia->bindParam(":materia", $nombremateria);
         $sentencia->bindParam(":creditos", $creditosmateria);
         $sentencia->bindParam(":tipo", $tipomateria);
         $sentencia->bindParam(":semestre", $semestremateria);
-        $sentencia->bindParam(":urlarchivo", $archivo);
         $sentencia->bindParam(":carrera", $carrera);
         $sentencia->bindParam(":abreviacion", $abreviacionmateria);
         $sentencia->execute(); 

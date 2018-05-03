@@ -5,7 +5,7 @@
         $_POST[$indice] = htmlspecialchars($valor);
         }
         extract($_POST);
-        if($nombreprofesor!=""){
+        if($nombremateria!=""){
             $targetfolder = "ProgramasMaterias/";
             $targetfolder = $targetfolder . basename( $_FILES['archivo']['name']) ;
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder)) {
@@ -15,11 +15,11 @@
             }
             $archivo = $targetfolder;
             $conexion = new DB();
-            $resultado = $conexion->insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria);
+            $resultado = $conexion->insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria, $archivo);
             session_start();
-            $_SESSION['result'] = 'guardado';
             if($resultado>0){
                 header('Location: reticula_admin.php');
+                $_SESSION['result'] = 'guardado';
             } else {
                 header('Location: reticula_admin.php');
                 $_SESSION['result'] = 'error';
