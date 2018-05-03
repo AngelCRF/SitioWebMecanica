@@ -44,8 +44,10 @@
         <!--Cuerpo de la pagina-->
         <div class=" Cprincipal_index card-panel grey lighten-4">
             <div class="row">
-                <div class="cajaS col s12 m6 l3"><img class="responsive-img" src="Imagenes/logoSEP.png"></div>
-                <div class="col s12 m12 l6 hide-on-med-and-down">
+                <header>
+                    <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">         
+                </header><br><br><br>
+                <div class="col s12 m12 l12 hide-on-med-and-down">
                     <div>
                         <h5 class="center-align">Plan de Estudios</h5>
                     </div>
@@ -53,7 +55,6 @@
                         <h5 class="center-align">Retícula para la carrera de Ingeniería Mecánica</h5>
                     </div>
                 </div>
-                <div class="cajaT col s12 m6 l3"><img class="responsive-img right" src="Imagenes/logoTEC.png"></div>
                 <div class="col s12 m12 hide-on-large-only">
                     <div>
                         <h5 class="center-align">Plan de Estudios</h5>
