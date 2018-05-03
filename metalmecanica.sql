@@ -63,7 +63,8 @@ CREATE TABLE `profesor` (
   `Nombre` varchar(60) NOT NULL,
   `Tipo` varchar(15) NOT NULL,
   `Carrera` varchar(11) NOT NULL,
-  `CV` text NOT NULL
+  `CV` text NOT NULL,
+  `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
