@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once("DB.php");
+header('Content-type: application/json');
 if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
+    
     foreach($_POST as $indice => $valor){
         $_POST[$indice] = htmlspecialchars($valor);
     }
@@ -22,14 +24,18 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
             //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
         }
         else {
-            //echo "Problem uploading file";
+            $response_array['status'] = 'errorArchivo';
+            echo json_encode($response_array);
+            exit;
         }
         if(move_uploaded_file($_FILES['archivoFotoe']['tmp_name'], $targetfoto))
         {
             //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
         }
         else {
-           //echo "Problem uploading file";
+            $response_array['status'] = 'errorFoto';
+            echo json_encode($response_array);
+            exit;
         }
         $archivo = $targetfolder;
         $foto = $targetfoto;
@@ -49,12 +55,14 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         $ruta= "";
         $resultado = $conexion->editarProfesor($nombreprofesorEditar, $puestoeditar, $carreraeditar, $archivo, $foto);
         if($resultado>0){
-            $_SESSION['result'] = 'editado';
-            header('Location: prueba_admin.php');
+            $response_array['status'] = 'success';
+            echo json_encode($response_array);
+            exit;
         }
         else{
-            $_SESSION['result'] = 'error';
-            header('Location: prueba_admin.php'); 
+            $response_array['status'] = 'errorConsulta';
+            echo json_encode($response_array);
+            exit;
         }
     }
     else{
@@ -70,7 +78,9 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                 //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
             }
             else {
-                //echo "Problem uploading file";
+                $response_array['status'] = 'errorArchivo';
+                echo json_encode($response_array);
+                exit;
                 }
             $archivo = $targetfolder;
             //Eliminar el archivo viejo de CV y foto
@@ -84,14 +94,14 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
             $ruta= "";
             $resultado = $conexion->editarProfesorCV($nombreprofesorEditar, $puestoeditar, $carreraeditar, $archivo);
             if($resultado>0){
-                header('Location: prueba_admin.php');
-                $_SESSION['result'] = 'editado';
+                $response_array['status'] = 'success';
+                echo json_encode($response_array);
             }
             else{
-                header('Location: prueba_admin.php');
-                $_SESSION['result'] = 'error';
+                $response_array['status'] = 'errorConsulta';
+                echo json_encode($response_array);
             }
-            $_SESSION['result'] = 'editado';
+            //$_SESSION['result'] = 'editado';
         }
         else {
             if( (isset($_FILES['archivoe']) && $_FILES['archivoe']['error'] == 4) && (isset($_FILES['archivoFotoe']) && $_FILES['archivoFotoe']['error'] != 4)  ) { 
@@ -104,7 +114,9 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                     //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
                 }
                 else {
-                    //echo "Problem uploading file";
+                    $response_array['status'] = 'errorFoto';
+                    echo json_encode($response_array);
+                    exit;
                 }
                 $foto = $targetfoto;
                 //Eliminar el archivo viejo de CV y foto
@@ -119,12 +131,14 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                 //se editará el puesto, carrera y foto
                 $resultado = $conexion->editarProfesorFoto($nombreprofesorEditar, $puestoeditar, $carreraeditar, $foto);
                 if($resultado>0){
-                    header('Location: prueba_admin.php');
-                    $_SESSION['result'] = 'editado';
+                    $response_array['status'] = 'success';
+                    echo json_encode($response_array);
+                    exit;
                 }
                 else{
-                    header('Location: prueba_admin.php');
-                    $_SESSION['result'] = 'error';
+                    $response_array['status'] = 'errorConsulta';
+                    echo json_encode($response_array);
+                    exit;
                 }
 
             }
@@ -132,16 +146,14 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                 //el usuario no ingresó ningun archivo por lo que solo se modificará el puesto y carrera
                 //echo "llegue al ultimo if donde no hay archivos";
                 $conexion = new DB();
-                $resultado = $conexion->editarProfesorPuesto($nombreprofesorEditar, $puestoeditar, $carreraeditar);
-                    
-                
+                $resultado = $conexion->editarProfesorPuesto($nombreprofesorEditar, $puestoeditar, $carreraeditar); 
                 if($resultado>0){
-                    header('Location: prueba_admin.php');
-                    $_SESSION['result'] = 'editado';
+                    $response_array['status'] = 'success';
+                    echo json_encode($response_array);
                 }
                 else{
-                    header('Location: prueba_admin.php');
-                    $_SESSION['result'] = 'error';
+                    $response_array['status'] = 'errorConsulta';
+                    echo json_encode($response_array);
                 }
             }
         }

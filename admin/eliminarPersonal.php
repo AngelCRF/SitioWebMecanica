@@ -30,11 +30,11 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                     $resultado = $conexion->eliminarProfesor($eliminarp);
                     if($resultado>0){
                         
-                        $_SESSION['result'] = 'eliminado';
-                        header('Location: prueba_admin.php');
+                        //$_SESSION['result'] = 'eliminado';
+                        //header('Location: prueba_admin.php');
                     }
                     else{
-                        $_SESSION['result'] = 'error';
+                        //$_SESSION['result'] = 'error';
                         //echo "Error de consulta";
                     }
             }   

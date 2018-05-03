@@ -106,7 +106,7 @@
             <div class="file-field input-field">
                 <div class="btn">
                     <span>Foto</span>
-                    <input type="file" accept="image/*" name="archivoFoto" id="archivoFoto">
+                    <input type="file" accept="image/jpeg" name="archivoFoto" id="archivoFoto">
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
