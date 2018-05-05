@@ -32,7 +32,7 @@ CREATE TABLE `materias` (
   `creditos` int(11) NOT NULL,
   `tipo` varchar(30) NOT NULL,
   `semestre` int(11) NOT NULL,
-  `url` varchar(200) NOT NULL,
+  `programa` varchar(200) NOT NULL,
   `carrera` varchar(11) NOT NULL,
   `abreviacion` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -63,7 +63,8 @@ CREATE TABLE `profesor` (
   `Nombre` varchar(60) NOT NULL,
   `Tipo` varchar(15) NOT NULL,
   `Carrera` varchar(11) NOT NULL,
-  `CV` text NOT NULL
+  `CV` text NOT NULL,
+  `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

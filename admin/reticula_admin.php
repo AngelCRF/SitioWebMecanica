@@ -1,16 +1,16 @@
 <?php 
     session_start();
     if($_SESSION['result'] == 'guardado'){
-        echo "<h2 style=\"background-color: green;\">Guardado exitosamente<h2>";
+        echo '<script>alert("Guardado exitosamente!");</script>';
     }
     if($_SESSION['result'] == 'editado'){
-        echo "<h2 style=\"background-color: green;\">Editado exitosamente<h2>";
+        echo '<script>alert("Editado exitosamente!");</script>';
     }
     if($_SESSION['result'] == 'eliminado'){
-        echo "<h2 style=\"background-color: green;\">Eliminado exitosamente<h2>";
+        echo '<script>alert("Eliminado exitosamente!");</script>';
     }
     if($_SESSION['result'] == 'error'){
-        echo "<h2 style=\"background-color: red;\">Error, vuelva a intentarlo<h2>";
+        echo '<script>alert("Error, vuelva a intentarlo");</script>';
     }
     $_SESSION['result']= "";
 ?>
@@ -68,7 +68,7 @@
             <form action="subirMateria.php" method="post" enctype="multipart/form-data" id="agregarMateriaForm">
                 <input type="text" name= "nombremateria" id="nombremateria" placeholder="Nombre de la materia">
                 <input type="number"  min="0" max="11" default="1" name= "creditosmateria" id="creditosmateria" placeholder="Creditos de la materia">
-                <input type="text" name= "tiposmateria" id="tipomateria" placeholder="Tipo de la materia">
+                <input type="text" name= "tipomateria" id="tipomateria" placeholder="Tipo de la materia">
                 <input type="number"  min="1" max="12" default="1" name= "semestremateria" id="semestremateria" placeholder="Semestre de la materia">
                 <div class="input-field col s12">
                     <select id="carrera" name="carrera">
@@ -95,12 +95,12 @@
             </form>
         </div>
 
-    <!-- SECCION PARA EDITAR A LAS MATERIAS -->
+    <!-- SECCION PARA EDITAR LAS MATERIAS -->
     <div class="Cprincipal_index card-panel grey lighten-4">
         <h1>Editar Materias</h1>
         <form action="editarMateria.php" method="post" enctype="multipart/form-data" id="editarMateriaForm">
             <div class="input-field col s12">
-                <select id="nombremateriaEditar" class="nombremateriaEditar" name="nombremateriaEditar">
+                <select id="nombremateriaeditar" class="nombremateriaeditar" name="nombremateriaeditar">
                     <?php
                         require_once("DB.php");
                         $db = new DB();
@@ -118,23 +118,23 @@
                 </select>
                 <label>Materias</label>
             </div>
-                <input type="number"  min="0" max="11" name= "creditosmateria" id="creditosmateria" placeholder="Creditos de la materia">
-                <input type="text" name= "tiposmateria" id="tipomateria" placeholder="Tipo de la materia">
-                <input type="number"  min="1" max="12" name= "semestremateria" id="semestremateria" placeholder="Semestre de la materia">
+                <input type="number"  min="0" max="11" name= "creditosmateriaeditar" id="creditosmateriaeditar" placeholder="Creditos de la materia">
+                <input type="text" name= "tipomateriaeditar" id="tipomateriaeditar" placeholder="Tipo de la materia">
+                <input type="number"  min="1" max="12" name= "semestremateriaeditar" id="semestremateriaeditar" placeholder="Semestre de la materia">
                 <div class="input-field col s12">
-                    <select id="carrera" name="carrera">
+                    <select id="carreraeditar" name="carreraeditar">
                         <option value="mecanica">Mec&aacutencia</option>
                         <option value="mecatronica">Mecatr&oacutenica</option>
                     </select>
                     <label>Carrera</label>
                 </div>
-                <input type="text" name= "abreviacionmateria" id="abreviacionmateria" placeholder="Abreviación de la materia">
+                <input type="text" name= "abreviacionmateriaeditar" id="abreviacionmateriaeditar" placeholder="Abreviación de la materia">
                 <label for="archivo">Seleccione un archivo para subir</label>  
                 <br>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Programa</span>
-                        <input type="file"  accept="application/pdf" name="archivo" id="archivo">
+                        <input type="file"  accept="application/pdf" name="archivoeditar" id="archivoeditar">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text">

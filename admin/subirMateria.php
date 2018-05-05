@@ -15,11 +15,11 @@
             }
             $archivo = $targetfolder;
             $conexion = new DB();
-            $resultado = $conexion->insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $archivo, $abreviacionmateria);
+            $resultado = $conexion->insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria, $archivo);
             session_start();
-            $_SESSION['result'] = 'guardado';
             if($resultado>0){
                 header('Location: reticula_admin.php');
+                $_SESSION['result'] = 'guardado';
             } else {
                 header('Location: reticula_admin.php');
                 $_SESSION['result'] = 'error';
