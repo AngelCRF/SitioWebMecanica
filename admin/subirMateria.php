@@ -5,7 +5,7 @@
         $_POST[$indice] = htmlspecialchars($valor);
         }
         extract($_POST);
-        if($nombreprofesor!=""){
+        if($nombremateria!=""){
             $targetfolder = "ProgramasMaterias/";
             $targetfolder = $targetfolder . basename( $_FILES['archivo']['name']) ;
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder)) {
