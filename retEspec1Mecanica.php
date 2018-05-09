@@ -26,11 +26,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(1);
+                                        $resultSem1=$BD->mostrarmateria(1,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -46,11 +50,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(2);
+                                        $resultSem1=$BD->mostrarmateria(2,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -66,11 +74,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(3);
+                                        $resultSem1=$BD->mostrarmateria(3,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -86,11 +98,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(4);
+                                        $resultSem1=$BD->mostrarmateria(4,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -106,11 +122,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(5);
+                                        $resultSem1=$BD->mostrarmateria(5,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -126,11 +146,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(6);
+                                        $resultSem1=$BD->mostrarmateria(6,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -146,11 +170,11 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(7);
+                                        $resultSem1=$BD->mostrarmateria(7,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
                                         }
@@ -166,11 +190,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(8);
+                                        $resultSem1=$BD->mostrarmateria(8,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -186,11 +214,15 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(9);
+                                        $resultSem1=$BD->mostrarmateria(9,'Mecanica','Especialidad 1');
                                         while ($renglon=mysqli_fetch_array($resultSem1)){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                                     </tr>
                                     <?php  
                                         }
@@ -215,7 +247,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(1);
+                        $resultSem1=$BD->mostrarmateria(1,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -224,7 +256,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -243,7 +279,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(2);
+                        $resultSem1=$BD->mostrarmateria(2,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -252,7 +288,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -271,7 +311,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(3);
+                        $resultSem1=$BD->mostrarmateria(3,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -280,7 +320,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -299,7 +343,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(4);
+                        $resultSem1=$BD->mostrarmateria(4,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -308,7 +352,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -327,7 +375,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(5);
+                        $resultSem1=$BD->mostrarmateria(5,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -336,7 +384,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -355,7 +407,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(6);
+                        $resultSem1=$BD->mostrarmateria(6,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -364,7 +416,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -383,7 +439,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(7);
+                        $resultSem1=$BD->mostrarmateria(7,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -392,7 +448,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -411,7 +471,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(8);
+                        $resultSem1=$BD->mostrarmateria(8,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -420,7 +480,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
@@ -439,7 +503,7 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(9);
+                        $resultSem1=$BD->mostrarmateria(9,'Mecanica','Especialidad 1');
                         $cont=0;
                         while ($renglon=mysqli_fetch_array($resultSem1)){
                             if($cont==3){
@@ -448,7 +512,11 @@
                                 <?php
                             }
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href="PDF/Reticula/mecanica/Calidad.pdf"><h6><?php echo $renglon['materia']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+<<<<<<< HEAD
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo $renglon['url'] ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+=======
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+>>>>>>> 51a00c44e6c8ba922951af29d9407cb956f29ca8
                     <?php 
                             $cont=$cont+1; 
                         }
