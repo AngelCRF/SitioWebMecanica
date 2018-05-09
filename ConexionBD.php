@@ -1,6 +1,5 @@
 <?php
-	class conexionBD
-	{				
+	class conexionBD {				
 		private $servidor = "";
 		private $usuario = "";
 		private $contrasena="";
@@ -23,11 +22,11 @@
 		private function seleccionarbd(){
 			mysqli_select_db($this->conexion,$this->bd) or die(mysqli_error());
 		}
+		
 		public function mostrarmateria($semestre,$carrera,$especialidad){
 			$consulta="SELECT * FROM `materias` WHERE semestre=".$semestre." and carrera='".$carrera."' and (tipo='".$especialidad."' or tipo='Tronco Comun')";
 			$resultado=mysqli_query($this->conexion, $consulta)or die("Query fail: ".mysqli_error($this->conexion));
 			return $resultado;
 		}
-
 	}
 ?>
