@@ -5,13 +5,12 @@ class DB{
     function __construct(){
         
         try {
-            
-        //incluir variables de conexion
-        require_once("datos_conexion.php");
+            //incluir variables de conexion
+            //require_once("datos_conexion.php");
             //echo var_dump($datos_conexion);
             $usuario = 'root';
-            $pass = '12345678';
-            $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=mecanica;', $usuario, $pass);
+            $pass = '';
+            $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=mecanica;port=3307', $usuario, $pass);
             //echo "Conexion exitosa";
         }catch(PDOException $e){
             die("Error al conectarse:". $e->getMessage());
@@ -205,6 +204,57 @@ class DB{
         $sentencia->bindParam(":carrera", $carrera);
         $sentencia->bindParam(":abreviacion", $abreviacionmateria);
         $sentencia->execute(); 
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    //funciones noticias
+    public function insertarNoticia($tituloNoticia, $descripcion, $foto, $direccion){
+        $sql = "INSERT INTO noticias VALUES(null, :titulo, :descripcion, :foto, CURRENT_DATE(), :direccion)";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":titulo", $tituloNoticia);
+        $sentencia->bindParam(":descripcion", $descripcion);
+        $sentencia->bindParam(":foto", $foto);
+        $sentencia->bindParam(":direccion", $direccion);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function editarNoticia($tituloNoticia,$descripcionEditar,$foto,$urlEditar){
+        $sql = "UPDATE noticias " .
+            "SET descripcion = '" . $descripcionEditar . "'," .
+            "url = '" . $urlEditar . "'," .
+            "imagen = '" . $foto . "'," .
+            "fecha = CURRENT_DATE()" .
+            "WHERE titulo = '" . $tituloNoticia . "'";
+        if ($this->conexion->query($sql) === TRUE) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+    public function editarNoticiaSinFoto($tituloNoticia,$descripcionEditar, $urlEditar){
+        $sql = "UPDATE noticias " .
+            "SET descripcion = '" . $descripcionEditar . "'," .
+            "url = '" . $urlEditar . "'," .
+            "fecha = CURRENT_DATE()" .
+            "WHERE titulo = '" . $tituloNoticia . "'";
+        if ($this->conexion->query($sql) === TRUE) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+    public function eliminarNoticia($eliminarn){
+        $sql = "DELETE FROM noticias WHERE titulo=:titulo";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":titulo", $eliminarn);
+        $sentencia->execute();
         $sentencia->setFetchMode(PDO::FETCH_ASSOC);
         $resultado = $sentencia->fetchAll();
         return $resultado;
