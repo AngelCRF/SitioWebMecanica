@@ -174,6 +174,27 @@ class DB{
         return $resultado;
     }
 
+     
+    //Funciones para la tabla de especialidad
+    public function eliminarEspecialidad($nomesp){
+        $sql = "DELETE FROM especialidad WHERE Nombre=:nomesp";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nomesp", $nomesp);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+    public function agregarEspecialidad($nomesp, $carrera){
+        $sql = "INSERT INTO especialidad VALUES(null, :nomesp, :carrera)";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":nomesp", $nomesp);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
     public function obtenerDatosMateria($nombremateria){
         $sql = "SELECT materia,creditos,tipo,semestre,carrera,abreviacion FROM materias WHERE materia=:nombremateria";
         $sentencia = $this->conexion->prepare($sql);

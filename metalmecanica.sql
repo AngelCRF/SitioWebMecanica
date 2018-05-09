@@ -80,6 +80,16 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Table structure for table `especialidad`
+--
+
+CREATE TABLE `especialidad` (
+  `id_esp` int(4) NOT NULL,
+  `Nombre` varchar(60) NOT NULL, 
+  `Carrera` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
 -- Indexes for dumped tables
 --
 
@@ -108,6 +118,12 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
+-- Indexes for table `especialidad`
+--
+ALTER TABLE `especialidad`
+  ADD PRIMARY KEY (`id_esp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -131,6 +147,13 @@ ALTER TABLE `profesor`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(4) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `especialidd`
+--
+ALTER TABLE `especialidad`
+  MODIFY `id_esp` int(4) NOT NULL AUTO_INCREMENT;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
