@@ -1,7 +1,7 @@
 <?php
     session_start();
     include('ConexionBD.php');
-    $BD=new ConexionBD('localhost','metalmecanica','metal_mecanica','itmoreliamecanica');
+    $BD=new ConexionBD('127.0.0.1','mecanica','root','12345678');
 ?>
 <div id="wrapper">
     <table class="centered hide-on-med-and-down">
