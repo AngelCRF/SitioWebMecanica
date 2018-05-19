@@ -59,6 +59,7 @@
             <ul class="center hide-on-med-and-down">
                 <li><a href="prueba_admin.php"><i class="material-icons">Personal</i></a></li>
                 <li><a href="reticula_admin.php"><i class="material-icons">Reticula</i></a></li>
+                <li><a href="indices_admin.php"><i class="material-icons">Índices</i></a></li>
             </ul>
         </div>
     </nav>

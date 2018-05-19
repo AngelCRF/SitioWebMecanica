@@ -48,8 +48,9 @@
   <nav class="hide-on-med-and-down">
         <div class="nav-wrapper grey darken-1 center-align">
             <ul class="center hide-on-med-and-down">
-                <li><a href=""><i class="material-icons">Personal</i></a></li>
+                <li><a href="prueba_admin.php"><i class="material-icons">Personal</i></a></li>
                 <li><a href="reticula_admin.php"><i class="material-icons">Reticula</i></a></li>
+                <li><a href="indices_admin.php"><i class="material-icons">Índices</i></a></li>
             </ul>
         </div>
     </nav>

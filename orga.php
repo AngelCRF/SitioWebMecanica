@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Artesania y loza Mexicana -->
 <html lang="es">
     <head>
         <title>DMM | ITMORELIA</title>
@@ -7,15 +6,10 @@
         <meta name="keywords" content="pagina de IGE"/>
         <meta name="author" content="Kevin Erick Angel Medrano"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-        <link rel="stylesheet" type="" href="orga.css" />
-        <!-- Materialized libraries -->
-        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" type="" href="css/orga.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-           <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
---><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="index.css" />
         <style type="text/css">
             body{
@@ -45,23 +39,25 @@
         </div>
         <div class="Cprincipal_index card-panel grey lighten-4">
             <div>
-            <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">
+            <img class="responsive-img" src="Imagenes/head.png" height="90px" width="3000px">
             </div>
             <div class="Cprincipal_index card-panel grey lighten-4">
                 <div id="wrapper">
                     <ol class="organizational-chart">
                         <li>
                             <div>
-                                <h3>Jefe de Departamento</h3>
                                 <?php
-                                    //Conexion a la base de datos
                                     require_once("BD.php");
                                     $db = new BD();
-                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='presidente_de_academia' AND Carrera='mecanica'";
+                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='jefe_de_departamento' AND Carrera='mecanica'";
                                     $resultado = $db->ejecutar($SQL);
                                     foreach($resultado as $fila){
                                 ?>
-                                        <h4><?=$fila[0]?></h4>
+                                <a href="admin/<?=$fila[0]?>">
+                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                </a>
+                                <h3>Jefe de Departamento</h3>
+                                <h4><?=$fila[2]?></h4>
                                 <?php
                                     }
                                 ?>
@@ -69,16 +65,18 @@
                             <ol>
                                 <li>
                                     <div>
-                                        <h4>Presidente de Academia</h4>
                                         <?php
-                                            //Conexion a la base de datos
                                             require_once("BD.php");
                                             $db = new BD();
-                                            $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='presidente_de_academia' AND Carrera='mecanica'";
+                                            $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='presidente_de_academia' AND Carrera='mecanica'";
                                             $resultado = $db->ejecutar($SQL);
                                             foreach($resultado as $fila){
                                         ?>
-                                                <h5><?=$fila[0]?></h5>
+                                        <a href="admin/<?=$fila[0]?>">
+                                            <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                        </a>
+                                        <h4>Presidente de Academia</h4>
+                                        <h5><?=$fila[2]?></h5>
                                         <?php
                                             }
                                         ?>
@@ -86,16 +84,18 @@
                                     <ol>
                                         <li>
                                             <div>
+                                                <?php
+                                                    require_once("BD.php");
+                                                    $db = new BD();
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='secretario_de_academia' AND Carrera='mecanica'";
+                                                    $resultado = $db->ejecutar($SQL);
+                                                    foreach($resultado as $fila){
+                                                ?>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
                                                 <h5>Secretario de Academia</h5>
-                                                <?php
-                                                    //Conexion a la base de datos
-                                                    require_once("BD.php");
-                                                    $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='secretario_de_academia' AND Carrera='mecanica'";
-                                                    $resultado = $db->ejecutar($SQL);
-                                                    foreach($resultado as $fila){
-                                                ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -103,16 +103,18 @@
                                         </li>
                                         <li>
                                             <div>
+                                                <?php
+                                                    require_once("BD.php");
+                                                    $db = new BD();
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='coordinador_de_carrera' AND Carrera='mecanica'";
+                                                    $resultado = $db->ejecutar($SQL);
+                                                    foreach($resultado as $fila){
+                                                ?>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
                                                 <h5>Coordinador de Carrera</h5>
-                                                <?php
-                                                    //Conexion a la base de datos
-                                                    require_once("BD.php");
-                                                    $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='coordinador_de_carrera' AND Carrera='mecanica'";
-                                                    $resultado = $db->ejecutar($SQL);
-                                                    foreach($resultado as $fila){
-                                                ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -120,16 +122,18 @@
                                         </li>
                                         <li>
                                             <div>
+                                                <?php
+                                                    require_once("BD.php");
+                                                    $db = new BD();
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='coordinador_de_programa_de-tutorias' AND Carrera='mecanica'";
+                                                    $resultado = $db->ejecutar($SQL);
+                                                    foreach($resultado as $fila){
+                                                ?>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
                                                 <h5>Coordinador de Programa de Tutorias</h5>
-                                                <?php
-                                                    //Conexion a la base de datos
-                                                    require_once("BD.php");
-                                                    $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='coordinador_de_programa_de-tutorias' AND Carrera='mecanica'";
-                                                    $resultado = $db->ejecutar($SQL);
-                                                    foreach($resultado as $fila){
-                                                ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -137,16 +141,18 @@
                                         </li>
                                         <li>
                                             <div>
+                                                <?php
+                                                    require_once("BD.php");
+                                                    $db = new BD();
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_docencia' AND Carrera='mecanica'";
+                                                    $resultado = $db->ejecutar($SQL);
+                                                    foreach($resultado as $fila){
+                                                ?>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
                                                 <h5>Jefe de Proyecto de Docencia</h5>
-                                                <?php
-                                                    //Conexion a la base de datos
-                                                    require_once("BD.php");
-                                                    $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_docencia' AND Carrera='mecanica'";
-                                                    $resultado = $db->ejecutar($SQL);
-                                                    foreach($resultado as $fila){
-                                                ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -154,16 +160,18 @@
                                         </li>
                                         <li>
                                             <div>
+                                                <?php
+                                                    require_once("BD.php");
+                                                    $db = new BD();
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_vinculacion' AND Carrera='mecanica'";
+                                                    $resultado = $db->ejecutar($SQL);
+                                                    foreach($resultado as $fila){
+                                                ?>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
                                                 <h5>Jefe de Proyecto de Vinculación</h5>
-                                                <?php
-                                                    //Conexion a la base de datos
-                                                    require_once("BD.php");
-                                                    $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_vinculacion' AND Carrera='mecanica'";
-                                                    $resultado = $db->ejecutar($SQL);
-                                                    foreach($resultado as $fila){
-                                                ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -171,16 +179,18 @@
                                         </li>
                                         <li>
                                             <div>
-                                                <h5>Jefe de Proyecto de Investigación</h5>
                                                 <?php
-                                                    //Conexion a la base de datos
                                                     require_once("BD.php");
                                                     $db = new BD();
-                                                    $SQL = "SELECT Nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_investigacion' AND Carrera='mecanica'";
+                                                    $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='Jefe_de_proyecto_de_investigacion' AND Carrera='mecanica'";
                                                     $resultado = $db->ejecutar($SQL);
                                                     foreach($resultado as $fila){
                                                 ?>
-                                                        <h6><?=$fila[0]?></h6>
+                                                <a href="admin/<?=$fila[0]?>">
+                                                    <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                </a>
+                                                <h5>Jefe de Proyecto de Investigación</h5>
+                                                <h6><?=$fila[2]?></h6>
                                                 <?php
                                                     }
                                                 ?>
@@ -194,16 +204,19 @@
                                     </div>
                                     <ol>
                                         <?php
-                                            //Conexion a la base de datos
                                             require_once("BD.php");
                                             $db = new BD();
-                                            $SQL = "SELECT Nombre FROM profesor WHERE Carrera='mecanica'";
+                                            $SQL = "SELECT CV, foto, nombre FROM profesor WHERE Tipo ='Profesor'";
                                             $resultado = $db->ejecutar($SQL);
                                             foreach($resultado as $fila){
                                         ?>
                                                 <li>
                                                     <div>
-                                                        <h5><?=$fila[0]?></h5>
+                                                        <a href="admin/<?=$fila[0]?>">
+                                                            <img class="responsive-img" src="admin/<?=$fila[1]?>" height="90px" width="90px">
+                                                        </a>
+                                                        <h5>Presidente de Academia</h5>
+                                                        <h6><?=$fila[2]?></h6>
                                                     </div>
                                                 </li>
                                         <?php
