@@ -2,11 +2,14 @@
     class BD{
         function __construct(){
             try {
-                require_once("datos_conexion.php");
+                //incluir variables de conexion
+                //require_once("datos_conexion.php");
+                //echo var_dump($datos_conexion);
                 $usuario = 'root';
-                $pass = '12345678';
-                $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=mecanica;', $usuario, $pass);
-            } catch(PDOException $e) {
+                $pass = '';
+                $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=mecanica;port=3307', $usuario, $pass);
+                //echo "Conexion exitosa";
+            }catch(PDOException $e){
                 die("Error al conectarse:". $e->getMessage());
             }    
         }
@@ -19,3 +22,4 @@
             }
         }
     }
+?>

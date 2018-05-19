@@ -67,7 +67,7 @@
                 </select>
                 <label>Carrera</label>
             </div>
-            <br>
+            <br><br>
             <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
                 <i class="material-icons right">save</i>
             </button>

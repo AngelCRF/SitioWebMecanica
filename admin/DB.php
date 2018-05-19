@@ -280,4 +280,25 @@ class DB{
         $resultado = $sentencia->fetchAll();
         return $resultado;
     }
+
+    public function mostEspecialidades($carrera){
+        $sql = "SELECT Nombre FROM especialidad WHERE Carrera=:carrera";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
+
+    public function mostReticula($carrera,$especialidad){
+        $sql = "SELECT * FROM materias WHERE carrera=:carrera and (tipo=:tipo or tipo='Tronco Comun')";
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->bindParam(":carrera", $carrera);
+        $sentencia->bindParam(":tipo", $especialidad);
+        $sentencia->execute();
+        $sentencia->setFetchMode(PDO::FETCH_ASSOC);
+        $resultado = $sentencia->fetchAll();
+        return $resultado;
+    }
 }

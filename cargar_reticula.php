@@ -1,7 +1,9 @@
 <?php
-    session_start();
-    include('ConexionBD.php');
-    $BD=new ConexionBD('localhost','metalmecanica','metal_mecanica','itmoreliamecanica');
+session_start();
+require_once("admin/DB.php");
+header('Content-type: application/json');
+$conexion = new DB();
+$resultado = $conexion->mostReticula($_SESSION['carrera'],$_GET['e']);
 ?>
 <div id="wrapper">
     <table class="centered hide-on-med-and-down">
@@ -26,13 +28,35 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(1,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==1){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                   <div>
+                        <div class="row">
+                            <table class="centered hide-on-med-and-down">
+                                <tbody>
+                                <?php
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==2){
+                                    ?>
+                                    <tr>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
+                                    </tr>
+                                    <?php  
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -46,13 +70,14 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(2,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==3){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -66,13 +91,98 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(3,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==4){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                   <div>
+                        <div class="row">
+                            <table class="centered hide-on-med-and-down">
+                                <tbody>
+                                <?php
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==5){
+                                    ?>
+                                    <tr>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
+                                    </tr>
+                                    <?php  
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                   <div>
+                        <div class="row">
+                            <table class="centered hide-on-med-and-down">
+                                <tbody>
+                                <?php
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==6){
+                                    ?>
+                                    <tr>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
+                                    </tr>
+                                    <?php  
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                   <div>
+                        <div class="row">
+                            <table class="centered hide-on-med-and-down">
+                                <tbody>
+                                <?php
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==7){
+                                    ?>
+                                    <tr>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
+                                    </tr>
+                                    <?php  
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                   <div>
+                        <div class="row">
+                            <table class="centered hide-on-med-and-down">
+                                <tbody>
+                                <?php
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==8){
+                                    ?>
+                                    <tr>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
+                                    </tr>
+                                    <?php  
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -86,113 +196,14 @@
                             <table class="centered hide-on-med-and-down">
                                 <tbody>
                                     <?php
-                                        $resultSem1=$BD->mostrarmateria(4,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                                        foreach($resultado as $row){
+                                            if($row['semestre']==9){
                                     ?>
                                     <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                                     </tr>
                                     <?php  
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> 
-                </td>
-                <td>
-                   <div>
-                        <div class="row">
-                            <table class="centered hide-on-med-and-down">
-                                <tbody>
-                                    <?php
-                                        $resultSem1=$BD->mostrarmateria(5,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
-                                    ?>
-                                    <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
-                                    </tr>
-                                    <?php  
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> 
-                </td>
-                <td>
-                   <div>
-                        <div class="row">
-                            <table class="centered hide-on-med-and-down">
-                                <tbody>
-                                    <?php
-                                        $resultSem1=$BD->mostrarmateria(6,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
-                                    ?>
-                                    <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
-                                    </tr>
-                                    <?php  
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> 
-                </td>
-                <td>
-                   <div>
-                        <div class="row">
-                            <table class="centered hide-on-med-and-down">
-                                <tbody>
-                                    <?php
-                                        $resultSem1=$BD->mostrarmateria(7,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
-                                    ?>
-                                    <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
-                                    </tr>
-                                    <?php  
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> 
-                </td>
-                <td>
-                   <div>
-                        <div class="row">
-                            <table class="centered hide-on-med-and-down">
-                                <tbody>
-                                    <?php
-                                        $resultSem1=$BD->mostrarmateria(8,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
-                                    ?>
-                                    <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
-                                    </tr>
-                                    <?php  
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div> 
-                </td>
-                <td>
-                   <div>
-                        <div class="row">
-                            <table class="centered hide-on-med-and-down">
-                                <tbody>
-                                    <?php
-                                        $resultSem1=$BD->mostrarmateria(9,'Mecanica','Especialidad 2');
-                                        while ($renglon=mysqli_fetch_array($resultSem1)){
-                                    ?>
-                                    <tr>
-                                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
-                                    </tr>
-                                    <?php  
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -215,18 +226,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(1,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==1){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -243,18 +255,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(2,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==2){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -271,18 +284,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(3,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==3){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -299,18 +313,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(4,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==4){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -327,18 +342,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(5,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==5){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -355,18 +371,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(6,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==6){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -382,19 +399,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <?php
-                        $resultSem1=$BD->mostrarmateria(7,'Mecanica','Especialidad 2');
+                <?php
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==7){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -411,18 +429,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(8,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==8){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
@@ -439,18 +458,19 @@
             <tbody>
                 <tr>
                     <?php
-                        $resultSem1=$BD->mostrarmateria(9,'Mecanica','Especialidad 2');
                         $cont=0;
-                        while ($renglon=mysqli_fetch_array($resultSem1)){
+                        foreach($resultado as $row){
                             if($cont==3){
                                 ?>
                                 </tr><tr>
                                 <?php
                             }
+                            if($row['semestre']==9){
                     ?>
-                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$renglon['url'].'' ?>><h6><?php echo $renglon['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $renglon['creditos']; ?><br />Tipo: <?php echo $renglon['tipo']?><br /></div></td>
+                        <td><div class="waves-effect centered waves-light white-text orange darken-3"><div><a class="btn-large  orange darken-2 flow-text"  href=<?php echo 'admin/'.$row['programa'].'' ?>><h6><?php echo $row['abreviacion']; ?></h6></a></div><br />Creditos:<?php echo $row['creditos']; ?><br />Tipo: <?php echo $row['tipo']?><br /></div></td>
                     <?php 
                             $cont=$cont+1; 
+                            }
                         }
                     ?>
                 </tr>
