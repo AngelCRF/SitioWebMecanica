@@ -5,10 +5,11 @@
         $_POST[$indice] = htmlspecialchars($valor);
         }
         extract($_POST);
-        if($nombremateria!=""){
-            $targetfolder = "Indices/"+$carrera+"/";
+        if(isset($carrera)){
+            session_start();
+            $targetfolder = "Indices/" . $carrera . "/";
             //$targetfolder = $targetfolder.basename( $_FILES['archivo']['name']) ;
-            $newname = $periodo+"_"+$fecha+".pdf";
+            $newname = $periodo+"_" . $fecha . ".pdf";
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder . $newname)) {
                 //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
             } else {
@@ -17,7 +18,6 @@
             $archivo = $targetfolder;
             $conexion = new DB();
             $resultado = $conexion->insertarIndice($carrera, $periodo, $fecha);
-            session_start();
             if($resultado>0){
                 header('Location: indices_admin.php');
                 $_SESSION['result'] = 'guardado';

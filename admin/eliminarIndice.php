@@ -6,7 +6,7 @@
         }
         extract($_POST);
         //falta eliminar el archivo
-        if($eliminarindice!=""){
+        if($carrera!=""){
             $conexion = new DB();
             $resultado = $conexion->eliminarIndice($carrera, $periodo, $fecha);
             session_start();
