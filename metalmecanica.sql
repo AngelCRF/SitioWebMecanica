@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2018 at 06:43 AM
+-- Generation Time: May 03, 2018 at 03:33 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -32,7 +32,7 @@ CREATE TABLE `materias` (
   `creditos` int(11) NOT NULL,
   `tipo` varchar(30) NOT NULL,
   `semestre` int(11) NOT NULL,
-  `url` varchar(200) NOT NULL,
+  `programa` varchar(200) NOT NULL,
   `carrera` varchar(11) NOT NULL,
   `abreviacion` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -63,7 +63,8 @@ CREATE TABLE `profesor` (
   `Nombre` varchar(60) NOT NULL,
   `Tipo` varchar(15) NOT NULL,
   `Carrera` varchar(11) NOT NULL,
-  `CV` text NOT NULL
+  `CV` text NOT NULL,
+  `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -76,6 +77,16 @@ CREATE TABLE `usuarios` (
   `id_usuario` int(4) NOT NULL,
   `nombre` varchar(30) NOT NULL,
   `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `especialidad`
+--
+
+CREATE TABLE `especialidad` (
+  `id_esp` int(4) NOT NULL,
+  `Nombre` varchar(60) NOT NULL, 
+  `Carrera` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -107,6 +118,12 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
+-- Indexes for table `especialidad`
+--
+ALTER TABLE `especialidad`
+  ADD PRIMARY KEY (`id_esp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -130,6 +147,13 @@ ALTER TABLE `profesor`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_usuario` int(4) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `especialidd`
+--
+ALTER TABLE `especialidad`
+  MODIFY `id_esp` int(4) NOT NULL AUTO_INCREMENT;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!-- Artesania y loza Mexicana -->
-
+<?php
+    session_start();
+    $_SESSION['carrera']='Mecanica';
+?>
 <html lang="es">
     <head>
         <title>ITMORELIA| Dept. Metal-Mecánica</title>
@@ -27,15 +29,16 @@
     <body>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>    
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>    
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".dropdown-button").dropdown();
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
+                $('.tabs').tabs();
             });            
         </script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
         <div id="navbar" class="navbar">
             <script type="text/javascript">
                 $("#navbar").load("navbar.html");
@@ -64,27 +67,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col s3"><a href="#especialidad1" class="active">Especialidad 1</a></li>
-                        <li class="tab col s3"><a href="#especialidad2">Especialidad 2</a></li>
-                    </ul>
-                </div>
-                <div id="especialidad1" class="col s12">
-                    <div id="espec1">
-                        <script type="text/javascript">
-                            $("#espec1").load("retEspec1Mecanica.php");
-                        </script> 
+            <div id="especialidades">
+                <script type="text/javascript">
+                    $("#especialidades").load("cargar_especialidades.php");
+                </script>
+                <!--<div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s3"><a href="#Ingenieria_De_Software">Ingenieria_De_Software</a></li>
+                            <li class="tab col s3"><a href="#Tecnologias_Web">Tecnologias_Web</a></li>
+                            <li class="tab col s3"><a href="#Seguridad_Informatica">Seguridad_Informatica</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div id="especialidad2" class="col s12">
-                    <div id="espec2">
-                        <script type="text/javascript">
-                            $("#espec2").load("retEspec2Mecanica.php");
-                        </script> 
-                    </div>
-                </div>
+                    <div id='Ingenieria_De_Software' class="col s12">Ingenieria_De_Software</div>
+                    <div id='Tecnologias_Web' class="col s12">Tecnologias_Web</div>
+                    <div id='Seguridad_Informatica' class="col s12">Seguridad_Informatica</div>
+                </div>-->>
             </div>
         </div>
         <div id="feet" class="feet">

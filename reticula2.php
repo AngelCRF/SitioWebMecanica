@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- Artesania y loza Mexicana -->
-
+<?php
+    session_start();
+    $_SESSION['carrera']='Mecatronica';
+?>
 <html lang="es">
     <head>
         <title>ITMORELIA| Dept. Metal-Mecánica</title>
@@ -33,6 +36,7 @@
                 $(".dropdown-button").dropdown();
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
+                $('.tabs').tabs();
             });            
         </script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -65,27 +69,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row ">
-                <div class="col s12">
-                    <ul class="tabs ">
-                        <li class="tab col s3 "><a href="#especialidad1" class="active">Especialidad 1</a></li>
-                        <li class="tab col s3"><a href="#especialidad2">Especialidad 2</a></li>
-                    </ul>
-                </div>
-                <div id="especialidad1" class="col s12">
-                    <div id="espec1">
-                        <script type="text/javascript">
-                            $("#espec1").load("retEspec1Mecatronica.php");
-                        </script> 
-                    </div>
-                </div>
-                <div id="especialidad2" class="col s12">
-                    <div id="espec2">
-                        <script type="text/javascript">
-                            $("#espec2").load("retEspec2Mecatronica.php");
-                        </script> 
-                    </div>
-                </div>
+            <div id="especialidades">
+                <script type="text/javascript">
+                    $("#especialidades").load("cargar_especialidades.php");
+                </script> 
             </div>
         </div>
         <!--Pie de pagina, datos de contato-->
