@@ -12,9 +12,8 @@
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
         <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
@@ -25,17 +24,15 @@
                 background-attachment: fixed;
            }
         </style> 
+        <script>
+            $(document).ready(function() {
+                $('select').material_select();
+                $(".button-collapse").sideNav();
+            });
+        </script>
     </head>
     <body >
-        <!--encabezado y menus-->  
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.materialboxed').materialbox();
-                $(".button-collapse").sideNav();
-            });            
-        </script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <!--contenedores para menus desplegables-->
+        <!--encabezado y menus-->
         <div id="navbar" class="navbar">
             <script type="text/javascript">
                     $("#navbar").load("navbar.html");
