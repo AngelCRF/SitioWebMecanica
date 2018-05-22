@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("DB.php");
     if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         foreach($_POST as $indice => $valor){
@@ -7,10 +8,11 @@
         extract($_POST);
         if(isset($carrera)){
             session_start();
-            $targetfolder = "Indices/" . $carrera . "/";
+            $targetfolder = "Indices/".$carrera."/";
             //$targetfolder = $targetfolder.basename( $_FILES['archivo']['name']) ;
-            $newname = $periodo+"_" . $fecha . ".pdf";
-            if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder . $newname)) {
+            $newname = $periodo."_" .$fecha.".pdf";
+            $file = $targetfolder."".$newname;
+            if(move_uploaded_file($_FILES['archivo']['tmp_name'], $file)) {
                 //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
             } else {
                 //echo "Problem uploading file";
