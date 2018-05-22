@@ -5,19 +5,8 @@ $(document).ready(
         $('select').material_select();  
     });
 
-    function agregarpersonal(){
-        var xhr= new XMLHttpRequest();
-        xhr.open('GET', 'agregarPersonal.html', true);
-        xhr.onreadystatechange= function() {
-            if (this.readyState!==4) return;
-            if (this.status!==200) return; // or whatever error handling you want
-            document.getElementById('contenedor').innerHTML= this.responseText;
-        };
-        xhr.send();
-        $('select').material_select();
-    }
-
     $(function(){
+        
         $('#agregarPersonalForm').on("submit", function(e){
             e.preventDefault();
             var f = $(this);
@@ -34,7 +23,7 @@ $(document).ready(
             if($('#archivoFoto').get(0).files.length === 0){
 
                 $("#archivoFoto").css('background-color', '#fbc7c7');
-                validated = validated +7;
+                validated = validated +3;
             }
             if(validated>=1){
                 switch(validated){
@@ -46,7 +35,6 @@ $(document).ready(
                     case 7: alert("Favor de llenar todos los campos"); break;
                     default: ;break;
                 }
-                
                 return false;
             } else {
                 
