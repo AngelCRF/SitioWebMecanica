@@ -20,14 +20,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-         <link rel="stylesheet" type="text/css" href="index.css" />
+         
         <style type="text/css">
             body{
                 background: #dddddd;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-attachment: fixed;
-           }
+            }
+            #sombra{
+                -webkit-text-stroke: 0.70px black;
+            }
+            #sombrah5{
+                /*-webkit-text-fill-color: white;*/
+                -webkit-text-stroke: 0.40px black;
+            }
+            .Cprincipal_index{
+                width: 90%;
+                height: auto;
+                margin-top: 5%;
+                margin-left: 5%;  
+                border-bottom: solid iem*
+            }
+           
         </style>
        </head>
 
@@ -39,9 +54,11 @@
                 $('.materialboxed').materialbox();
                 $(".button-collapse").sideNav();
                 $('select').material_select();
-                $('.carousel.carousel-slider').carousel({fullWidth: true});     
+                $('.carousel.carousel-slider').carousel({fullWidth: false});
+                $('.slider').slider({fullWidth: false});     
                 function autoplay() {
-                    $('.carousel').carousel('next');
+                   // $('.carousel').carousel('next');
+                  $('.slider').slider('next');
                     setTimeout(autoplay, 4500);
                 }
 
@@ -66,42 +83,45 @@
       <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">
     </div>
    
-    
+    <br />
 
     <!--Carusel de imagenes -->
-    <div class="carousel carousel-slider center z-depth-5" data-indicators="true">
+    <div class="slider">
+      <ul class="slides">
+        <?php
 
-      <div class="carousel-item grey white-text">
-        <div class="carousel-fixed-item"><img src="Imagenes/1.png"></div>
-        <h2>Mecanica imagen 1</h2>
-        <p class="white-text">This is your first panel</p>
-      </div>
+            require ("admin/DB.php");
+            $conexion = new DB();
+            $sql = "SELECT titulo, descripcion, imagen, url FROM noticias ORDER BY fecha DESC LIMIT 3";
+            $resultado=$conexion->ejecutar($sql);
+            foreach($resultado as $fila){ 
+              $admin = "admin/"     ;
+              $img = $fila ['imagen']; 
 
-      <div class="carousel-item grey darken-1 white-text" href="#two!">
-        <div class="carousel-fixed-item"><img src="Imagenes/5.png"></div>
-        <h2>Second Panel</h2>
-        <p class="white-text">This is your second panel</p>
-      </div>
-
-      <div class="carousel-item grey darken-2 white-text" href="#three!">
-        <div class="carousel-fixed-item"><img src="Imagenes/3.png"></div>
-        <h2>Third Panel</h2>
-        <p class="white-text">This is your third panel</p>
-      </div>
-
-      <div class="carousel-item grey darken-3 white-text" href="#four!">
-        <div class="carousel-fixed-item"><img src="Imagenes/4.png"></div>
-        <h2>Fourth Panel</h2>
-        <p class="white-text">This is your fourth panel</p>
-      </div>
-
+            //Especificar el alto y el ancho con javascript cada vez que devuelva la consulta 
+        ?>
+        <li>
+          <img src="<?php echo $admin . $img ; ?>">
+          <div class="caption center-align">
+            <div id="sombra">
+                <a class="light grey-text text-lighten-3" target="blank" href="http://<?php echo $fila ['url']; ?>"><h3><?php echo $fila ['titulo']; ?></h3></a>
+            </div>
+                <h5 class="light grey-text text-lighten-3"><?php echo $fila ['descripcion']; ?></h5> 
+            <a class="waves-effect green accent-4 z-depth-4 btn" target="blank" href="http://<?php echo $fila ['url']; ?>" ><i class="material-icons right">insert_link</i>Ver más</a>
+          </div>
+        </li>
+      
+        <?php 
+             } 
+        ?>
+      </ul>
     </div>
-
-
+  
+    <br /><br />
     <div class="sitios_interes2 container">
       <center class="flow-text grey-text ">Sitios de Interés</center><br>
     </div>
-
+             
     <div class="row">
       <div class="col s6 m6 l6">
         <div class="card">
@@ -137,5 +157,5 @@
                     $("#feet").load("footer.html");
             </script> 
         </div>
-    </body>
+ </body>
 </html> 
