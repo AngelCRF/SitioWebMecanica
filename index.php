@@ -3,193 +3,159 @@
 
 <html lang="es">
     <head>
-        <title>ITMORELIA| Ing. en Gestión Empresarial</title>
+        <title>ITMORELIA| Dept. Metal-Mec�nica</title>
         <meta charset="utf-8"/>
        
-        <meta name="keywords" content="pagina de IGE"/>
+        <meta name="keywords" content="index de metalmecanica"/>
         
-        <meta name="author" content="Neri Gonzalez Lopez"/>
+        <meta name="author" content="Yael Revuelta"/>
         <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>
-      
-         <link rel="stylesheet" type="text/css" href="index.css" />
+
+        <!-- Materialized libraries -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+         
         <style type="text/css">
-        body{
-          background: #000000;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-attachment: fixed;
-           }
+            body{
+                background: #dddddd;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+            #sombra{
+                -webkit-text-stroke: 0.70px black;
+            }
+            #sombrah5{
+                /*-webkit-text-fill-color: white;*/
+                -webkit-text-stroke: 0.40px black;
+            }
+            .Cprincipal_index{
+                width: 90%;
+                height: auto;
+                margin-top: 5%;
+                margin-left: 5%;  
+                border-bottom: solid iem*
+            }
+           
         </style>
        </head>
 
 
 <body >
-   
-<div>   
-    <div id="header" style = "display: table; width: 500px;">
-    <div style = "float: left; width: 104px;">
-        <div style = "float: left; height: 100px; width: 100px;">
-        <ul class="nav">
-            <li><img src="Imagenes/logoch.png"></li>
-        </ul>
-        </div>
-        
-    </div>
-    
-    <div  style = "float: left; height: 100px; width: 100px;">
-    	
-    	
-    	<ul class="titulo_carrera">
-			<li>Ingenieria en Gestión Empresarial</li>    	
-    	</ul>
-    	    	
-    </div>
-    
-    <div style = "height: 50px; width: 1350px;">
-    
-    <br><br>
-    	<ul class="nav">            
-            <li><a href="index.php"><font color="white">INICIO</font></a></li>
-            <li><a href="index.php#"><font color="white">RETICULA</font></a>
-            	<ul>
-                    <li><a href="reticula1.php"><font color="white">Especialidad Calidad</font></a></li>
-                    <li><a href="reticula2.php"><font color="white">Especialidad Finanzas</font></a></li>
-                </ul>
-            </li>    
-            <li><a href="index.php#"><font color="white">PERFILES</font></a>
-                <ul>
-                    <li><a href="aspirante.php"><font color="white">Perfil de Aspirante</font></a></li>
-                    <li><a href="egresado.php"><font color="white">Perfil de Egresado</font></a></li>
-                </ul>
-            </li>
-            <li><a href="mision.php"><font color="white">QUIENES SOMOS</font></a></li>
-            <li><a href="orga.php"><font color="white">ORGANIGRAMA</font></a></li>
-            <li><a href="material_apoyo.php"><font color="white">MATERIAL DE APOYO</font></a></li>
-          <li><a href="index.php#"><font color="white">INDICE DE REPROBACIÓN</font></a>
-                <ul>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2015.pdf" target="blank"><font color="white">ENE-JUN 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2015.pdf" target="blank"><font color="white">AGO-DIC 2015</font></a></li>
-                    <li><a href="PDF/Indice_Rep/ENE-JUN&#32;2016.pdf" target="blank"><font color="white">ENE-JUN 2016</font></a></li>
-                    <li><a href="PDF/Indice_Rep/AGO-DIC&#32;2016.pdf" target="blank"><font color="white">AGO-DIC 2016</font></a></li>
-              </ul>       
-                    </li>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".dropdown-button").dropdown();
+                $('.materialboxed').materialbox();
+                $(".button-collapse").sideNav();
+                $('select').material_select();
+                $('.carousel.carousel-slider').carousel({fullWidth: false});
+                $('.slider').slider({fullWidth: false});     
+                function autoplay() {
+                   // $('.carousel').carousel('next');
+                  $('.slider').slider('next');
+                    setTimeout(autoplay, 4500);
+                }
+
+                jQuery(document).ready(function() {
+                    setTimeout(function() {
+                      autoplay()
+                    }, 4500);
+                });
                 
-        </ul>
-    
+            });            
+        </script>
+
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <div id="navbar" class="navbar">
+            <script type="text/javascript">
+                    $("#navbar").load("navbar.html");
+            </script> 
+        </div>
+      
+  <div class="Cprincipal_index card-panel grey lighten-4">
+    <div>
+      <img class="responsive-img" src="Imagenes/head.png" alt="header pagina quienes somos" height="90px" width="3000px">
     </div>
-    
-</div>
-<br><br><br>
-<br><br><br>
+   
+    <br />
 
-</div>
+    <!--Carusel de imagenes -->
+    <div class="slider">
+      <ul class="slides">
+        <?php
 
-<div class="Cprincipal_index">
-    <div class="cajaS"><img src="Imagenes/logoSEP.png"></div>
-     <div class="cajaT"><img src="Imagenes/logoTEC.png"><br></div>
-     
-     
-<br>
-<br>
+            require ("admin/DB.php");
+            $conexion = new DB();
+            $sql = "SELECT titulo, descripcion, imagen, url FROM noticias ORDER BY fecha DESC LIMIT 3";
+            $resultado=$conexion->ejecutar($sql);
+            foreach($resultado as $fila){ 
+              $admin = "admin/"     ;
+              $img = $fila ['imagen']; 
 
+            //Especificar el alto y el ancho con javascript cada vez que devuelva la consulta 
+        ?>
+        <li>
+          <img src="<?php echo $admin . $img ; ?>">
+          <div class="caption center-align">
+            <div id="sombra">
+                <a class="light grey-text text-lighten-3" target="blank" href="http://<?php echo $fila ['url']; ?>"><h3><?php echo $fila ['titulo']; ?></h3></a>
+            </div>
+                <h5 class="light grey-text text-lighten-3"><?php echo $fila ['descripcion']; ?></h5> 
+            <a class="waves-effect green accent-4 z-depth-4 btn" target="blank" href="http://<?php echo $fila ['url']; ?>" ><i class="material-icons right">insert_link</i>Ver más</a>
+          </div>
+        </li>
+      
+        <?php 
+             } 
+        ?>
+      </ul>
+    </div>
+  
+    <br /><br />
+    <div class="sitios_interes2 container">
+      <center class="flow-text grey-text ">Sitios de Interés</center><br>
+    </div>
+             
+    <div class="row">
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+            <a href="http://www.conacytprensa.mx/"><img src="Pagina/images/logoAICgris.png"></a>
+            <span class="card-title">Card Title</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+            <a href="http://cacei.org.mx/index.php"><img src="Pagina/images/cacei.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m6 l6">
+        <div class="card">
+          <div class="card-image">
+          <a href="https://www.entrepreneur.com/es"><img src="Imagenes/entrepreneur-logo.png"></a>
+            <span class="card-title">Card Title</span>
+          </div>
+        </div>
+      </div>
+    </div>
+            
 
- <div class="slider">
-	
-	<ul>
-		<li><img src="Imagenes/1.png" alt=""></li>
-		<li><img src="Imagenes/3.png" alt=""></li>
-		<li><img src="Imagenes/5.png" alt=""></li>
-		<li><img src="Imagenes/4.png" alt=""></li>
-		<li><img src="Imagenes/5.png" alt=""></li>
-	</ul>
+  </div>
 
-
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<div class="sitios_interes2"><center>Sitios de Interés</center><br></div>
-
-
-<div>
-<table>	
-<tr>
-
-<td style="width: 500px"><a href="Pagina/pdf/Diagnostico_ITMorelia.pdf" target="_blank"><img src="Pagina/images/Imagen_Diagnostico.png"></a></td>
-<td><a title="Medio informativo especializado sobre los �ltimos desarrollos tecnol�gicos e innovadores de nuestro pa�s." href="http://www.conacytprensa.mx/" target="_blank"><img src="Pagina/images/logoAICgris.png"></a></td>
-<td><a href="http://cacei.org.mx/index.php" target="_blank"><img src="Pagina/images/cacei.png"></a></td>
-</tr>
-</table>
-<table>
-<tr>
-<td style="width: 100px"></td>
-<td><a title="S�bete a un autobus, concibe, construye e inicia una Startup" href="https://northamerica.startupbus.com/buses/mex.html" target="_blank"><img src="Imagenes/startupbusMexico.png"></a></td>
-<td style="width: 300px"></td>
-<td><a href="https://www.entrepreneur.com/es" target="_blank"><img src="Imagenes/entrepreneur-logo.png"></td>
-<td style="width: 100px"></td>
-</tr>
-
-
-</table>
-
-</div>    
-
-</div>
-
-<div  class="letra_pie">
-<div class="Cpie_index">
-<div class="CSocial">
-<div class="titulos_pie"><center>Redes Sociales</center><br></div>
-<div class="CSocial2">
-<a id="link" href="https://www.facebook.com/IGE-ITMorelia-Oficial-137692846975721/" target="_blank"> <img src="Imagenes/face.jpg">Facebook<br></a>
-<a  id="link" href="https://twitter.com/itmoficial" target="_blank"> <img src="Imagenes/tiwter.jpg">Twitter<br></a>
-<a  id="link" href="https://www.youtube.com/user/ITMoreliaOficial/" target="_blank"> <img src="Imagenes/youtube.jpg">Youtube<br> </a>
-<a  id="link" href="https://www.linkedin.com/edu/instituto-tecnol%C3%B3gico-de-morelia-173011" target="_blank"><img src="Imagenes/link.jpg">Linkedin<br></a>
-</div>
-</div>
-<div class="CVinculo">
-<div class="titulos_pie">Vínculos Académicos</center><br><br></div>
-<a  id="link" href="http://www.tecnm.mx/" target="_blank">Tecnológico Nacional De México<br><br></a>
-<a   id="link" href="http://www.ets.org/es/toefl"  target="_blank">Toefl<br><br></a>
-<a   id="link" href="http://www.ceneval.edu.mx/" target="_blank">Ceneval<BR><br></a>
-<a    id="link" href="http://www.anfei.mx/" target="_blank">Anfei<BR><br></a>
-<a     id="link" href="http://www.conacyt.mx/" target="_blank">Consejo Nacional De Ciencia Y Tecnología<br><br></a>
-</div>
-<div class="CContactar">
-<div class="titulos_pie">Contactanos</div><br><br>
-<a id="link2">Teléfonos:</a><br>
-4433121570 Ext.248<br><br>
-<a id="link2">Email:</a><br><a id="link" >ige@itmorelia.edu.mx</a><br><br>
-<a id="link2">Dirección:</a><br>
-Avenida Tecnológico No. 1500. Lomas de Santiaguito, Edificio AA. C.P. 58120 Morelia, Michoacán, México.<br>
-</div> 
-
-</div>
-Derechos Reservados. © 2017 Instituto Tecnológico de Morelia.
-</div>
-
-          
- 
-
-
-
-    </body>
-    </html>
-
-
-
-
-
-    <!--
--->
+ <!--Pie de pagina, datos de contato-->
+ <div id="feet" class="feet">
+            <script type="text/javascript">
+                    $("#feet").load("footer.html");
+            </script> 
+        </div>
+ </body>
+</html> 
