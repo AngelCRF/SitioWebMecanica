@@ -5,27 +5,28 @@
         $_POST[$indice] = htmlspecialchars($valor);
         }
         extract($_POST);
-        if($nombremateria!=""){
-            $targetfolder = "ProgramasMaterias/";
-            $targetfolder = $targetfolder . basename( $_FILES['archivo']['name']) ;
-            if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder)) {
+        if(isset($carrera)){
+            session_start();
+            $targetfolder = "Indices/" . $carrera . "/";
+            //$targetfolder = $targetfolder.basename( $_FILES['archivo']['name']) ;
+            $newname = $periodo+"_" . $fecha . ".pdf";
+            if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder . $newname)) {
                 //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
             } else {
                 //echo "Problem uploading file";
             }
             $archivo = $targetfolder;
             $conexion = new DB();
-            $resultado = $conexion->insertarMateria($nombremateria, $creditosmateria, $tipomateria, $semestremateria, $carrera, $abreviacionmateria, $archivo);
-            session_start();
+            $resultado = $conexion->insertarIndice($carrera, $periodo, $fecha);
             if($resultado>0){
-                header('Location: reticula_admin.php');
+                header('Location: indices_admin.php');
                 $_SESSION['result'] = 'guardado';
             } else {
-                header('Location: reticula_admin.php');
+                header('Location: indices_admin.php');
                 $_SESSION['result'] = 'error';
             }
         }   
     } else {
-        echo "se genero un error";
+        echo "Se generó un error";
     }
 ?>

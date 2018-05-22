@@ -68,8 +68,8 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
       <a href="#" class="brand-logo center"><h5>Metal Mecánica</h5></a>
     </div>
 </nav>
-
   <div class="Cprincipal_index card-panel grey lighten-4" style="text-align:center; margin-top: 10%; margin-bottom: 10%; margin-left: 25%; margin-right: 25%;">
+    <h6>Administrador</h6>
     <form action="EliminarPersonal.php" method="post" enctype="multipart/form-data" class="datos_usuarios" id="logInForm">
     <div class="row">
       <div class="input-field col s12">
@@ -129,7 +129,5 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
             </div>
           </div>
         </footer>
-
-
     </body>
 </html> 

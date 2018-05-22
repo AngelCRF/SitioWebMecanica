@@ -48,8 +48,9 @@
   <nav class="hide-on-med-and-down">
         <div class="nav-wrapper grey darken-1 center-align">
             <ul class="center hide-on-med-and-down">
-                <li><a href=""><i class="material-icons">Personal</i></a></li>
+                <li><a href="prueba_admin.php"><i class="material-icons">Personal</i></a></li>
                 <li><a href="reticula_admin.php"><i class="material-icons">Reticula</i></a></li>
+                <li><a href="indices_admin.php"><i class="material-icons">Índices</i></a></li>
             </ul>
         </div>
     </nav>
@@ -81,10 +82,10 @@
                 <select id="puesto" name="puesto">
                     <option value="Profesor">Profesor</option>
                     <option value="Jefe_de_departamento">Jefe de departamento</option>
-                    <option value="presidente_de_academia">Presidente de academia</option>
-                    <option value="secretario_de_academia">Secretario de academia</option>
-                    <option value="coordinador_de_carrera">coordinador de carrera</option>
-                    <option value="coordinador_de_programa_de-tutorias">coordinador de programa de tutorias</option>
+                    <option value="Presidente_de_academia">Presidente de academia</option>
+                    <option value="Secretario_de_academia">Secretario de academia</option>
+                    <option value="Coordinador_de_carrera">coordinador de carrera</option>
+                    <option value="Coordinador_de_programa_de_tutorias">coordinador de programa de tutorias</option>
                     <option value="Jefe_de_proyecto_de_docencia">Jefe de proyecto de docencia</option>
                     <option value="Jefe_de_proyecto_de_vinculacion">Jefe de proyecto de vinculaci&oacuten</option>
                     <option value="Jefe_de_proyecto_de_investigacion">Jefe de proyecto de investigaci&oacuten</option>

@@ -1,7 +1,8 @@
 $(document).ready(
     function(){
         $(".dropdown-button").dropdown();
-        $(".button-collapse").sideNav();   
+        $(".button-collapse").sideNav(); 
+        $('select').material_select();  
     });
 
     function agregarpersonal(){
@@ -171,5 +172,25 @@ $(document).ready(
             } else {
                 return true;
             }
+        });
+
+        $('#agregarIndiceForm').submit(function() {
+            var validated = 0;
+            if($('#archivo').get(0).files.length === 0){
+                $("#archivo").css('background-color', '#fbc7c7');
+                validated = validated +1;
+            }
+            if(validated>=1){
+                switch(validated){
+                    case 1: alert("Favor de ingresar un archivo valido"); break;
+                    default: ;break;
+                }
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        $('#eliminarIndiceForm').submit(function() {
         });
     })

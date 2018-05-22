@@ -6,9 +6,9 @@
         }
         extract($_POST);
         //falta eliminar el archivo
-        if($eliminarmateria!=""){
+        if($carrera!=""){
             $conexion = new DB();
-            $resultado = $conexion->eliminarMateria($eliminarmateria);
+            $resultado = $conexion->eliminarIndice($carrera, $periodo, $fecha);
             session_start();
             if($resultado>0){
                 $_SESSION['result'] = 'eliminado';
