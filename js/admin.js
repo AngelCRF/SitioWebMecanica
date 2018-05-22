@@ -171,6 +171,4 @@ $(document).ready(
             }
         });
 
-        $('#eliminarIndiceForm').submit(function() {
-        });
     })
