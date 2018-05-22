@@ -9,11 +9,12 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
 
     extract($_POST);
                 if($nombreprofesor!=""){
-                    echo "Entro al primer if";
+                    
                     //agregar archivos al sitioWeb
                     $targetfolder = "CV/";
                     $targetfoto = "foto/";
                     $targetfolder = $targetfolder . basename( $_FILES['archivo']['name']) ;
+                    $targetfoto = $targetfoto . basename( $_FILES['archivoFoto']['name']) ;
                    if(move_uploaded_file($_FILES['archivo']['tmp_name'], $targetfolder))
                     {
                         //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
@@ -21,10 +22,11 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                     else {
                         $response_array['status'] = 'errorArchivo';
                         echo json_encode($response_array);
-                        exit;     
+                        exit;
+                         
                     }
-                    if(!file_exists($_FILES['archivoFoto']['tmp_name']) || !is_uploaded_file($_FILES['name']['tmp_name'])){
-                        $targetfoto = $targetfoto . basename( $_FILES['archivoFoto']['name']) ;
+                    if ( isset( $_FILES["archivoFoto"] ) && !empty( $_FILES["archivoFoto"]["name"] ) ) {
+                        if ( is_uploaded_file( $_FILES["archivoFoto"]["tmp_name"] ) && $_FILES["archivoFoto"]["error"] === 0 )
                         if(move_uploaded_file($_FILES['archivoFoto']['tmp_name'], $targetfoto))
                         {
                             //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
@@ -36,13 +38,13 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                         }
                     }
                     else{
-                        $targetfoto= "foto/default.jpg";
-                    }
-                    
+                        $targetfoto = "foto/default.jpg";
+                    }   
                     $archivo = $targetfolder;
                     $foto = $targetfoto;
                     $conexion = new DB();
                     $resultado = $conexion->insertarProfesor($nombreprofesor, $puesto, $carrera, $archivo, $foto);
+                    session_start();
                     //$_SESSION['result'] = 'guardado';
                     if($resultado>0){
                         $response_array['status'] = 'success';
@@ -58,7 +60,6 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
 }
 else{
     
-    $response_array['status'] = 'errorConsulta';
-    echo json_encode($response_array);
+    echo "se genero un error";
 }
 ?>
