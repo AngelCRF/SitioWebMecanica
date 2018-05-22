@@ -26,11 +26,7 @@ foreach ($resultado as $row){
     <?php
         foreach($resultado as $row){
             $especialidad = str_replace(" ", "_", $row['Nombre']);
-            //fin php
-            //    <div id="<?php echo $row['Nombre']" class="col s12">
-            //        
-            //    </div>
-            // inicio?>
+    ?>
             <div id='<?php echo $especialidad; ?>' class="col s12">
                 <div id="especialidad_<?php echo $especialidad;?>">
                     <script type="text/javascript">

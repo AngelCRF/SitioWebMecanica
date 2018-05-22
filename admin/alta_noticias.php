@@ -28,6 +28,7 @@
             $(document).ready(function() {
                 $('select').material_select();
                 $(".button-collapse").sideNav();
+                $('.tabs').tabs();
             });
         </script>
     </head>
@@ -60,92 +61,101 @@
         ?>
         <!-- SECCION PARA AGREGAR NOTICIAS-->
         <div class="Cprincipal_index card-panel grey lighten-4">
-            <h1>Agregar Noticia</h1>
-            <form action="subirNoticia.php" method="post" enctype="multipart/form-data" id="agregarNoticiaForm">
-                <input type="text" name= "tituloNoticia" id="tituloNoticia" placeholder="Titulo de la noticia">
-                <input type="text" name= "descripcion" id="descripcion" placeholder="Descripción de la noticia">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>Foto</span>
-                        <input type="file" accept="image/jpeg" name="archivoFoto" id="archivoFoto">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Image de la noticia">
-                    </div>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#alta" class="teal-text text-darken-2">AGREGAR NOTICIA</a></li>
+                        <li class="tab col s3"><a href="#modificar" class="teal-text text-darken-2">MODIFICAR NOTICIA</a></li>
+                        <li class="tab col s3"><a href="#baja" class="teal-text text-darken-2">BAJA NOTICIA</a></li>
+                    </ul>
                 </div>
-                <input type="text" name="url" id="url" placeholder="URL de la noticia completa">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
-                    <i class="material-icons right">save</i>
-                </button>
-            </form>
-        </div>
-        <!-- SECCION PARA EDITAR NOTICIAS -->
-        <div class="Cprincipal_index card-panel grey lighten-4">
-            <h1>Editar Noticias</h1>
-            <form action="editarNoticia.php" method="post" enctype="multipart/form-data" id="editarNoticiasForm">
-                <div class="input-field col s12">
-                    <label>Noticia</label><br>
-                    <select id="tituloNoticia" name="tituloNoticia">
-                        <option value="" disabled selected>Selecciona una noticia</option>
-                        <?php
-                        //Conexion a la base de datos
-                        require_once("DB.php");
-                        $db = new DB();
-                        $SQL = "SELECT titulo FROM noticias";
-                        $resultado = $db->ejecutar($SQL);
-                        foreach($resultado as $fila){
-                            $json= json_decode($fila[0]);
-                        ?>
-                            <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
-                            <?php
-                        }
-                        ?>
-                    </select>
-                    <br>
+                <div id='alta' class="col s12">
+                    <h1>Agregar Noticia</h1>
+                    <form action="subirNoticia.php" method="post" enctype="multipart/form-data" id="agregarNoticiaForm">
+                        <input type="text" name= "tituloNoticia" id="tituloNoticia" placeholder="Titulo de la noticia">
+                        <input type="text" name= "descripcion" id="descripcion" placeholder="Descripción de la noticia">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Foto</span>
+                                <input type="file" accept="image/jpeg" name="archivoFoto" id="archivoFoto">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Image de la noticia">
+                            </div>
+                        </div>
+                        <input type="text" name="url" id="url" placeholder="URL de la noticia completa">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+                            <i class="material-icons right">save</i>
+                        </button>
+                    </form>
                 </div>
-                <input type="text" name= "descripcionEditar" id="descripcionEditar" placeholder="Descripción de la noticia">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>Foto</span>
-                        <input type="file" accept="image/jpeg" name="archivoFotoEditar" id="archivoFotoEditar">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Image de la noticia">
-                    </div>
+                <div id='modificar' class="col s12">
+                    <h1>Editar Noticias</h1>
+                    <form action="editarNoticia.php" method="post" enctype="multipart/form-data" id="editarNoticiasForm">
+                        <div class="input-field col s12">
+                            <label>Noticia</label><br>
+                            <select id="tituloNoticia" name="tituloNoticia">
+                                <option value="" disabled selected>Selecciona una noticia</option>
+                                <?php
+                                //Conexion a la base de datos
+                                require_once("DB.php");
+                                $db = new DB();
+                                $SQL = "SELECT titulo FROM noticias";
+                                $resultado = $db->ejecutar($SQL);
+                                foreach($resultado as $fila){
+                                    $json= json_decode($fila[0]);
+                                ?>
+                                    <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                            <br>
+                        </div>
+                        <input type="text" name= "descripcionEditar" id="descripcionEditar" placeholder="Descripción de la noticia">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Foto</span>
+                                <input type="file" accept="image/jpeg" name="archivoFotoEditar" id="archivoFotoEditar">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Image de la noticia">
+                            </div>
+                        </div>
+                        <input type="text" name="urlEditar" id="urlEditar" placeholder="URL de la noticia completa">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Editar
+                            <i class="material-icons right">system_update_alt</i>
+                        </button>
+                    </form>
                 </div>
-                <input type="text" name="urlEditar" id="urlEditar" placeholder="URL de la noticia completa">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                    <i class="material-icons right">system_update_alt</i>
-                </button>
-            </form>
-        </div>
-        <!-- SECCION PARA ELIMINAR NOTICIAS-->
-        <div class="Cprincipal_index card-panel grey lighten-4">
-            <h1>Eliminar Noticias</h1>
-            <form action="eliminarNoticia.php" method="post" enctype="multipart/form-data" id="eliminarNoticiasForm">
-                <div class="input-field col s12">
-                    <label>Eliminar</label><br>
-                    <select id="tituloNoticia" name="tituloNoticia">
-                        <option value="" disabled selected>Selecciona una noticia</option>
-                        <?php
-                        //Conexion a la base de datos
-                        require_once("DB.php");
-                        $db = new DB();
-                        $SQL = "SELECT titulo FROM noticias";
-                        $resultado = $db->ejecutar($SQL);
-                        foreach($resultado as $fila){
-                            $json= json_decode($fila[0]);
-                        ?>
-                            <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
-                            <?php
-                        }
-                        ?>
-                    </select>
+                <div id='baja' class="col s12">
+                    <h1>Eliminar Noticias</h1>
+                    <form action="eliminarNoticia.php" method="post" enctype="multipart/form-data" id="eliminarNoticiasForm">
+                        <div class="input-field col s12">
+                            <label>Eliminar</label><br>
+                            <select id="tituloNoticia" name="tituloNoticia">
+                                <option value="" disabled selected>Selecciona una noticia</option>
+                                <?php
+                                //Conexion a la base de datos
+                                require_once("DB.php");
+                                $db = new DB();
+                                $SQL = "SELECT titulo FROM noticias";
+                                $resultado = $db->ejecutar($SQL);
+                                foreach($resultado as $fila){
+                                    $json= json_decode($fila[0]);
+                                ?>
+                                    <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Eliminar
+                            <i class="material-icons right">delete_forever</i>
+                        </button>
+                    </form>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Eliminar
-                    <i class="material-icons right">delete_forever</i>
-                </button>
-            </form>
+            </div>
         </div>
     </body>
 </html> 
