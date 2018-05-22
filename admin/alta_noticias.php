@@ -6,14 +6,15 @@
 <html lang="es">
 <head>
 <title>ITMORELIA| Dept. Metal-Mecánica</title>
-        <meta charset="utf-8"/>
+<meta charset="utf-8"/>
         <meta name="keywords" content="pagina de Mecanica"/>
         <meta name="author" content="Jorge Cervantes Ramirez"/>
-        <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+        <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>      
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
         <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
         <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
@@ -34,11 +35,12 @@
     </head>
     <body >
         <!--encabezado y menus-->
-        <div id="navbar" class="navbar">
-            <script type="text/javascript">
-                    $("#navbar").load("navbar.html");
-            </script> 
-        </div>
+        <?php
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTMLFile("navbar.html");
+            echo $doc->saveHTML();
+        ?>
         <?php 
             #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
             if($_SESSION['result'] == 'guardado'){
