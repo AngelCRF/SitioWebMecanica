@@ -10,7 +10,7 @@ class DB{
             //echo var_dump($datos_conexion);
             $usuario = 'root';
             $pass = '';
-            $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=mecanica;port=3307', $usuario, $pass);
+            $this->conexion = new PDO('mysql:host=127.0.0.1;dbname=metalmecanica;port=3306', $usuario, $pass);
             //echo "Conexion exitosa";
         }catch(PDOException $e){
             die("Error al conectarse:". $e->getMessage());

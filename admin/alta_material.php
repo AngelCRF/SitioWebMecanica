@@ -71,14 +71,14 @@
                     </ul>
                 </div>
                 <div id='alta' class="col s12">
-                    <h1>Agregar Material/Documento</h1>
+                    <h1>Agregar Material</h1>
                     <br />
                     <form action="subirMaterial.php" method="post" enctype="multipart/form-data" id="agregarMaterialForm">
                         <input type="text" name= "tituloMaterial" id="tituloMaterial" placeholder="Titulo del documento (para mostrar en pantalla)">
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Elige el documento</span>
-                                <input type="file" accept="application/pdf, application/vnd.ms-excel, application/vnd.ms-word" name="archivoMaterial" id="archivoMaterial">
+                                <input type="file" accept="image/* , .pdf, .doc, .docx, .xls, .xlsx" name="archivoMaterial" id="archivoMaterial">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" placeholder="Nombre orginal del documento">
@@ -90,10 +90,10 @@
                                 <option value="" disabled selected>Selecciona una sección</option>
                                 <option value="Documentos">Documentos</option>
                                 <option value="Normativos">Normativos</option>
-                                <option value="Reglamento">Reglamento</option>
+                                <option value="Reglamento">Reglamento (Alumnos)</option>
                                 <option value="Materias">Materias</option>
                                 <option value="Ceneval">Ceneval</option>
-                                <option value="Tríptico">Tríptico</option>
+                                <option value="Triptico">Tríptico</option>
                             </select>
                         </div>
                         <br />
@@ -129,7 +129,7 @@
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Elige el nuevo documento</span>
-                                <input type="file" accept="application/pdf, application/vnd.ms-excel, application/vnd.ms-word" name="materialEditar" id="materialEditar">
+                                <input type="file" accept="image/* , .pdf, .doc, .docx, .xls, .xlsx" name="materialEditar" id="materialEditar">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" placeholder="Nombre del documento">
@@ -141,10 +141,10 @@
                                 <option value="" disabled selected>Selecciona una sección</option>
                                 <option value="Documentos">Documentos</option>
                                 <option value="Normativos">Normativos</option>
-                                <option value="Reglamento">Reglamento</option>
+                                <option value="Reglamento">Reglamento (Alumnos)</option>
                                 <option value="Materias">Materias</option>
                                 <option value="Ceneval">Ceneval</option>
-                                <option value="Tríptico">Tríptico</option>
+                                <option value="Triptico">Tríptico</option>
                             </select>
                         </div>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Editar
