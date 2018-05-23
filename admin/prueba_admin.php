@@ -20,7 +20,6 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript" src="/SitioWebMecanica/js/admin.js"/></script>
-        <script type="text/javascript" src="/SitioWebMecanica/js/agregarPersonal.js"/></script>
         <style type="text/css">
             body{
                 background: #dddddd;
