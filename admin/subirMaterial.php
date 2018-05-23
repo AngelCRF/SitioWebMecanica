@@ -20,9 +20,9 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
             header('Location: alta_material.php');
             exit;
         }
-        $doc = $targetdoc;
+        $ruta = $targetdoc;
         $conexion = new DB();
-        $resultado = $conexion->insertarMaterial($tituloMaterial, $doc, $seccion);
+        $resultado = $conexion->insertarMaterial( $seccionMaterial, $tituloMaterial, $ruta);
         session_start();
         //$_SESSION['result'] = 'guardado';
         if($resultado>0){
@@ -34,7 +34,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         else{
             $response_array['status'] = 'errorConsulta';
             echo json_encode($response_array);
-            $_SESSION['result']='error';
+            $_SESSION['result']='errorMaterial';
             header('Location: alta_material.php');
             exit;
         }  

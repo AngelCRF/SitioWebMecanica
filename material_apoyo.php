@@ -1,5 +1,4 @@
 <?php
-
 require_once ("admin/DB.php");
 $conexion = new DB();
  
@@ -53,10 +52,14 @@ $conexion = new DB();
             <div class="cajaT"><img src="Imagenes/logoTEC.png"></div>
             <br>
             <br>
+            
             <div id="wrapper">
             <div>
+            
               <div class="row">
+              
                 <div class="col s10 m5 l5 offset-s1 offset-m1 offset-l1">
+                  <br />
                   <div class="divider"></div>
                   <div>
                     <h5 class="center-align">Documentación</h5>
@@ -68,9 +71,17 @@ $conexion = new DB();
                     <form class="col s12">
                       <div class="row">
                         <div class="input-field col s12">
-                        
                           <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                            <option value="<?php echo $ruta.$nombre; ?>"><?php echo $nombre; ?></option>
+                            <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Documentos'";
+                                $resultado=$conexion->ejecutar($sql);
+                                foreach($resultado as $fila){ 
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
+                                     $nombre = $fila ['nombre'];
+                            ?>
+                            
+                            <option value="<?php echo $ruta.$rutacompleta ?>"><?php echo $nombre; } ?></option>
                           </select>
                           <label>Documentos</label>
                         </div>
@@ -81,17 +92,18 @@ $conexion = new DB();
                     <form class="col s12">
                       <div class="row">
                         <div class="input-field col s12">
-                        <?php  
-                                $sql = "SELECT nombre FROM material_apoyo WHERE seccion = 'Documentos'";
+                          <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                          <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Normativos'";
                                 $resultado=$conexion->ejecutar($sql);
                                 foreach($resultado as $fila){ 
-                                     $ruta = "admin/material/";
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
                                      $nombre = $fila ['nombre'];
-                            ?> 
-                          <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                            <option value="<?php echo $ruta.$nombre; ?>"><?php echo $nombre; ?></option>
+                            ?>
+                            
+                            <option value="<?php echo $ruta.$rutacompleta; ?>"><?php echo $nombre; } ?></option>     
                           </select>
-                                <?php } ?>
                           <label>Normativos</label>
                         </div>
                       </div>
@@ -105,11 +117,16 @@ $conexion = new DB();
                       <div class="row">
                         <div class="input-field col s12">
                           <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                            <option value="PDF/Recursos/Alumnos/Reglamento_de_los_Alumnos_del_Sistema_Nacional_de_Institutos_Tecnologicos.pdf">Reglamento para Alumnos del Sistema Nacional de Institutos Tecnológicos</option>
-                            <option value="PDF/Recursos/Alumnos/RESIDENCIAS PROFESIONALES ENERO-JUNIO 2017.xlsx">Residencias Profesionales ENE-JUN 2017</option>
-                            <option value="PDF/Recursos/Alumnos/RESIDENCIAS PROFESIONALES AGOSTO- DICIEMBRE 2017.xlsx">Residencias  Profesionales AGO-DIC 2017</option>
-                            <option value="PDF/Recursos/Alumnos/listado titulacion ENE-JUN2017.xlsx">Titulaciones ENE-JUN 2017</option>
-                            <option value="PDF/Recursos/Alumnos/listado titulacion AGOSTO-DIC 2017.xlsx">Titulaciones AGO-DIC 2017</option>
+                          <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Reglamento'";
+                                $resultado=$conexion->ejecutar($sql);
+                                foreach($resultado as $fila){ 
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
+                                     $nombre = $fila ['nombre'];
+                            ?>
+                            
+                            <option value="<?php echo $ruta.$rutacompleta; ?>"><?php echo $nombre; } ?></option>
                           </select>
                           <label>Reglamento</label>
                         </div>
@@ -121,16 +138,28 @@ $conexion = new DB();
                   <div class="divider"></div>
                   <div >
                     <h5 class="center-align">Material de Apoyo</h5>
+                    <br />
                   </div>
                   <div class="row">
                     <form class="col s12">
                       <div class="row">
                         <div class="input-field col s12">
                           <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                            <option value="PDF/Recursos/Materias/Presentación JMANCERA Y GARENAS.pptx"> 5° Congreso Contaduría - Jesús Mancera Macedo </option>
-                            <option value="PDF/Recursos/Materias/Introducción  al Mercado de Valores.ppt">introducción al MV - Jesús Mancera Macedo</option>
+                          <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Materias'";
+                                $resultado=$conexion->ejecutar($sql);
+                                foreach($resultado as $fila){ 
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
+                                     $nombre = $fila ['nombre'];
+                            ?>
+                            
+                                <option value="<?php echo $ruta.$rutacompleta; ?>"><?php echo $nombre; } ?></option>
+                                
                           </select>
+                          
                           <label>Materias</label>
+                                
                         </div>
                       </div>
                     </form>
@@ -140,20 +169,38 @@ $conexion = new DB();
                       <div class="row">
                         <div class="input-field col s12">
                           <select id="Lista" name=" Lista" class="combo" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
-                            <option value="PDF/Recursos/Ceneval/GUIA_EXANI_II.PDF">Guía EXANI-II</option>
+                          <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Ceneval'";
+                                $resultado=$conexion->ejecutar($sql);
+                                foreach($resultado as $fila){ 
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
+                                     $nombre = $fila ['nombre'];
+                            ?>
+                            
+                            <option value="<?php echo $ruta.$rutacompleta; ?>"><?php echo $nombre; } ?></option>
                           </select>
                           <label>Ceneval</label>
                         </div>
                       </div>
                     </form>
                   </div>
+                  <br />
                   <div class="row">
                     <form class="col s12">
                       <div class="row">
                         <div class="input-field col s12" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
                           <select id="Lista" name=" Lista" class="combo">
-                            <option value="Imagenes/Triptico1.jpg">Exterior</option>
-                            <option value="Imagenes/Triptico2.jpg">Interior</option>
+                          <?php  
+                                $sql = "SELECT nombre, ruta FROM material_apoyo WHERE seccion = 'Triptico'";
+                                $resultado=$conexion->ejecutar($sql);
+                                foreach($resultado as $fila){ 
+                                     $ruta = "admin/";
+                                     $rutacompleta = $fila ['ruta'];
+                                     $nombre = $fila ['nombre'];
+                            ?>
+                            
+                            <option value="<?php echo $ruta.$rutacompleta; ?>"><?php echo $nombre; } ?></option>
                           </select>
                           <label>Tríptico</label>
                         </div>
@@ -165,8 +212,7 @@ $conexion = new DB();
             </div>
           </div>
         </div>
-
-       <div id="feet" class="feet">
+        <div id="feet" class="feet">
             <script type="text/javascript">
                     $("#feet").load("footer.html");
             </script> 

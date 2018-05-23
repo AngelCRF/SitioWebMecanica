@@ -6,14 +6,15 @@
 <html lang="es">
 <head>
 <title>ITMORELIA| Dept. Metal-Mecánica</title>
-        <meta charset="utf-8"/>
+<meta charset="utf-8"/>
         <meta name="keywords" content="pagina de Mecanica"/>
         <meta name="author" content="Jorge Cervantes Ramirez/Yael Revuelta"/>
-        <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+        <link rel="icon" type="image/ico" href="Imagenes/icotec.ico"/>      
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
         <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
         <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
@@ -34,28 +35,29 @@
     </head>
     <body >
         <!--encabezado y menus-->
-        <div id="navbar" class="navbar">
-            <script type="text/javascript">
-                    $("#navbar").load("navbar.html");
-            </script> 
-        </div>
+        <?php
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTMLFile("navbar.html");
+            echo $doc->saveHTML();
+        ?>
         <?php 
             #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
-            if($_SESSION['result'] == 'guardado'){
-                echo '<script>alert("Noticia guardada exitosamente!");</script>';
+            if($_SESSION['result'] == 'guardadoMaterial'){
+                echo '<script>alert("Material guardado exitosamente!");</script>';
                 //echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Guardado exitosamente</H2></div></nav>";
             }
-            if($_SESSION['result'] == 'editado'){
-                echo '<script>alert("Noticia editada exitosamente!");</script>';
+            if($_SESSION['result'] == 'editadoMaterial'){
+                echo '<script>alert("Material editado exitosamente!");</script>';
             }
-            if($_SESSION['result'] == 'eliminado'){
-                echo '<script>alert("Noticia eliminada exitosamente!");</script>';
+            if($_SESSION['result'] == 'eliminadoMaterial'){
+                echo '<script>alert("Material eliminado exitosamente!");</script>';
             }
-            if($_SESSION['result'] == 'error'){
+            if($_SESSION['result'] == 'errorMaterial'){
                 echo '<script>alert("Error, vuelva a intentarlo más tarde!");</script>';
             }
-            if($_SESSION['result'] == 'errorFoto'){
-                echo '<script>alert("Error al cargar la foto, selecciona otra o vuelva a intentarlo más tarde!");</script>';
+            if($_SESSION['result'] == 'errorDoc'){
+                echo '<script>alert("Error al cargar el documento, selecciona otro o vuelva a intentarlo más tarde!");</script>';
             }
             $_SESSION['result']= "";
         ?>
@@ -66,7 +68,7 @@
                     <ul class="tabs">
                         <li class="tab col s3"><a href="#alta" class="teal-text text-darken-2">AGREGAR MATERIAL</a></li>
                         <li class="tab col s3"><a href="#modificar" class="teal-text text-darken-2">MODIFICAR MATERIAL</a></li>
-                        <li class="tab col s3"><a href="#baja" class="teal-text text-darken-2">BAJA MATERIAL</a></li>
+                        <li class="tab col s3"><a href="#baja" class="teal-text text-darken-2">ELIMINAR MATERIAL</a></li>
                     </ul>
                 </div>
                 <div id='alta' class="col s12">
@@ -103,30 +105,30 @@
                 </div>
                 <div id='modificar' class="col s12">
                     <h1>Editar Material</h1>
+                    <br />
                     <form action="editarMaterial.php" method="post" enctype="multipart/form-data" id="editarMaterialForm">
                         <div class="input-field col s12">
                             <label>Documento</label><br>
                             <select id="tituloMaterial" name="tituloMaterial">
-                                <option value="" disabled selected>Selecciona un documento a editar</option>
+                                <option value="" disabled selected>Selecciona el documento a editar</option>
                                 <?php
-                                //Conexion a la base de datos
-                                require_once("DB.php");
-                                $db = new DB();
-                                $SQL = "SELECT nombre FROM material_apoyo";
-                                $resultado = $db->ejecutar($SQL);
-                                foreach($resultado as $fila){
-                                    $json= json_decode($fila[0]);
+                                    //Conexion a la base de datos
+                                    require_once("DB.php");
+                                    $db = new DB();
+                                    $SQL = "SELECT nombre FROM material_apoyo";
+                                    $resultado = $db->ejecutar($SQL);
+                                    foreach($resultado as $fila){
+                                        $json= json_decode($fila[0]);
                                 ?>
-                                    <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
-                                    <?php
-                                }
-                                ?>
+                                <option value="<?php echo $fila[0]; ?>"><?php echo $fila[0];  } ?></option>  
+                                    
+                                    
                             </select>
-                            <br>
-                        </div>
-                        <!--<label>Nuevo nombre del documento a mostrar</label>
+                        </div>   
+                        <br />
+                         <label>Nuevo nombre del documento a mostrar</label>
                         <input type="text" name= "tituloMaterialEditar" id="tituloMaterialEditar" placeholder="Titulo del documento (para mostrar en pantalla)">
-                        -->
+                        
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Elige el nuevo documento</span>
@@ -138,7 +140,7 @@
                         </div>
                         <div class="input-field col s12 ">
                             <label>Editar Sección</label><br>
-                            <select id="tituloMaterialB" name="tituloMaterialB">
+                            <select id="seccionMaterialEditar" name="seccionMaterialEditar">
                                 <option value="" disabled selected>Selecciona una sección</option>
                                 <option value="Documentos">Documentos</option>
                                 <option value="Normativos">Normativos</option>
@@ -148,13 +150,16 @@
                                 <option value="Tríptico">Tríptico</option>
                             </select>
                         </div>
+
+                        
+
                         <button class="btn waves-effect waves-light" type="submit" name="action">Editar
                             <i class="material-icons right">system_update_alt</i>
                         </button>
                     </form>
                 </div>
                 <div id='baja' class="col s12">
-                    <h1>Eliminar Material de apoyo</h1>
+                    <h1>Eliminar Material de Apoyo</h1>
                     <form action="eliminar_material.php" method="post" enctype="multipart/form-data" id="eliminarMaterialForm">
                         <div class="input-field col s12">
                             <label>Eliminar</label><br>
@@ -169,12 +174,11 @@
                                 foreach($resultado as $fila){
                                     $json= json_decode($fila[0]);
                                 ?>
-                                    <option value="<?php echo $fila[0]?>"><?php echo $fila[0]?></option>  
-                                    <?php
-                                }
-                                ?>
+                                    <option value="<?php echo $fila[0]; ?>"><?php echo $fila[0]; } ?></option>  
+                                    
                             </select>
                         </div>
+                        
                         <button class="btn waves-effect waves-light" type="submit" name="action">Eliminar
                             <i class="material-icons right">delete_forever</i>
                         </button>

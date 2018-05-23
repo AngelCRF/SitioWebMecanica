@@ -302,21 +302,36 @@ class DB{
         return $resultado;
     }
 
-    public function insertarMaterial($tituloMaterial, $doc, $seccion){
+    public function insertarMaterial($seccionMaterial, $tituloMaterial, $ruta){
         $sql = "INSERT INTO material_apoyo VALUES(null, :seccion , :nombre , :ruta)";
         $sentencia = $this->conexion->prepare($sql);
-        $sentencia->bindParam(":seccion", $seccion);
+        $sentencia->bindParam(":seccion", $seccionMaterial);
         $sentencia->bindParam(":nombre", $tituloMaterial);
-        $sentencia->bindParam(":seccion", $doc);
+        $sentencia->bindParam(":ruta", $ruta);
         $sentencia->execute();
         $sentencia->setFetchMode(PDO::FETCH_ASSOC);
         $resultado = $sentencia->fetchAll();
         return $resultado;
     }
 
-    public function editarMaterialSinDoc($tituloMaterial, $seccion){
+    public function editarMaterial($seccionMaterialEditar, $tituloMaterial, $ruta){
         $sql = "UPDATE material_apoyo " .
-            "SET seccion = '" . $seccion .
+            "SET seccion = '" . $seccionMaterialEditar . "'," .
+            "nombre = '" . $tituloMaterialEditar ."'," .
+            "ruta = '" . $ruta .
+            "WHERE titulo = '" . $tituloMaterial . "'";
+        if ($this->conexion->query($sql) === TRUE) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+
+    public function editarMaterialSinDoc($seccionMaterial , $tituloMaterial){
+        $sql = "UPDATE material_apoyo " .
+            "SET seccion = '" . $seccionMaterialEditar . "'," .
+            "nombre = '" . $tituloMaterialEditar .
             "WHERE nombre = '" . $tituloMaterial . "'";
         if ($this->conexion->query($sql) === TRUE) {
             return 0;

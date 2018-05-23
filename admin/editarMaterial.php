@@ -18,11 +18,11 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
             //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
         }
         else {
-            $response_array['status'] = 'errorMaterial';
+            $response_array['status'] = 'error';
             echo json_encode($response_array);
             exit;
         }
-        $doc = $targetdoc;
+        $ruta = $targetdoc;
         //Eliminar el archivo viejo de CV y foto
         $conexion = new DB();
         $oldDoc = $conexion->ejecutar("SELECT ruta FROM material_apoyo WHERE nombre='".$tituloMaterial."'");
@@ -31,7 +31,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         }
         unlink($ruta);
         $ruta= "";
-        $resultado = $conexion->editarMaterial($tituloMaterial,$doc,$seccion);
+        $resultado = $conexion->editarMaterial($seccionMaterialEditar, $tituloMaterial, $ruta);
         if($resultado>0){
             $response_array['status'] = 'success';
             echo json_encode($response_array);
@@ -42,7 +42,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         else{
             $response_array['status'] = 'errorConsulta';
             echo json_encode($response_array);
-            $_SESSION['result']='error';
+            $_SESSION['result']='errorMaterial';
             header('Location: alta_material.php');
             exit;
         }
@@ -51,7 +51,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         //el usuario no ingresó ningun archivo por lo que solo se modificará el nombre, descripcion y url
         //echo "llegue al ultimo if donde no hay archivos";
         $conexion = new DB();
-        $resultado = $conexion->editarMaterialSinDoc($tituloMaterial, $seccion); 
+        $resultado = $conexion->editarMaterialSinDoc( $seccionMaterial, $tituloMaterial); 
         if($resultado>0){
             $response_array['status'] = 'success';
             echo json_encode($response_array);
@@ -61,7 +61,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         else{
             $response_array['status'] = 'errorConsulta';
             echo json_encode($response_array);
-            $_SESSION['result']='error';
+            $_SESSION['result']='errorMaterial';
             header('Location: alta_material.php');
         }
     }  

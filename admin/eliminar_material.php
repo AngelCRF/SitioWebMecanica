@@ -17,11 +17,11 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         unlink($ruta);
         $resultado = $conexion->eliminarMaterial($tituloMaterial);
         if($resultado>0){
-            $_SESSION['result'] = 'eliminado';
+            $_SESSION['result'] = 'eliminadoMaterial';
             header('Location: alta_material.php');
         }
         else{
-            $_SESSION['result'] = 'error';
+            $_SESSION['result'] = 'errorMaterial';
             header('Location: alta_material.php');
         }
     }   
