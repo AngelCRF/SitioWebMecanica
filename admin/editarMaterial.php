@@ -7,40 +7,42 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         $_POST[$indice] = htmlspecialchars($valor);
     }
     extract($_POST);
-    if( (isset($_FILES['archivoMaterialEditar']) && $_FILES['archivoMaterialEditar']['error'] != 4)){ 
+    if( (isset($_FILES['materialEditar']) && $_FILES['materialEditar']['error'] != 4)){ 
         //echo "llegue al primer if donde ambos archivos existen\n"; 
         //se debe cambiar toda la información del profesor
         //asignar las rutas para guardar los archivos de foto(png, jpg, etc) y CV (pdf)
-        $targetdoc = "material/";
+        $targetarchivo = "material/";
         $ruta= "";
-        $targetdoc = $targetdoc . basename( $_FILES['archivoMaterialEditar']['name']);
-        if(move_uploaded_file($_FILES['archivoMaterialEditar']['tmp_name'], $targetdoc)){
+        $targetarchivo = $targetarchivo . basename( $_FILES['materialEditar']['name']);
+        if(move_uploaded_file($_FILES['materialEditar']['tmp_name'], $targetarchivo)){
             //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
         }
         else {
-            $response_array['status'] = 'error';
+            $response_array['result'] = 'errorDoc';
             echo json_encode($response_array);
             exit;
         }
-        $ruta = $targetdoc;
+        $archivo = $targetarchivo;
         //Eliminar el archivo viejo de CV y foto
         $conexion = new DB();
-        $oldDoc = $conexion->ejecutar("SELECT ruta FROM material_apoyo WHERE nombre='".$tituloMaterial."'");
-        foreach($oldDoc as $fila){
+        $oldArchivo = $conexion->ejecutar("SELECT ruta FROM material_apoyo WHERE nombre='".$tituloMaterial."'");
+        foreach($oldArchivo as $fila){
             $ruta = $fila[0];
         }
+        echo($ruta);
         unlink($ruta);
         $ruta= "";
-        $resultado = $conexion->editarMaterial($seccionMaterialEditar, $tituloMaterial, $ruta);
+        echo $_FILES['materialEditar']['name'];
+        $resultado = $conexion->editarMaterial($tituloMaterial,$tituloMaterialEditar,"material/".$_FILES['materialEditar']['name'],$seccionMaterialEditar);
         if($resultado>0){
             $response_array['status'] = 'success';
             echo json_encode($response_array);
-            $_SESSION['result']='editado';
-            header('Location: alta_material.php');
+            $_SESSION['result']='editadoMaterial';
+           header('Location: alta_material.php');
             exit;
         }
         else{
-            $response_array['status'] = 'errorConsulta';
+            $response_array['status'] = 'errorMaterial';
             echo json_encode($response_array);
             $_SESSION['result']='errorMaterial';
             header('Location: alta_material.php');
@@ -51,18 +53,20 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
         //el usuario no ingresó ningun archivo por lo que solo se modificará el nombre, descripcion y url
         //echo "llegue al ultimo if donde no hay archivos";
         $conexion = new DB();
-        $resultado = $conexion->editarMaterialSinDoc( $seccionMaterial, $tituloMaterial); 
+        $resultado = $conexion->editarMaterialSinArchivo($tituloMaterial,$tituloMaterialEditar,$seccionMaterialEditar);
         if($resultado>0){
             $response_array['status'] = 'success';
             echo json_encode($response_array);
-            $_SESSION['result']='editado';
+            $_SESSION['result']='editadoMaterial';
             header('Location: alta_material.php');
+            exit;
         }
         else{
-            $response_array['status'] = 'errorConsulta';
+            $response_array['status'] = 'errorMaterial';
             echo json_encode($response_array);
             $_SESSION['result']='errorMaterial';
             header('Location: alta_material.php');
+            exit;
         }
     }  
 }

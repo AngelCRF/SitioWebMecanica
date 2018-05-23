@@ -34,11 +34,12 @@
     </head>
     <body >
         <!--encabezado y menus-->
-        <div id="navbar" class="navbar">
-            <script type="text/javascript">
-                    $("#navbar").load("navbar.html");
-            </script> 
-        </div>
+        <?php
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTMLFile("navbar.html");
+            echo $doc->saveHTML();
+        ?>
         <?php 
             #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
             if($_SESSION['result'] == 'guardado'){

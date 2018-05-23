@@ -45,7 +45,6 @@
             #condiciones para veerificiar que las peticiones fueron aceptadas o rechazadas
             if($_SESSION['result'] == 'guardadoMaterial'){
                 echo '<script>alert("Material guardado exitosamente!");</script>';
-                //echo "<nav><div class=\"nav-wrapper light-green accent-4\"><H2>Guardado exitosamente</H2></div></nav>";
             }
             if($_SESSION['result'] == 'editadoMaterial'){
                 echo '<script>alert("Material editado exitosamente!");</script>';
@@ -120,9 +119,7 @@
                                     foreach($resultado as $fila){
                                         $json= json_decode($fila[0]);
                                 ?>
-                                <option value="<?php echo $fila[0]; ?>"><?php echo $fila[0];  } ?></option>  
-                                    
-                                    
+                                <option value="<?php echo $fila[0]; ?>"><?php echo $fila[0];  } ?></option>                                    
                             </select>
                         </div>   
                         <br />
@@ -132,7 +129,7 @@
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Elige el nuevo documento</span>
-                                <input type="file" accept="application/pdf, application/vnd.ms-excel, application/vnd.ms-word" name="archivoMaterialEditar" id="archivoMaterialEditar">
+                                <input type="file" accept="application/pdf, application/vnd.ms-excel, application/vnd.ms-word" name="materialEditar" id="materialEditar">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" placeholder="Nombre del documento">
@@ -150,9 +147,6 @@
                                 <option value="Tríptico">Tríptico</option>
                             </select>
                         </div>
-
-                        
-
                         <button class="btn waves-effect waves-light" type="submit" name="action">Editar
                             <i class="material-icons right">system_update_alt</i>
                         </button>
