@@ -30,7 +30,8 @@ foreach ($resultado as $row){
             //    <div id="<?php echo $row['Nombre']" class="col s12">
             //        
             //    </div>
-            // inicio?>
+            // inicio
+    ?>
             <div id='<?php echo $especialidad; ?>' class="col s12">
                 <div id="especialidad_<?php echo $especialidad;?>">
                     <script type="text/javascript">

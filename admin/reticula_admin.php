@@ -25,7 +25,6 @@
        <!-- Materialized libraries -->
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="icon" href="img/icon.png"/>
         <!--Import jQuery before materialize.js-->
         <!-- Compiled and minified JavaScript -->
@@ -33,6 +32,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript" src="/SitioWebMecanica/js/admin.js"/></script>
         <script type="text/javascript" src="/SitioWebMecanica/js/agregarPersonal.js"/></script>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <style type="text/css">
             body{
                 background: #dddddd;

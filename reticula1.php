@@ -71,18 +71,6 @@
                 <script type="text/javascript">
                     $("#especialidades").load("cargar_especialidades.php");
                 </script>
-                <!--<div class="row">
-                    <div class="col s12">
-                        <ul class="tabs">
-                            <li class="tab col s3"><a href="#Ingenieria_De_Software">Ingenieria_De_Software</a></li>
-                            <li class="tab col s3"><a href="#Tecnologias_Web">Tecnologias_Web</a></li>
-                            <li class="tab col s3"><a href="#Seguridad_Informatica">Seguridad_Informatica</a></li>
-                        </ul>
-                    </div>
-                    <div id='Ingenieria_De_Software' class="col s12">Ingenieria_De_Software</div>
-                    <div id='Tecnologias_Web' class="col s12">Tecnologias_Web</div>
-                    <div id='Seguridad_Informatica' class="col s12">Seguridad_Informatica</div>
-                </div>-->>
             </div>
         </div>
         <div id="feet" class="feet">

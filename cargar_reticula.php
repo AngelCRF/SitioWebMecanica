@@ -1,7 +1,9 @@
 <?php
-    session_start();
-    include('ConexionBD.php');
-    $BD=new ConexionBD('127.0.0.1','mecanica','root','12345678');
+session_start();
+require_once("admin/DB.php");
+header('Content-type: application/json');
+$conexion = new DB();
+$resultado = $conexion->mostReticula($_SESSION['carrera'],$_GET['e']);
 ?>
 <div id="wrapper">
     <table class="centered hide-on-med-and-down">

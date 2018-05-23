@@ -74,6 +74,16 @@ CREATE TABLE `especialidad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Table structure for table `especialidad`
+--
+
+CREATE TABLE `especialidad` (
+  `id_esp` int(4) NOT NULL,
+  `Nombre` varchar(60) NOT NULL, 
+  `Carrera` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
 -- Indexes for dumped tables
 -- Table structure for table `indices`
 --
@@ -104,6 +114,12 @@ ALTER TABLE `profesor`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
+--
+-- Indexes for table `especialidad`
+--
+ALTER TABLE `especialidad`
+  ADD PRIMARY KEY (`id_esp`);
+
 --
 -- Indexes for table `especialidad`
 --

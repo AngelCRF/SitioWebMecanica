@@ -13,13 +13,15 @@
        <!-- Materialized libraries -->
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
         <link rel="icon" href="img/icon.png"/>
         <!--Import jQuery before materialize.js-->
         <!-- Compiled and minified JavaScript -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript" src="/SitioWebMecanica/js/admin.js"/></script>
+        <script type="text/javascript" src="/SitioWebMecanica/js/agregarPersonal.js"/></script>
         <style type="text/css">
             body{
                 background: #dddddd;

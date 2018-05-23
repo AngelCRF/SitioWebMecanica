@@ -25,6 +25,7 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                         exit;
                          
                     }
+<<<<<<< HEAD
                     if ( isset( $_FILES["archivoFoto"] ) && !empty( $_FILES["archivoFoto"]["name"] ) ) {
                         if ( is_uploaded_file( $_FILES["archivoFoto"]["tmp_name"] ) && $_FILES["archivoFoto"]["error"] === 0 )
                         if(move_uploaded_file($_FILES['archivoFoto']['tmp_name'], $targetfoto))
@@ -40,6 +41,17 @@ if(isset($_POST) and $_SERVER["REQUEST_METHOD"]=="POST"){
                     else{
                         $targetfoto = "foto/default.jpg";
                     }   
+=======
+                    if(move_uploaded_file($_FILES['archivoFoto']['tmp_name'], $targetfoto))
+                    {
+                        //echo "The file ". basename( $_FILES['archivo']['name']). " is uploaded";
+                    }
+                    else {
+                        $response_array['status'] = 'errorFoto';
+                        echo json_encode($response_array);
+                        exit;
+                    }
+>>>>>>> b97b589b0cf89a75adc21e9bb5b324899bc27123
                     $archivo = $targetfolder;
                     $foto = $targetfoto;
                     $conexion = new DB();
@@ -62,4 +74,8 @@ else{
     
     echo "se genero un error";
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b97b589b0cf89a75adc21e9bb5b324899bc27123
